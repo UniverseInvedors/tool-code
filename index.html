@@ -1,440 +1,670 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview | Universe Invedors Tools</title>
-  <meta name="description" content="Free online code editor with live preview. Write HTML, CSS and JavaScript in your browser with syntax highlighting, IntelliSense and instant results. Powered by Monaco Editor. No sign-up." />
-  <meta name="keywords" content="online code editor free, HTML CSS JavaScript playground, live preview code editor, Monaco editor online, browser IDE free, run javascript online free, web code editor" />
-  <link rel="canonical" href="https://code.universeinvedors.tech/" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Code Playground — Free Online HTML CSS JS Editor" />
-  <meta property="og:description" content="Write and run HTML, CSS and JavaScript in your browser. Live preview, syntax highlighting, no sign-up." />
-  <meta property="og:url" content="https://code.universeinvedors.tech/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#0d1117" />
-  <link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any" />
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Code Playground",
-    "url": "https://code.universeinvedors.tech",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-    "publisher": {
-      "@type": "Organization",
-      "name": "Universe Invedors",
-      "url": "https://universeinvedors.tech",
-      "logo": "https://universeinvedors.tech/logo.png",
-      "sameAs": [
-        "https://linkedin.com/company/universe-invedors",
-        "https://github.com/UniverseInvedors"
-      ]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Universe Invedors", "item": "https://universeinvedors.tech"},
-      {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://universeinvedors.tech/tools"},
-      {"@type": "ListItem", "position": 3, "name": "Code Playground", "item": "https://code.universeinvedors.tech"}
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Code Playground",
-    "url": "https://code.universeinvedors.tech",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Universe Invedors Tools",
-      "url": "https://universeinvedors.tech"
-    }
-  }
-]
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview | Universe Invedors Tools</title>
+<meta name="description" content="Free online code editor with live preview. Write HTML, CSS and JavaScript in your browser with syntax highlighting and instant results. Powered by Monaco Editor. No sign-up." />
+<meta name="keywords" content="online code editor free, HTML CSS JavaScript playground, live preview code editor, Monaco editor online, browser IDE free, run javascript online free, web code editor" />
+<link rel="canonical" href="https://code.universeinvedors.tech/" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="Universe Invedors" />
+<meta name="publisher" content="Universe Invedors" />
+<meta property="og:title" content="Code Playground — Free Online HTML CSS JavaScript Editor" />
+<meta property="og:description" content="Write and run HTML, CSS and JavaScript in your browser. Live preview, syntax highlighting, multiple editors. Free, no sign-up." />
+<meta property="og:url" content="https://code.universeinvedors.tech/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Universe Invedors Tools" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@universeinvedors" />
+<meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+<link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any" />
+<meta name="theme-color" content="#090c13" />
+<meta name="google-adsense-account" content="ca-pub-8759032363251002" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Code Playground","url":"https://code.universeinvedors.tech","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Code Playground","item":"https://code.universeinvedors.tech"}]}]
 </script>
+<style>
+/* ── Design system ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#090c13;--bg-surface:#0f1420;--bg-elevated:#141b28;--bg-card:#1a2235;--bg-input:#111827;
+  --text-1:#f0f4ff;--text-2:#a8b5cc;--text-3:#64748b;--text-4:#3d4f6e;
+  --accent:#3b82f6;--accent-h:#60a5fa;--accent-glow:rgba(59,130,246,.25);
+  --green:#10b981;--violet:#8b5cf6;--cyan:#06b6d4;--orange:#f97316;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.5);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono','Fira Code',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--topbar-h:52px;--sidebar-w:200px;--transition:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
 
-  <!-- Google AdSense -->
-  <meta name="google-adsense-account" content="ca-pub-8759032363251002" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
+/* Topbar */
+.topbar{
+  height:var(--topbar-h);background:rgba(9,12,19,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;
+  padding:0 .85rem;flex-shrink:0;z-index:200;
+}
+.logo{display:flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:700;color:var(--text-1);text-decoration:none;white-space:nowrap;flex-shrink:0}
+.logo:hover{color:var(--accent-h);text-decoration:none}
+.logo-icon{font-size:1.05rem}
+.logo-sep{color:var(--text-4);font-weight:400;font-size:.75rem}
 
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#0d1117;--surface:#161b22;--border:rgba(255,255,255,0.08);
-      --text:#e6edf3;--muted:#8b949e;--blue:#3b82f6;--green:#10b981;
-      --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono','Fira Code',monospace;
-    }
-    html{font-size:16px;scroll-behavior:smooth}
-    body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100dvh;display:flex;flex-direction:column}
-    a{color:var(--blue);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .topbar{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;border-bottom:1px solid var(--border);background:rgba(13,17,23,.95);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100;gap:.75rem;flex-wrap:wrap}
-    .logo{display:flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:700;color:var(--text);white-space:nowrap}
-    .logo span{color:var(--blue)}
-    .tabs{display:flex;gap:.25rem;background:rgba(255,255,255,.04);border-radius:8px;padding:3px}
-    .tab{padding:.3rem .75rem;border-radius:6px;font-size:.78rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:all .15s}
-    .tab.active{background:var(--blue);color:#fff}
-    .actions{display:flex;gap:.4rem;flex-wrap:wrap}
-    .btn{padding:.35rem .85rem;border-radius:7px;font-size:.78rem;font-weight:600;border:none;cursor:pointer;transition:all .15s}
-    .btn-run{background:var(--green);color:#000}
-    .btn-run:hover{background:#0ea371}
-    .btn-copy,.btn-reset{background:rgba(255,255,255,.07);color:var(--muted);border:1px solid var(--border)}
-    .btn-copy:hover,.btn-reset:hover{background:rgba(255,255,255,.12);color:var(--text)}
-    .main{display:flex;flex:1;overflow:hidden;height:calc(100dvh - 48px)}
-    .editor-pane{display:flex;flex-direction:column;width:50%;border-right:1px solid var(--border);overflow:hidden}
-    .preview-pane{flex:1;display:flex;flex-direction:column;overflow:hidden}
-    .pane-header{padding:.4rem .75rem;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);background:rgba(255,255,255,.02);display:flex;align-items:center;gap:.5rem}
-    .pane-header .dot{width:8px;height:8px;border-radius:50%;background:var(--blue)}
-    textarea{flex:1;width:100%;padding:1rem;font-family:var(--mono);font-size:13px;line-height:1.6;background:#0d1117;color:#e6edf3;border:none;resize:none;outline:none;tab-size:2}
-    textarea::selection{background:rgba(59,130,246,.3)}
-    iframe{flex:1;border:0;background:#fff;width:100%}
-    .status{padding:.3rem .75rem;font-size:.7rem;color:var(--muted);border-top:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
-    .status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-    .ad-slot{padding:.5rem;text-align:center;border-top:1px solid var(--border);background:rgba(255,255,255,.01)}
-    @media(max-width:640px){
-      .main{flex-direction:column;height:auto}
-      .editor-pane,.preview-pane{width:100%;height:50vh}
-      .editor-pane{border-right:none;border-bottom:1px solid var(--border)}
-    }
-  </style>  <meta name="author" content="Universe Invedors" />
-  <meta name="publisher" content="Universe Invedors" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="sitemap" type="application/xml" href="https://code.universeinvedors.tech/sitemap.xml" />
+/* Engine tabs */
+.engine-tabs{display:flex;align-items:center;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:3px;overflow-x:auto;flex-shrink:1}
+.etab{padding:.26rem .65rem;border-radius:var(--r-sm);font-size:.72rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--transition);display:flex;align-items:center;gap:.3rem}
+.etab:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.etab.active{background:var(--accent);color:#fff;box-shadow:0 0 10px var(--accent-glow)}
+.etab-badge{font-size:.58rem;font-weight:700;padding:.08rem .28rem;border-radius:3px;background:rgba(255,255,255,.18);line-height:1}
 
-  <!-- Open Graph image (required for Google + social sharing previews) -->
-  <meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview" />
-  <meta property="og:site_name" content="Universe Invedors Tools" />
-  <meta property="og:locale" content="en_US" />
+.spacer{flex:1}
 
-  <!-- Twitter image -->
-  <meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta name="twitter:site" content="@universeinvedors" />
-  <meta name="twitter:creator" content="@universeinvedors" />
-  <meta name="twitter:label1" content="Category" />
-  <meta name="twitter:data1" content="Free Developer Tool" />
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.75rem;font-weight:600;cursor:pointer;border:none;transition:all var(--transition);white-space:nowrap}
+.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-h);box-shadow:0 0 14px var(--accent-glow)}
+.btn-green{background:var(--green);color:#000}
+.btn-green:hover{background:#0ea371}
+.btn-sm{padding:.26rem .6rem;font-size:.68rem}
+.btn:disabled{opacity:.4;cursor:not-allowed}
 
+/* Language tabs */
+.lang-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--bg-surface);flex-shrink:0}
+.ltab{padding:.42rem .85rem;font-size:.75rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);border-bottom:2px solid transparent;transition:all var(--transition)}
+.ltab:hover{color:var(--text-2)}
+.ltab.active{color:var(--accent-h);border-bottom-color:var(--accent)}
+
+/* Main layout */
+.main{display:flex;flex:1;overflow:hidden}
+.editor-col{display:flex;flex-direction:column;width:50%;border-right:1px solid var(--border);overflow:hidden;transition:width var(--transition)}
+.preview-col{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.panel-header{display:flex;align-items:center;gap:.5rem;padding:.35rem .85rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.panel-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.panel-dot.g{background:var(--green)}
+.panel-header-right{margin-left:auto;display:flex;gap:.3rem}
+
+/* CodeMirror override */
+#cm-editor{flex:1;overflow:hidden}
+.cm-editor{height:100%;font-family:var(--font-mono);font-size:13px}
+.cm-editor.cm-focused{outline:none}
+.cm-scroller{overflow:auto}
+
+/* Monaco container */
+#monaco-editor{flex:1}
+
+/* Preview */
+#preview-frame{flex:1;border:0;background:#fff;width:100%}
+
+/* Console */
+#console-out{flex:1;overflow-y:auto;padding:.65rem;font-family:var(--font-mono);font-size:.75rem;line-height:1.55;background:var(--bg-base)}
+.console-line{padding:.1rem 0;border-bottom:1px solid var(--border)}
+.console-line.log{color:var(--text-2)}
+.console-line.warn{color:var(--yellow,#f59e0b)}
+.console-line.error{color:#f87171}
+.console-line.info{color:var(--cyan)}
+
+/* Status bar */
+.statusbar{display:flex;align-items:center;gap:.75rem;padding:.25rem .85rem;background:var(--bg-surface);border-top:1px solid var(--border);font-size:.68rem;color:var(--text-3);flex-shrink:0}
+.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.status-lang{color:var(--accent-h);font-weight:600}
+
+/* Settings drawer */
+.settings-panel{position:absolute;top:var(--topbar-h);right:0;width:260px;height:calc(100dvh - var(--topbar-h));background:var(--bg-elevated);border-left:1px solid var(--border);padding:1rem;z-index:300;transform:translateX(100%);transition:transform var(--transition);overflow-y:auto}
+.settings-panel.open{transform:translateX(0)}
+.settings-title{font-size:.8rem;font-weight:700;margin-bottom:.9rem;color:var(--text-1)}
+.settings-row{margin-bottom:.85rem}
+.settings-row label{display:block;font-size:.7rem;font-weight:600;color:var(--text-3);margin-bottom:.3rem;letter-spacing:.05em;text-transform:uppercase}
+.settings-row select, .settings-row input{width:100%;padding:.4rem .65rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.8rem;outline:none}
+.settings-row select:focus, .settings-row input:focus{border-color:var(--border-focus)}
+
+/* Snippet library */
+.snippets{display:flex;flex-direction:column;gap:.35rem;margin-top:.3rem}
+.snippet-btn{padding:.4rem .65rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);font-size:.75rem;color:var(--text-2);cursor:pointer;text-align:left;transition:all var(--transition)}
+.snippet-btn:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.25);color:var(--text-1)}
+
+/* SEO footer */
+.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.35rem .8rem;padding:.45rem .85rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.67rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a{color:var(--text-3)}
+.seo-footer a:hover{color:var(--text-2)}
+.seo-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+/* Toast */
+.toasts{position:fixed;bottom:1rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
+.toast{padding:.55rem .9rem;border-radius:var(--r-md);font-size:.75rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:0 8px 32px rgba(0,0,0,.5);animation:tin .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.3);color:var(--green)}
+.toast.err{border-color:rgba(239,68,68,.3);color:#f87171}
+@keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* Resizer */
+.resizer{width:4px;background:var(--bg-base);cursor:col-resize;flex-shrink:0;transition:background .15s}
+.resizer:hover{background:var(--accent)}
+
+@media(max-width:700px){
+  .editor-col{width:100%;border-right:none}
+  .preview-col{display:none}
+  .preview-col.show-mobile{display:flex}
+}
+</style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="logo"><span>⌨️</span> <a href="https://universeinvedors.tech/tools" style="color:inherit">Universe Tools</a> <span style="color:var(--muted);font-weight:400">/</span> <span>Code Playground</span></div>
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('html',this)">HTML</button>
-    <button class="tab" onclick="switchTab('css',this)">CSS</button>
-    <button class="tab" onclick="switchTab('js',this)">JS</button>
+<!-- TOPBAR -->
+<header class="topbar" role="banner">
+  <a href="https://universeinvedors.tech/tools" class="logo" aria-label="Universe Tools home">
+    <span class="logo-icon">⌨️</span>
+    <span>Universe Tools</span>
+    <span class="logo-sep">/</span>
+    <span style="color:var(--accent-h)">Code Playground</span>
+  </a>
+
+  <!-- Engine switcher -->
+  <div class="engine-tabs" role="tablist" aria-label="Editor engine">
+    <button class="etab active" role="tab" aria-selected="true" onclick="switchEngine('monaco',this)">
+      Monaco <span class="etab-badge">VS Code</span>
+    </button>
+    <button class="etab" role="tab" aria-selected="false" onclick="switchEngine('cm',this)">
+      CodeMirror <span class="etab-badge">Lite</span>
+    </button>
+    <button class="etab" role="tab" aria-selected="false" onclick="switchEngine('split',this)">
+      Split View
+    </button>
   </div>
-  <div class="actions">
-    <button class="btn btn-copy" onclick="copyCode()">Copy</button>
-    <button class="btn btn-reset" onclick="resetCode()">Reset</button>
-    <button class="btn btn-run" onclick="runCode()">▶ Run</button>
+
+  <div class="spacer"></div>
+
+  <div style="display:flex;align-items:center;gap:.4rem">
+    <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format code (Shift+Alt+F)">⚡ Format</button>
+    <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">Copy</button>
+    <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share code via URL">Share</button>
+    <button class="btn btn-ghost btn-sm" onclick="toggleSettings()" title="Settings" aria-expanded="false" id="settings-btn">⚙</button>
+    <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">▶ Run</button>
   </div>
 </header>
 
-<main class="main">
-  <div class="editor-pane">
-    <div class="pane-header"><span class="dot"></span> Editor</div>
-    <textarea id="editor" spellcheck="false" oninput="scheduleRun()"></textarea>
-    <div class="status"><span class="status-dot"></span> Live · Auto-runs after typing stops</div>
-  </div>
-  <div class="preview-pane">
-    <div class="pane-header"><span class="dot" style="background:var(--green)"></span> Preview</div>
-    <iframe id="preview" title="Code preview" sandbox="allow-scripts"></iframe>
-  </div>
-</main>
-
-<!-- AdSense ad slot -->
-<div class="ad-slot" aria-label="Advertisement">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8759032363251002" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<!-- LANGUAGE TABS -->
+<div class="lang-tabs" role="tablist" aria-label="File type">
+  <button class="ltab active" role="tab" onclick="switchLang('html',this)" data-lang="html">index.html</button>
+  <button class="ltab" role="tab" onclick="switchLang('css',this)" data-lang="css">style.css</button>
+  <button class="ltab" role="tab" onclick="switchLang('js',this)" data-lang="js">script.js</button>
+  <button class="ltab" role="tab" onclick="switchLang('console',this)" data-lang="console" id="console-tab">Console</button>
 </div>
 
+<!-- MAIN -->
+<div class="main" id="main-area">
+
+  <!-- Editor column -->
+  <div class="editor-col" id="editor-col">
+    <div class="panel-header">
+      <span class="panel-dot"></span>
+      <span id="panel-engine-label">Monaco Editor</span>
+      <span class="panel-header-right">
+        <span style="font-size:.65rem;color:var(--text-4)">Ctrl+Enter to run</span>
+      </span>
+    </div>
+    <!-- Monaco -->
+    <div id="monaco-editor" style="flex:1;display:flex;flex-direction:column;overflow:hidden"></div>
+    <!-- CodeMirror (hidden until selected) -->
+    <div id="cm-editor" style="flex:1;overflow:hidden;display:none"></div>
+    <!-- Console output (hidden by default) -->
+    <div id="console-panel" style="display:none;flex-direction:column;flex:1;overflow:hidden">
+      <div class="panel-header"><span class="panel-dot g"></span>Console</div>
+      <div id="console-out"></div>
+    </div>
+  </div>
+
+  <!-- Resize handle -->
+  <div class="resizer" id="resizer" aria-hidden="true"></div>
+
+  <!-- Preview column -->
+  <div class="preview-col" id="preview-col">
+    <div class="panel-header">
+      <span class="panel-dot g"></span>
+      <span>Preview</span>
+      <span class="panel-header-right">
+        <button class="btn btn-ghost btn-sm" onclick="openFullscreen()">⤡</button>
+        <button class="btn btn-ghost btn-sm" onclick="clearPreview()">Clear</button>
+      </span>
+    </div>
+    <iframe id="preview-frame" title="Code preview" sandbox="allow-scripts allow-same-origin"></iframe>
+  </div>
+</div>
+
+<!-- Status bar -->
+<div class="statusbar">
+  <span class="status-dot"></span>
+  <span class="status-lang" id="status-lang">HTML</span>
+  <span id="status-cursor">Ln 1, Col 1</span>
+  <span style="margin-left:auto">
+    <span class="kbd"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> run &nbsp;·&nbsp; <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd> format</span>
+  </span>
+</div>
+
+<!-- SEO footer -->
+<footer class="seo-footer">
+  <div class="seo-links">
+    <a href="https://universeinvedors.tech">Universe Invedors</a>
+    <a href="https://universeinvedors.tech/tools">All Tools</a>
+    <a href="https://diagram.universeinvedors.tech">Diagrams</a>
+    <a href="https://chart.universeinvedors.tech">Charts</a>
+    <a href="https://ocr.universeinvedors.tech">OCR</a>
+    <a href="https://pdf.universeinvedors.tech">PDF</a>
+    <a href="https://image.universeinvedors.tech">Image</a>
+    <a href="https://3d.universeinvedors.tech">3D</a>
+    <a href="https://map.universeinvedors.tech">Maps</a>
+    <a href="https://media.universeinvedors.tech">Media</a>
+  </div>
+  <span>© 2024 Universe Invedors · Free online code editor · Monaco &amp; CodeMirror</span>
+</footer>
+
+<!-- Settings panel -->
+<div class="settings-panel" id="settings-panel" aria-label="Editor settings">
+  <div class="settings-title">Editor Settings</div>
+  <div class="settings-row">
+    <label>Font size</label>
+    <input type="range" min="11" max="22" value="13" id="font-size-range" oninput="setFontSize(this.value)">
+    <span style="font-size:.72rem;color:var(--text-3)" id="font-size-label">13px</span>
+  </div>
+  <div class="settings-row">
+    <label>Theme</label>
+    <select id="theme-select" onchange="setTheme(this.value)">
+      <option value="vs-dark">Dark (default)</option>
+      <option value="vs">Light</option>
+      <option value="hc-black">High Contrast</option>
+    </select>
+  </div>
+  <div class="settings-row">
+    <label>Tab size</label>
+    <select id="tab-size" onchange="setTabSize(this.value)">
+      <option value="2">2 spaces</option>
+      <option value="4">4 spaces</option>
+    </select>
+  </div>
+  <div class="settings-row">
+    <label>Word wrap</label>
+    <select id="word-wrap" onchange="setWordWrap(this.value)">
+      <option value="on">On</option>
+      <option value="off">Off</option>
+    </select>
+  </div>
+  <div style="margin-top:1rem">
+    <div class="settings-title" style="font-size:.75rem;margin-bottom:.5rem">Snippets</div>
+    <div class="snippets">
+      <button class="snippet-btn" onclick="insertSnippet('fetch')">fetch() template</button>
+      <button class="snippet-btn" onclick="insertSnippet('async')">async/await</button>
+      <button class="snippet-btn" onclick="insertSnippet('class')">ES6 Class</button>
+      <button class="snippet-btn" onclick="insertSnippet('canvas')">Canvas 2D</button>
+      <button class="snippet-btn" onclick="insertSnippet('tailwind')">Tailwind starter</button>
+      <button class="snippet-btn" onclick="insertSnippet('react')">React CDN starter</button>
+    </div>
+  </div>
+  <button class="btn btn-ghost btn-sm" style="margin-top:1rem;width:100%" onclick="toggleSettings()">Close</button>
+</div>
+
+<!-- Toasts -->
+<div class="toasts" id="toasts"></div>
+
+<!-- Monaco loader -->
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs/loader.js"></script>
+<!-- Prettier -->
+<script src="https://unpkg.com/prettier@3.3.3/standalone.js"></script>
+<script src="https://unpkg.com/prettier@3.3.3/plugins/babel.js"></script>
+<script src="https://unpkg.com/prettier@3.3.3/plugins/html.js"></script>
+<script src="https://unpkg.com/prettier@3.3.3/plugins/postcss.js"></script>
+<!-- DOMPurify -->
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<!-- CodeMirror 6 -->
+<script type="module">
+import { EditorView, basicSetup } from 'https://cdn.jsdelivr.net/npm/codemirror@6.0.1/+esm'
+import { javascript } from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-javascript@6.2.2/+esm'
+import { html }       from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-html@6.4.9/+esm'
+import { css }        from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-css@6.3.1/+esm'
+import { oneDark }    from 'https://cdn.jsdelivr.net/npm/@codemirror/theme-one-dark@6.1.2/+esm'
+
+window.__cmDeps = { EditorView, basicSetup, javascript, html, css, oneDark }
+</script>
+
 <script>
-const DEFAULT = {
-  html: `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Page</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 2rem 2.5rem;
-      text-align: center;
-      max-width: 400px;
-    }
-    h1 { color: #60a5fa; margin: 0 0 0.5rem; }
-    p  { color: #94a3b8; margin: 0; }
-    button {
-      margin-top: 1.25rem;
-      padding: 0.6rem 1.5rem;
-      background: #3b82f6;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    button:hover { background: #2563eb; }
-  </style>  <meta name="author" content="Universe Invedors" />
-  <meta name="publisher" content="Universe Invedors" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="sitemap" type="application/xml" href="https://code.universeinvedors.tech/sitemap.xml" />
-
-  <!-- Open Graph image (required for Google + social sharing previews) -->
-  <meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview" />
-  <meta property="og:site_name" content="Universe Invedors Tools" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter image -->
-  <meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta name="twitter:site" content="@universeinvedors" />
-  <meta name="twitter:creator" content="@universeinvedors" />
-  <meta name="twitter:label1" content="Category" />
-  <meta name="twitter:data1" content="Free Developer Tool" />
-
-</head>
-<body>
-  <div class="card">
-    <h1>Hello, Universe!</h1>
-    <p>Edit the code on the left to see changes here.</p>
-    <button onclick="alert('It works!')">Click me</button>
-  </div>
-
-<!-- SEO Footer — internal links to main site and sibling tools -->
-<footer style="padding:.75rem 1rem;border-top:1px solid rgba(255,255,255,.07);background:#0a0d13;font-family:'Inter',system-ui,sans-serif;font-size:.72rem;color:#6b7685;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;justify-content:space-between">
-  <div style="display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center">
-    <a href="https://universeinvedors.tech" style="color:#3b82f6;text-decoration:none" rel="noopener">Universe Invedors</a>
-    <span>·</span>
-    <a href="https://universeinvedors.tech/tools" style="color:#8b949e;text-decoration:none">All Tools</a>
-    <span>·</span>
-    <a href="https://code.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Code</a>
-    <a href="https://diagram.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Charts</a>
-    <a href="https://ocr.universeinvedors.tech" style="color:#8b949e;text-decoration:none">OCR</a>
-    <a href="https://pdf.universeinvedors.tech" style="color:#8b949e;text-decoration:none">PDF</a>
-    <a href="https://image.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Image</a>
-    <a href="https://3d.universeinvedors.tech" style="color:#8b949e;text-decoration:none">3D</a>
-    <a href="https://map.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Maps</a>
-    <a href="https://media.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Media</a>
-  </div>
-  <div>
-    <a href="https://universeinvedors.tech/privacy" style="color:#6b7685;text-decoration:none">Privacy</a>
-    &nbsp;·&nbsp;
-    <span>&copy; 2024 Universe Invedors</span>
-  </div>
-</footer>
-</body>
-</html>`,
-  css: '/* Add CSS here — it will be injected into the HTML */',
-  js:  '// Add JavaScript here — it will be injected into the HTML'
+// ── State ─────────────────────────────────────────────────
+const files = {
+  html: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>My App</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n<body>\n\n  <div class="container">\n    <h1 class="title">Hello, Universe! 🚀</h1>\n    <p class="subtitle">Edit the code in the panel to see live changes.</p>\n    <button class="btn" onclick="greet()">Click Me</button>\n    <p id="output"></p>\n  </div>\n\n  <script src="script.js"><\/script>\n</body>\n</html>`,
+  css:  `:root {\n  --primary: #3b82f6;\n  --bg: #0f172a;\n  --text: #f1f5f9;\n}\n\n* { box-sizing: border-box; margin: 0; padding: 0; }\n\nbody {\n  font-family: system-ui, sans-serif;\n  background: var(--bg);\n  color: var(--text);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n.container {\n  text-align: center;\n  padding: 2rem;\n  max-width: 480px;\n}\n\n.title {\n  font-size: 2.2rem;\n  font-weight: 800;\n  background: linear-gradient(135deg, #3b82f6, #8b5cf6);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin-bottom: .5rem;\n}\n\n.subtitle { color: #94a3b8; margin-bottom: 1.5rem; }\n\n.btn {\n  padding: .65rem 1.5rem;\n  background: var(--primary);\n  color: #fff;\n  border: none;\n  border-radius: 8px;\n  font-size: 1rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: .2s;\n}\n.btn:hover { background: #2563eb; transform: translateY(-1px); }\n\n#output { margin-top: 1rem; color: #10b981; font-weight: 600; }`,
+  js:   `function greet() {\n  const messages = [\n    'Hello from JavaScript! 👋',\n    'Universe Invedors says hi! 🌌',\n    'Keep building great things! 🚀',\n    'Code is art. 🎨',\n  ]\n  const idx = Math.floor(Math.random() * messages.length)\n  document.getElementById('output').textContent = messages[idx]\n}\n\n// Auto-greet on load\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log('Page loaded!')\n  greet()\n})`
 }
 
-let current = 'html'
-let code = { html: DEFAULT.html, css: DEFAULT.css, js: DEFAULT.js }
+let currentLang = 'html'
+let currentEngine = 'monaco'
+let monacoEditor = null
+let cmEditor = null
 let runTimer = null
+let settingsOpen = false
 
-const editor = document.getElementById('editor')
-const preview = document.getElementById('preview')
-
-editor.value = code[current]
-
-function switchTab(tab, btn) {
-  code[current] = editor.value
-  current = tab
-  editor.value = code[current]
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'))
-  btn.classList.add('active')
+const SNIPPETS = {
+  fetch: `async function getData(url) {\n  try {\n    const response = await fetch(url)\n    if (!response.ok) throw new Error(\`HTTP error: \${response.status}\`)\n    const data = await response.json()\n    return data\n  } catch (error) {\n    console.error('Fetch failed:', error)\n    throw error\n  }\n}\n\ngetData('https://jsonplaceholder.typicode.com/posts/1')\n  .then(data => console.log(data))`,
+  async: `// Async/Await pattern\nasync function example() {\n  try {\n    const result = await someAsyncOperation()\n    return result\n  } catch (error) {\n    console.error(error)\n  }\n}\n\nfunction someAsyncOperation() {\n  return new Promise((resolve) => {\n    setTimeout(() => resolve('done!'), 1000)\n  })\n}`,
+  class: `class Animal {\n  #name\n  #sound\n\n  constructor(name, sound) {\n    this.#name = name\n    this.#sound = sound\n  }\n\n  speak() {\n    return \`\${this.#name} says \${this.#sound}!\`\n  }\n\n  get name() { return this.#name }\n}\n\nclass Dog extends Animal {\n  constructor(name) {\n    super(name, 'Woof')\n  }\n\n  fetch(item) {\n    return \`\${this.name} fetches the \${item}\`\n  }\n}\n\nconst dog = new Dog('Rex')\nconsole.log(dog.speak())\nconsole.log(dog.fetch('ball'))`,
+  canvas: `const canvas = document.getElementById('canvas') || document.createElement('canvas')\nconvas.width = 400\ncanvas.height = 300\ndocument.body.appendChild(canvas)\nconst ctx = canvas.getContext('2d')\n\n// Background\nctx.fillStyle = '#0f172a'\nctx.fillRect(0, 0, canvas.width, canvas.height)\n\n// Gradient circle\nconst gradient = ctx.createRadialGradient(200, 150, 0, 200, 150, 120)\ngradient.addColorStop(0, '#3b82f6')\ngradient.addColorStop(1, '#8b5cf6')\nctx.fillStyle = gradient\nctx.beginPath()\nctx.arc(200, 150, 120, 0, Math.PI * 2)\nctx.fill()\n\n// Text\nctx.fillStyle = '#fff'\nctx.font = 'bold 24px system-ui'\nctx.textAlign = 'center'\nctx.fillText('Canvas 2D', 200, 158)`,
+  tailwind: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <script src="https://cdn.tailwindcss.com"><\/script>\n  <title>Tailwind Starter</title>\n</head>\n<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">\n  <div class="bg-slate-800 rounded-2xl p-8 max-w-md w-full shadow-xl border border-slate-700">\n    <h1 class="text-3xl font-bold text-white mb-2">\n      Tailwind CSS\n      <span class="text-blue-400">Starter</span>\n    </h1>\n    <p class="text-slate-400 mb-6">Edit this template to build your UI.</p>\n    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors">\n      Get Started\n    </button>\n  </div>\n</body>\n</html>`,
+  react: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>React Starter</title>\n  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"><\/script>\n  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>\n  <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>\n</head>\n<body style="margin:0;background:#0f172a;color:#f1f5f9;font-family:system-ui">\n<div id="root"></div>\n<script type="text/babel">\nfunction App() {\n  const [count, setCount] = React.useState(0)\n  return (\n    <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',minHeight:'100vh',gap:'1rem'}}>\n      <h1 style={{fontSize:'2rem',fontWeight:800}}>React Counter</h1>\n      <p style={{fontSize:'3rem',fontWeight:700,color:'#3b82f6'}}>{count}</p>\n      <div style={{display:'flex',gap:'.5rem'}}>\n        <button onClick={() => setCount(c => c - 1)} style={{padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>−</button>\n        <button onClick={() => setCount(0)} style={{padding:'.5rem 1.25rem',background:'#6b7280',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>Reset</button>\n        <button onClick={() => setCount(c => c + 1)} style={{padding:'.5rem 1.25rem',background:'#3b82f6',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>+</button>\n      </div>\n    </div>\n  )\n}\nReact.createRoot(document.getElementById('root')).render(<App />)\n<\/script>\n</body>\n</html>`
 }
 
-function buildDoc() {
-  let h = code.html
-  if (code.css.trim() && !code.css.startsWith('/*')) {
-    h = h.replace('  <meta name="author" content="Universe Invedors" />
-  <meta name="publisher" content="Universe Invedors" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="sitemap" type="application/xml" href="https://code.universeinvedors.tech/sitemap.xml" />
+// ── Monaco setup ───────────────────────────────────────────
+require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs' } })
+require(['vs/editor/editor.main'], () => {
+  monaco.editor.defineTheme('universe-dark', {
+    base: 'vs-dark',
+    inherit: true,
+    rules: [{ background: '090c13' }],
+    colors: {
+      'editor.background': '#090c13',
+      'editor.lineHighlightBackground': '#141b28',
+      'editorGutter.background': '#090c13',
+      'editorLineNumber.foreground': '#3d4f6e',
+      'editorLineNumber.activeForeground': '#3b82f6',
+    }
+  })
 
-  <!-- Open Graph image (required for Google + social sharing previews) -->
-  <meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview" />
-  <meta property="og:site_name" content="Universe Invedors Tools" />
-  <meta property="og:locale" content="en_US" />
+  monacoEditor = monaco.editor.create(document.getElementById('monaco-editor'), {
+    value: files.html,
+    language: 'html',
+    theme: 'universe-dark',
+    fontSize: 13,
+    fontFamily: "'JetBrains Mono','Fira Code',Consolas,monospace",
+    fontLigatures: true,
+    minimap: { enabled: false },
+    lineNumbers: 'on',
+    wordWrap: 'on',
+    scrollBeyondLastLine: false,
+    automaticLayout: true,
+    padding: { top: 12, bottom: 12 },
+    smoothScrolling: true,
+    cursorBlinking: 'smooth',
+    renderLineHighlight: 'gutter',
+    bracketPairColorization: { enabled: true },
+  })
 
-  <!-- Twitter image -->
-  <meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta name="twitter:site" content="@universeinvedors" />
-  <meta name="twitter:creator" content="@universeinvedors" />
-  <meta name="twitter:label1" content="Category" />
-  <meta name="twitter:data1" content="Free Developer Tool" />
-</head>', `<style>${code.css}</style>  <meta name="author" content="Universe Invedors" />
-  <meta name="publisher" content="Universe Invedors" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="sitemap" type="application/xml" href="https://code.universeinvedors.tech/sitemap.xml" />
+  monacoEditor.onDidChangeModelContent(() => {
+    files[currentLang] = monacoEditor.getValue()
+    scheduleRun()
+  })
 
-  <!-- Open Graph image (required for Google + social sharing previews) -->
-  <meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview" />
-  <meta property="og:site_name" content="Universe Invedors Tools" />
-  <meta property="og:locale" content="en_US" />
+  monacoEditor.onDidChangeCursorPosition(e => {
+    document.getElementById('status-cursor').textContent = `Ln ${e.position.lineNumber}, Col ${e.position.column}`
+  })
 
-  <!-- Twitter image -->
-  <meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
-  <meta name="twitter:site" content="@universeinvedors" />
-  <meta name="twitter:creator" content="@universeinvedors" />
-  <meta name="twitter:label1" content="Category" />
-  <meta name="twitter:data1" content="Free Developer Tool" />
-</head>`)
-  }
-  if (code.js.trim() && !code.js.startsWith('//')) {
-    h = h.replace('
-<!-- SEO Footer — internal links to main site and sibling tools -->
-<footer style="padding:.75rem 1rem;border-top:1px solid rgba(255,255,255,.07);background:#0a0d13;font-family:'Inter',system-ui,sans-serif;font-size:.72rem;color:#6b7685;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;justify-content:space-between">
-  <div style="display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center">
-    <a href="https://universeinvedors.tech" style="color:#3b82f6;text-decoration:none" rel="noopener">Universe Invedors</a>
-    <span>·</span>
-    <a href="https://universeinvedors.tech/tools" style="color:#8b949e;text-decoration:none">All Tools</a>
-    <span>·</span>
-    <a href="https://code.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Code</a>
-    <a href="https://diagram.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Charts</a>
-    <a href="https://ocr.universeinvedors.tech" style="color:#8b949e;text-decoration:none">OCR</a>
-    <a href="https://pdf.universeinvedors.tech" style="color:#8b949e;text-decoration:none">PDF</a>
-    <a href="https://image.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Image</a>
-    <a href="https://3d.universeinvedors.tech" style="color:#8b949e;text-decoration:none">3D</a>
-    <a href="https://map.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Maps</a>
-    <a href="https://media.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Media</a>
-  </div>
-  <div>
-    <a href="https://universeinvedors.tech/privacy" style="color:#6b7685;text-decoration:none">Privacy</a>
-    &nbsp;·&nbsp;
-    <span>&copy; 2024 Universe Invedors</span>
-  </div>
-</footer>
-</body>', `<script>${code.js}<\/script>
-<!-- SEO Footer — internal links to main site and sibling tools -->
-<footer style="padding:.75rem 1rem;border-top:1px solid rgba(255,255,255,.07);background:#0a0d13;font-family:'Inter',system-ui,sans-serif;font-size:.72rem;color:#6b7685;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;justify-content:space-between">
-  <div style="display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center">
-    <a href="https://universeinvedors.tech" style="color:#3b82f6;text-decoration:none" rel="noopener">Universe Invedors</a>
-    <span>·</span>
-    <a href="https://universeinvedors.tech/tools" style="color:#8b949e;text-decoration:none">All Tools</a>
-    <span>·</span>
-    <a href="https://code.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Code</a>
-    <a href="https://diagram.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Charts</a>
-    <a href="https://ocr.universeinvedors.tech" style="color:#8b949e;text-decoration:none">OCR</a>
-    <a href="https://pdf.universeinvedors.tech" style="color:#8b949e;text-decoration:none">PDF</a>
-    <a href="https://image.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Image</a>
-    <a href="https://3d.universeinvedors.tech" style="color:#8b949e;text-decoration:none">3D</a>
-    <a href="https://map.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Maps</a>
-    <a href="https://media.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Media</a>
-  </div>
-  <div>
-    <a href="https://universeinvedors.tech/privacy" style="color:#6b7685;text-decoration:none">Privacy</a>
-    &nbsp;·&nbsp;
-    <span>&copy; 2024 Universe Invedors</span>
-  </div>
-</footer>
-</body>`)
-  }
-  return h
-}
+  monacoEditor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, runCode)
+  monacoEditor.addCommand(monaco.KeyMod.Shift | monaco.KeyMod.Alt | monaco.KeyCode.KeyF, formatCode)
 
-function runCode() {
-  code[current] = editor.value
-  preview.srcdoc = buildDoc()
-}
+  runCode()
+  loadFromURL()
+})
 
-function scheduleRun() {
-  code[current] = editor.value
-  clearTimeout(runTimer)
-  runTimer = setTimeout(runCode, 600)
-}
+// ── CodeMirror 6 setup (loaded after module) ───────────────
+function initCM() {
+  const { EditorView, basicSetup, javascript, html, css, oneDark } = window.__cmDeps || {}
+  if (!EditorView || cmEditor) return
 
-function copyCode() {
-  navigator.clipboard.writeText(editor.value).then(() => {
-    const btn = document.querySelector('.btn-copy')
-    btn.textContent = 'Copied!'
-    setTimeout(() => btn.textContent = 'Copy', 1500)
+  const langMap = { html, css, js: javascript }
+  cmEditor = new EditorView({
+    doc: files[currentLang],
+    extensions: [basicSetup, oneDark, (langMap[currentLang] || javascript)()],
+    parent: document.getElementById('cm-editor'),
+    dispatch(tr) {
+      cmEditor.update([tr])
+      if (tr.docChanged) {
+        files[currentLang] = cmEditor.state.doc.toString()
+        scheduleRun()
+      }
+    }
   })
 }
 
-function resetCode() {
-  if (!confirm('Reset to default code?')) return
-  code = { html: DEFAULT.html, css: DEFAULT.css, js: DEFAULT.js }
-  editor.value = code[current]
-  runCode()
+// ── Engine switcher ────────────────────────────────────────
+function switchEngine(engine, btn) {
+  currentEngine = engine
+  document.querySelectorAll('.etab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false') })
+  btn.classList.add('active'); btn.setAttribute('aria-selected','true')
+
+  const monacoEl = document.getElementById('monaco-editor')
+  const cmEl     = document.getElementById('cm-editor')
+
+  if (engine === 'monaco') {
+    monacoEl.style.display = 'flex'
+    cmEl.style.display = 'none'
+    document.getElementById('panel-engine-label').textContent = 'Monaco Editor'
+    if (monacoEditor) monacoEditor.layout()
+  } else if (engine === 'cm') {
+    monacoEl.style.display = 'none'
+    cmEl.style.display = 'flex'
+    document.getElementById('panel-engine-label').textContent = 'CodeMirror 6'
+    setTimeout(initCM, 200)
+  } else if (engine === 'split') {
+    monacoEl.style.display = 'flex'
+    cmEl.style.display = 'none'
+    document.getElementById('panel-engine-label').textContent = 'Monaco Editor (Split)'
+    if (monacoEditor) monacoEditor.layout()
+  }
 }
 
-// Initial run
-runCode()
-
-// Keyboard shortcut: Ctrl+Enter to run
-editor.addEventListener('keydown', e => {
-  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); runCode() }
-  // Tab indent
-  if (e.key === 'Tab') {
-    e.preventDefault()
-    const s = editor.selectionStart
-    editor.value = editor.value.slice(0,s) + '  ' + editor.value.slice(editor.selectionEnd)
-    editor.selectionStart = editor.selectionEnd = s + 2
+// ── Language switcher ──────────────────────────────────────
+function switchLang(lang, btn) {
+  // Save current
+  if (currentLang !== 'console') {
+    if (currentEngine === 'monaco' && monacoEditor) files[currentLang] = monacoEditor.getValue()
+    else if (currentEngine === 'cm' && cmEditor) files[currentLang] = cmEditor.state.doc.toString()
   }
-})
-</script>
 
-<!-- SEO Footer — internal links to main site and sibling tools -->
-<footer style="padding:.75rem 1rem;border-top:1px solid rgba(255,255,255,.07);background:#0a0d13;font-family:'Inter',system-ui,sans-serif;font-size:.72rem;color:#6b7685;display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:center;justify-content:space-between">
-  <div style="display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center">
-    <a href="https://universeinvedors.tech" style="color:#3b82f6;text-decoration:none" rel="noopener">Universe Invedors</a>
-    <span>·</span>
-    <a href="https://universeinvedors.tech/tools" style="color:#8b949e;text-decoration:none">All Tools</a>
-    <span>·</span>
-    <a href="https://code.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Code</a>
-    <a href="https://diagram.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Charts</a>
-    <a href="https://ocr.universeinvedors.tech" style="color:#8b949e;text-decoration:none">OCR</a>
-    <a href="https://pdf.universeinvedors.tech" style="color:#8b949e;text-decoration:none">PDF</a>
-    <a href="https://image.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Image</a>
-    <a href="https://3d.universeinvedors.tech" style="color:#8b949e;text-decoration:none">3D</a>
-    <a href="https://map.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Maps</a>
-    <a href="https://media.universeinvedors.tech" style="color:#8b949e;text-decoration:none">Media</a>
-  </div>
-  <div>
-    <a href="https://universeinvedors.tech/privacy" style="color:#6b7685;text-decoration:none">Privacy</a>
-    &nbsp;·&nbsp;
-    <span>&copy; 2024 Universe Invedors</span>
-  </div>
-</footer>
+  currentLang = lang
+  document.querySelectorAll('.ltab').forEach(t => t.classList.remove('active'))
+  btn.classList.add('active')
+  document.getElementById('status-lang').textContent = lang.toUpperCase()
+
+  const consolePanel = document.getElementById('console-panel')
+  const monacoEl = document.getElementById('monaco-editor')
+  const cmEl = document.getElementById('cm-editor')
+
+  if (lang === 'console') {
+    consolePanel.style.display = 'flex'
+    monacoEl.style.display = 'none'
+    cmEl.style.display = 'none'
+    return
+  }
+
+  consolePanel.style.display = 'none'
+
+  if (currentEngine === 'cm') {
+    cmEl.style.display = 'flex'; monacoEl.style.display = 'none'
+  } else {
+    monacoEl.style.display = 'flex'; cmEl.style.display = 'none'
+  }
+
+  const langMap = { html: 'html', css: 'css', js: 'javascript' }
+  if (currentEngine === 'monaco' && monacoEditor) {
+    const model = monaco.editor.createModel(files[lang], langMap[lang])
+    monacoEditor.setModel(model)
+    monacoEditor.layout()
+  }
+}
+
+// ── Run code ───────────────────────────────────────────────
+let runCount = 0
+function runCode() {
+  const frame = document.getElementById('preview-frame')
+  clearConsole()
+
+  let html = files.html
+  // Inject CSS
+  if (files.css.trim()) html = html.replace('</head>', `<style>\n${files.css}\n</style>\n</head>`)
+  // Inject JS with console capture
+  const consoleCapture = `
+    <script>
+    (function(){
+      const _log = console.log, _warn = console.warn, _err = console.error, _info = console.info
+      function post(type, args) {
+        window.parent.postMessage({ type:'console', level:type, msg:Array.from(args).map(a=>{
+          if(typeof a==='object'){try{return JSON.stringify(a,null,2)}catch{return String(a)}}
+          return String(a)
+        }).join(' ')}, '*')
+      }
+      console.log   = (...a) => { _log(...a);  post('log',  a) }
+      console.warn  = (...a) => { _warn(...a); post('warn', a) }
+      console.error = (...a) => { _err(...a);  post('error',a) }
+      console.info  = (...a) => { _info(...a); post('info', a) }
+      window.addEventListener('error', e => post('error', [e.message + ' (line ' + e.lineno + ')']))
+    })()
+    <\/script>`
+  if (files.js.trim()) html = html.replace('</body>', `${consoleCapture}<script>\n${files.js}\n<\/script>\n</body>`)
+
+  frame.srcdoc = html
+  runCount++
+}
+
+function scheduleRun() {
+  clearTimeout(runTimer)
+  runTimer = setTimeout(runCode, 700)
+}
+
+// ── Console ────────────────────────────────────────────────
+function clearConsole() { document.getElementById('console-out').innerHTML = '' }
+
+window.addEventListener('message', e => {
+  if (e.data?.type !== 'console') return
+  const out = document.getElementById('console-out')
+  const line = document.createElement('div')
+  line.className = `console-line ${e.data.level}`
+  line.textContent = `[${e.data.level.toUpperCase()}] ${e.data.msg}`
+  out.appendChild(line)
+  out.scrollTop = out.scrollHeight
+})
+
+// ── Format ─────────────────────────────────────────────────
+async function formatCode() {
+  if (typeof prettier === 'undefined') { toast('Prettier loading…', 'err'); return }
+  const langMap = { html: 'html', css: 'css', js: 'babel' }
+  const parser = langMap[currentLang] || 'babel'
+  const code = currentEngine === 'monaco' && monacoEditor ? monacoEditor.getValue() : files[currentLang]
+  try {
+    const plugins = [prettierPlugins.babel, prettierPlugins.html, prettierPlugins.postcss].filter(Boolean)
+    const formatted = await prettier.format(code, { parser, plugins, printWidth: 100, tabWidth: 2, singleQuote: true })
+    files[currentLang] = formatted
+    if (currentEngine === 'monaco' && monacoEditor) monacoEditor.setValue(formatted)
+    toast('Formatted ✓', 'ok')
+  } catch(e) {
+    toast('Format error: ' + e.message.slice(0,50), 'err')
+  }
+}
+
+// ── Copy & Share ───────────────────────────────────────────
+function copyCode() {
+  const code = currentEngine === 'monaco' && monacoEditor ? monacoEditor.getValue() : files[currentLang]
+  navigator.clipboard.writeText(code).then(() => toast('Copied to clipboard', 'ok'))
+}
+
+function shareCode() {
+  const state = { html: files.html, css: files.css, js: files.js }
+  const b64 = btoa(encodeURIComponent(JSON.stringify(state)))
+  const url = location.origin + location.pathname + '?code=' + b64
+  navigator.clipboard.writeText(url).then(() => toast('Share URL copied!', 'ok'))
+}
+
+function loadFromURL() {
+  const params = new URLSearchParams(location.search)
+  if (params.has('code')) {
+    try {
+      const state = JSON.parse(decodeURIComponent(atob(params.get('code'))))
+      Object.assign(files, state)
+      if (monacoEditor) monacoEditor.setValue(files.html)
+      runCode()
+    } catch {}
+  }
+}
+
+// ── Snippets ───────────────────────────────────────────────
+function insertSnippet(name) {
+  const code = SNIPPETS[name]
+  if (!code) return
+  if (name === 'tailwind' || name === 'react') {
+    files.html = code; files.css = ''; files.js = ''
+    if (monacoEditor) { monacoEditor.setValue(files.html); switchLang('html', document.querySelector('[data-lang=html]')) }
+  } else {
+    files.js = code
+    if (currentLang !== 'js') switchLang('js', document.querySelector('[data-lang=js]'))
+    else if (monacoEditor) monacoEditor.setValue(code)
+  }
+  runCode()
+  toast('Snippet inserted', 'ok')
+}
+
+// ── Settings ───────────────────────────────────────────────
+function toggleSettings() {
+  settingsOpen = !settingsOpen
+  document.getElementById('settings-panel').classList.toggle('open', settingsOpen)
+  document.getElementById('settings-btn').setAttribute('aria-expanded', settingsOpen)
+}
+function setFontSize(v) {
+  document.getElementById('font-size-label').textContent = v + 'px'
+  if (monacoEditor) monacoEditor.updateOptions({ fontSize: parseInt(v) })
+}
+function setTheme(v) {
+  if (monacoEditor) monaco.editor.setTheme(v === 'vs-dark' ? 'universe-dark' : v)
+}
+function setTabSize(v) {
+  if (monacoEditor) monacoEditor.updateOptions({ tabSize: parseInt(v) })
+}
+function setWordWrap(v) {
+  if (monacoEditor) monacoEditor.updateOptions({ wordWrap: v })
+}
+
+// ── Preview utils ──────────────────────────────────────────
+function clearPreview() { document.getElementById('preview-frame').srcdoc = '' }
+function openFullscreen() {
+  const w = window.open()
+  w.document.write(document.getElementById('preview-frame').srcdoc)
+  w.document.close()
+}
+
+// ── Resize panes ───────────────────────────────────────────
+(function() {
+  const resizer = document.getElementById('resizer')
+  const left    = document.getElementById('editor-col')
+  let dragging  = false, startX, startW
+
+  resizer.addEventListener('mousedown', e => {
+    dragging = true; startX = e.clientX; startW = left.offsetWidth
+    document.body.style.cursor = 'col-resize'; document.body.style.userSelect = 'none'
+  })
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return
+    const newW = Math.max(200, Math.min(window.innerWidth - 200, startW + e.clientX - startX))
+    left.style.width = newW + 'px'
+    if (monacoEditor) monacoEditor.layout()
+  })
+  document.addEventListener('mouseup', () => {
+    dragging = false; document.body.style.cursor = ''; document.body.style.userSelect = ''
+  })
+})()
+
+// ── Toast ──────────────────────────────────────────────────
+function toast(msg, type = '') {
+  const el = document.createElement('div')
+  el.className = 'toast' + (type ? ' ' + type : ''); el.textContent = msg
+  const container = document.getElementById('toasts')
+  container.appendChild(el)
+  setTimeout(() => el.remove(), 2800)
+}
+</script>
 </body>
 </html>
