@@ -1,261 +1,527 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Code Playground — Free Online HTML CSS JavaScript Editor with Live Preview | Universe Invedors Tools</title>
-<meta name="description" content="Free online code editor with live preview. Write HTML, CSS and JavaScript in your browser with syntax highlighting and instant results. Powered by Monaco Editor. No sign-up." />
-<meta name="keywords" content="online code editor free, HTML CSS JavaScript playground, live preview code editor, Monaco editor online, browser IDE free, run javascript online free, web code editor" />
-<link rel="canonical" href="https://code.universeinvedors.tech/" />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-<meta name="author" content="Universe Invedors" />
-<meta name="publisher" content="Universe Invedors" />
-<meta property="og:title" content="Code Playground — Free Online HTML CSS JavaScript Editor" />
-<meta property="og:description" content="Write and run HTML, CSS and JavaScript in your browser. Live preview, syntax highlighting, multiple editors. Free, no sign-up." />
-<meta property="og:url" content="https://code.universeinvedors.tech/" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://universeinvedors.tech/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Universe Invedors Tools" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@universeinvedors" />
-<meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg" />
-<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-<link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any" />
-<meta name="theme-color" content="#090c13" />
-<meta name="google-adsense-account" content="ca-pub-8759032363251002" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Code IDE — Free Online Code Editor | 50+ Languages, AI Assist, Interview Mode | Universe Invedors</title>
+<meta name="description" content="Free professional online code editor with 50+ languages, AI code assistance, interview mode with timer, CDN library picker, multi-file tabs, Vim mode, 10+ themes. Monaco Editor powered."/>
+<meta name="keywords" content="online code editor free,AI code assistant,interview coding tool,JavaScript IDE online,Python editor online,Monaco editor,multi-language IDE,coding interview practice"/>
+<link rel="canonical" href="https://code.universeinvedors.tech/"/>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+<meta name="author" content="Universe Invedors"/>
+<meta property="og:title" content="Code IDE — Free Online Editor with AI Assist and Interview Mode"/>
+<meta property="og:description" content="50+ languages, AI code help, interview timer, CDN picker, Vim mode. The complete free online IDE."/>
+<meta property="og:url" content="https://code.universeinvedors.tech/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://universeinvedors.tech/og-image.jpg"/>
+<meta property="og:site_name" content="Universe Invedors Tools"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/>
+<meta name="theme-color" content="#090c13"/>
+<meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
-<script type="application/ld+json">
-[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Code Playground","url":"https://code.universeinvedors.tech","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Code Playground","item":"https://code.universeinvedors.tech"}]}]
-</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Code IDE","url":"https://code.universeinvedors.tech","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["50+ programming languages","AI code assistant","Interview mode with timer","CDN library picker","Multi-file tabs","Vim mode","10+ themes"],"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Code IDE","item":"https://code.universeinvedors.tech"}]}]</script>
 <style>
-/* ── Design system ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg-base:#090c13;--bg-surface:#0f1420;--bg-elevated:#141b28;--bg-card:#1a2235;--bg-input:#111827;
-  --text-1:#f0f4ff;--text-2:#a8b5cc;--text-3:#64748b;--text-4:#3d4f6e;
-  --accent:#3b82f6;--accent-h:#60a5fa;--accent-glow:rgba(59,130,246,.25);
-  --green:#10b981;--violet:#8b5cf6;--cyan:#06b6d4;--orange:#f97316;
-  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.5);
-  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
-  --font-mono:'JetBrains Mono','Fira Code',Consolas,monospace;
-  --r-sm:6px;--r-md:10px;--r-lg:14px;--topbar-h:52px;--sidebar-w:200px;--transition:180ms cubic-bezier(.4,0,.2,1);
+  --bg:#090c13;--surf:#0d1117;--elev:#141b28;--card:#1a2235;--inp:#111827;
+  --t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;
+  --acc:#3b82f6;--acc-h:#60a5fa;--acc-glow:rgba(59,130,246,.22);
+  --green:#10b981;--violet:#8b5cf6;--cyan:#06b6d4;--orange:#f97316;--red:#ef4444;
+  --border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.13);
+  --font:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',Consolas,monospace;
+  --r:8px;--th:50px;--tr:160ms cubic-bezier(.4,0,.2,1);
 }
 html{font-size:16px;-webkit-text-size-adjust:100%}
-body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.22)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
 
-/* Topbar */
+/* ── TOPBAR ─────────────────────────────────────────────── */
 .topbar{
-  height:var(--topbar-h);background:rgba(9,12,19,.95);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;
-  padding:0 .85rem;flex-shrink:0;z-index:200;
+  height:var(--th);background:rgba(9,12,19,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);display:flex;align-items:center;
+  gap:.45rem;padding:0 .75rem;flex-shrink:0;z-index:300;position:relative;
 }
-.logo{display:flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:700;color:var(--text-1);text-decoration:none;white-space:nowrap;flex-shrink:0}
-.logo:hover{color:var(--accent-h);text-decoration:none}
-.logo-icon{font-size:1.05rem}
-.logo-sep{color:var(--text-4);font-weight:400;font-size:.75rem}
+.logo{display:flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:700;
+  color:var(--t1);text-decoration:none;white-space:nowrap;flex-shrink:0}
+.logo:hover{color:var(--acc-h);text-decoration:none}
 
-/* Engine tabs */
-.engine-tabs{display:flex;align-items:center;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:3px;overflow-x:auto;flex-shrink:1}
-.etab{padding:.26rem .65rem;border-radius:var(--r-sm);font-size:.72rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--transition);display:flex;align-items:center;gap:.3rem}
-.etab:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
-.etab.active{background:var(--accent);color:#fff;box-shadow:0 0 10px var(--accent-glow)}
-.etab-badge{font-size:.58rem;font-weight:700;padding:.08rem .28rem;border-radius:3px;background:rgba(255,255,255,.18);line-height:1}
+/* Language selector */
+.lang-select-wrap{position:relative;flex-shrink:0}
+.lang-btn{display:flex;align-items:center;gap:.4rem;padding:.28rem .65rem;
+  border-radius:var(--r);background:var(--elev);border:1px solid var(--border);
+  color:var(--t2);font-size:.75rem;font-weight:600;cursor:pointer;
+  transition:all var(--tr);white-space:nowrap;min-width:130px;justify-content:space-between}
+.lang-btn:hover{border-color:var(--acc);color:var(--t1)}
+.lang-dropdown{position:absolute;top:calc(100% + 4px);left:0;width:280px;
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:500;display:none;overflow:hidden}
+.lang-dropdown.open{display:block}
+.lang-search{padding:.55rem;border-bottom:1px solid var(--border)}
+.lang-search input{width:100%;padding:.38rem .6rem;background:var(--inp);
+  border:1px solid var(--border);border-radius:var(--r);color:var(--t1);
+  font-size:.8rem;outline:none}
+.lang-list{max-height:280px;overflow-y:auto}
+.lang-group{padding:.35rem .6rem .1rem;font-size:.62rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--t4)}
+.lang-item{display:flex;align-items:center;gap:.5rem;padding:.38rem .7rem;
+  cursor:pointer;font-size:.8rem;color:var(--t2);transition:all var(--tr)}
+.lang-item:hover,.lang-item.selected{background:rgba(59,130,246,.1);color:var(--acc-h)}
+.lang-icon{font-size:.9rem;width:18px;text-align:center}
+.lang-badge{margin-left:auto;font-size:.6rem;padding:.08rem .3rem;
+  border-radius:3px;background:rgba(16,185,129,.15);color:var(--green);font-weight:700}
 
-.spacer{flex:1}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.35rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.75rem;font-weight:600;cursor:pointer;border:none;transition:all var(--transition);white-space:nowrap}
-.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
-.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-h);box-shadow:0 0 14px var(--accent-glow)}
+/* Action buttons */
+.btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .7rem;
+  border-radius:var(--r);font-size:.73rem;font-weight:600;cursor:pointer;border:none;
+  transition:all var(--tr);white-space:nowrap}
+.btn-ghost{background:rgba(255,255,255,.05);color:var(--t2);border:1px solid var(--border)}
+.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--bh);color:var(--t1)}
+.btn-acc{background:var(--acc);color:#fff}
+.btn-acc:hover{background:var(--acc-h);box-shadow:0 0 12px var(--acc-glow)}
 .btn-green{background:var(--green);color:#000}
 .btn-green:hover{background:#0ea371}
-.btn-sm{padding:.26rem .6rem;font-size:.68rem}
+.btn-violet{background:var(--violet);color:#fff}
+.btn-violet:hover{background:#7c3aed}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-sm{padding:.22rem .55rem;font-size:.68rem}
 .btn:disabled{opacity:.4;cursor:not-allowed}
+.sp{flex:1}
 
-/* Language tabs */
-.lang-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--bg-surface);flex-shrink:0}
-.ltab{padding:.42rem .85rem;font-size:.75rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);border-bottom:2px solid transparent;transition:all var(--transition)}
-.ltab:hover{color:var(--text-2)}
-.ltab.active{color:var(--accent-h);border-bottom-color:var(--accent)}
+/* Interview timer badge */
+.timer-badge{display:none;align-items:center;gap:.4rem;padding:.28rem .7rem;
+  border-radius:var(--r);background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);
+  font-size:.78rem;font-weight:700;color:var(--red);font-family:var(--mono)}
+.timer-badge.active{display:flex}
+.timer-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1s infinite}
 
-/* Main layout */
-.main{display:flex;flex:1;overflow:hidden}
-.editor-col{display:flex;flex-direction:column;width:50%;border-right:1px solid var(--border);overflow:hidden;transition:width var(--transition)}
-.preview-col{flex:1;display:flex;flex-direction:column;overflow:hidden}
-.panel-header{display:flex;align-items:center;gap:.5rem;padding:.35rem .85rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
-.panel-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
-.panel-dot.g{background:var(--green)}
-.panel-header-right{margin-left:auto;display:flex;gap:.3rem}
+/* AI badge */
+.ai-badge{display:flex;align-items:center;gap:.3rem;padding:.2rem .5rem;
+  border-radius:var(--r);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);
+  font-size:.68rem;font-weight:700;color:#a78bfa;cursor:pointer;transition:all var(--tr)}
+.ai-badge:hover{background:rgba(139,92,246,.2)}
+.ai-badge.connected{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.25);color:var(--green)}
 
-/* CodeMirror override */
-#cm-editor{flex:1;overflow:hidden}
-.cm-editor{height:100%;font-family:var(--font-mono);font-size:13px}
-.cm-editor.cm-focused{outline:none}
-.cm-scroller{overflow:auto}
+/* ── FILE TABS ───────────────────────────────────────────── */
+.file-tabs{display:flex;align-items:center;background:var(--surf);
+  border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0;height:36px}
+.file-tab{display:flex;align-items:center;gap:.4rem;padding:0 .85rem;height:100%;
+  font-size:.75rem;font-weight:500;color:var(--t3);cursor:pointer;border-right:1px solid var(--border);
+  white-space:nowrap;transition:all var(--tr);flex-shrink:0;min-width:90px;border-bottom:2px solid transparent}
+.file-tab:hover{color:var(--t2);background:rgba(255,255,255,.03)}
+.file-tab.active{color:var(--t1);background:rgba(59,130,246,.05);border-bottom-color:var(--acc)}
+.file-tab-close{width:16px;height:16px;border-radius:3px;display:flex;align-items:center;
+  justify-content:center;font-size:.6rem;opacity:0;transition:all var(--tr);
+  background:transparent;border:none;color:var(--t3);cursor:pointer;margin-left:.1rem}
+.file-tab:hover .file-tab-close,.file-tab.active .file-tab-close{opacity:1}
+.file-tab-close:hover{background:rgba(239,68,68,.2);color:var(--red)}
+.add-tab{display:flex;align-items:center;justify-content:center;width:32px;height:100%;
+  color:var(--t4);cursor:pointer;flex-shrink:0;font-size:1rem;transition:all var(--tr)}
+.add-tab:hover{color:var(--t1);background:rgba(255,255,255,.04)}
 
-/* Monaco container */
-#monaco-editor{flex:1}
+/* ── MAIN LAYOUT ─────────────────────────────────────────── */
+.main-area{display:flex;flex:1;overflow:hidden}
 
-/* Preview */
-#preview-frame{flex:1;border:0;background:#fff;width:100%}
+/* Left sidebar (file tree + tools) */
+.left-sidebar{width:200px;background:var(--surf);border-right:1px solid var(--border);
+  display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:width var(--tr)}
+.left-sidebar.collapsed{width:0}
+.ls-header{padding:.45rem .65rem;border-bottom:1px solid var(--border);font-size:.65rem;
+  font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--t4);
+  display:flex;align-items:center;justify-content:space-between}
+.ls-body{flex:1;overflow-y:auto;padding:.4rem}
+.tree-item{display:flex;align-items:center;gap:.4rem;padding:.3rem .5rem;border-radius:6px;
+  cursor:pointer;font-size:.78rem;color:var(--t2);transition:all var(--tr)}
+.tree-item:hover{background:rgba(255,255,255,.05);color:var(--t1)}
+.tree-item.active{background:rgba(59,130,246,.1);color:var(--acc-h)}
+.tree-icon{font-size:.85rem;width:16px;text-align:center;flex-shrink:0}
+.tree-sep{height:1px;background:var(--border);margin:.3rem 0}
+.tool-section{padding:.3rem 0}
+.tool-label{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--t4);padding:.4rem .5rem .15rem}
+.tool-btn{display:flex;align-items:center;gap:.45rem;width:100%;padding:.32rem .5rem;
+  border-radius:6px;font-size:.76rem;color:var(--t2);cursor:pointer;border:none;
+  background:transparent;text-align:left;transition:all var(--tr)}
+.tool-btn:hover{background:rgba(255,255,255,.05);color:var(--t1)}
+.tool-btn.active{background:rgba(59,130,246,.1);color:var(--acc-h)}
 
-/* Console */
-#console-out{flex:1;overflow-y:auto;padding:.65rem;font-family:var(--font-mono);font-size:.75rem;line-height:1.55;background:var(--bg-base)}
-.console-line{padding:.1rem 0;border-bottom:1px solid var(--border)}
-.console-line.log{color:var(--text-2)}
-.console-line.warn{color:var(--yellow,#f59e0b)}
-.console-line.error{color:#f87171}
-.console-line.info{color:var(--cyan)}
+/* Editor area */
+.editor-area{display:flex;flex-direction:column;flex:1;overflow:hidden}
+#monaco-host{flex:1;overflow:hidden}
+
+/* Bottom panel */
+.bottom-panel{height:200px;display:flex;flex-direction:column;border-top:1px solid var(--border);
+  background:var(--bg);transition:height var(--tr)}
+.bottom-panel.collapsed{height:32px}
+.bp-tabs{display:flex;align-items:center;height:32px;border-bottom:1px solid var(--border);
+  background:var(--surf);flex-shrink:0;overflow-x:auto}
+.bpt{padding:0 .75rem;height:100%;display:flex;align-items:center;font-size:.7rem;
+  font-weight:600;cursor:pointer;color:var(--t3);border-bottom:2px solid transparent;
+  transition:all var(--tr);white-space:nowrap}
+.bpt:hover{color:var(--t2)}
+.bpt.active{color:var(--acc-h);border-bottom-color:var(--acc)}
+.bp-body{flex:1;overflow:auto}
+.console-out{padding:.5rem .75rem;font-family:var(--mono);font-size:12.5px;line-height:1.55}
+.cl{padding:.08rem 0;display:flex;gap:.5rem}
+.cl.log{color:var(--t2)}.cl.info{color:var(--cyan)}.cl.warn{color:var(--orange)}.cl.error{color:#f87171}.cl.sys{color:var(--t4)}
+.cl-icon{font-size:.7rem;opacity:.6;flex-shrink:0;margin-top:.15rem}
+.cl-msg{white-space:pre-wrap;word-break:break-all}
+
+/* Right panel: AI + CDN + Interview */
+.right-panel{width:0;background:var(--surf);border-left:1px solid var(--border);
+  overflow:hidden;transition:width var(--tr);display:flex;flex-direction:column;flex-shrink:0}
+.right-panel.open{width:340px}
+.rp-header{padding:.55rem .75rem;border-bottom:1px solid var(--border);display:flex;
+  align-items:center;justify-content:space-between;flex-shrink:0}
+.rp-title{font-size:.8rem;font-weight:700;color:var(--t1)}
+.rp-body{flex:1;overflow-y:auto;padding:.75rem}
+
+/* AI Chat */
+.ai-messages{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;min-height:100px}
+.ai-msg{padding:.55rem .7rem;border-radius:var(--r);font-size:.78rem;line-height:1.55}
+.ai-msg.user{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);color:var(--t1);align-self:flex-end;max-width:90%}
+.ai-msg.assistant{background:var(--card);border:1px solid var(--border);color:var(--t2);align-self:flex-start;max-width:95%}
+.ai-msg.assistant pre{background:rgba(0,0,0,.3);border-radius:5px;padding:.5rem;margin-top:.35rem;overflow-x:auto;font-size:11px}
+.ai-input-row{display:flex;gap:.4rem;align-items:flex-end}
+.ai-input-row textarea{flex:1;padding:.45rem .6rem;background:var(--inp);border:1px solid var(--border);
+  border-radius:var(--r);color:var(--t1);font-size:.78rem;font-family:var(--font);
+  resize:none;outline:none;min-height:60px;line-height:1.5;transition:border-color var(--tr)}
+.ai-input-row textarea:focus{border-color:rgba(59,130,246,.5)}
+.ai-key-row{display:flex;gap:.4rem;margin-bottom:.5rem;align-items:center}
+.ai-key-row input{flex:1;padding:.38rem .55rem;background:var(--inp);border:1px solid var(--border);
+  border-radius:var(--r);color:var(--t1);font-size:.75rem;outline:none;font-family:var(--mono)}
+.ai-key-row input:focus{border-color:rgba(139,92,246,.5)}
+
+/* CDN picker */
+.cdn-search input{width:100%;padding:.4rem .65rem;background:var(--inp);border:1px solid var(--border);
+  border-radius:var(--r);color:var(--t1);font-size:.8rem;outline:none;margin-bottom:.5rem}
+.cdn-results{display:flex;flex-direction:column;gap:.3rem;max-height:240px;overflow-y:auto}
+.cdn-item{padding:.5rem .6rem;border-radius:var(--r);background:var(--card);
+  border:1px solid var(--border);cursor:pointer;transition:all var(--tr)}
+.cdn-item:hover{border-color:rgba(6,182,212,.35);background:rgba(6,182,212,.06)}
+.cdn-name{font-size:.78rem;font-weight:600;color:var(--t1)}
+.cdn-desc{font-size:.68rem;color:var(--t3);margin-top:.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cdn-ver{font-size:.65rem;color:var(--cyan);margin-top:.08rem;font-family:var(--mono)}
+.cdn-added{display:flex;flex-direction:column;gap:.25rem;margin-top:.5rem}
+.cdn-added-item{display:flex;align-items:center;justify-content:space-between;
+  padding:.32rem .55rem;border-radius:6px;background:rgba(6,182,212,.07);
+  border:1px solid rgba(6,182,212,.2);font-size:.72rem;color:var(--cyan);font-family:var(--mono)}
+
+/* Interview mode */
+.problem-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:.75rem;margin-bottom:.6rem}
+.prob-title{font-size:.82rem;font-weight:700;color:var(--t1);margin-bottom:.35rem}
+.prob-diff{display:inline-block;font-size:.65rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-bottom:.4rem}
+.diff-easy{background:rgba(16,185,129,.12);color:var(--green)}
+.diff-med{background:rgba(245,158,11,.12);color:#f59e0b}
+.diff-hard{background:rgba(239,68,68,.12);color:var(--red)}
+.prob-desc{font-size:.76rem;color:var(--t2);line-height:1.6}
+.prob-example{background:var(--inp);border-radius:6px;padding:.5rem .6rem;margin-top:.4rem;font-family:var(--mono);font-size:.72rem;color:var(--cyan)}
 
 /* Status bar */
-.statusbar{display:flex;align-items:center;gap:.75rem;padding:.25rem .85rem;background:var(--bg-surface);border-top:1px solid var(--border);font-size:.68rem;color:var(--text-3);flex-shrink:0}
-.status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
-.status-lang{color:var(--accent-h);font-weight:600}
+.statusbar{display:flex;align-items:center;gap:.6rem;padding:.2rem .75rem;
+  background:var(--surf);border-top:1px solid var(--border);font-size:.67rem;
+  color:var(--t3);flex-shrink:0;overflow:hidden}
+.sb-green{color:var(--green)}
+.sb-blue{color:var(--acc-h)}
+.sb-right{margin-left:auto;display:flex;gap:.6rem}
 
-/* Settings drawer */
-.settings-panel{position:absolute;top:var(--topbar-h);right:0;width:260px;height:calc(100dvh - var(--topbar-h));background:var(--bg-elevated);border-left:1px solid var(--border);padding:1rem;z-index:300;transform:translateX(100%);transition:transform var(--transition);overflow-y:auto}
-.settings-panel.open{transform:translateX(0)}
-.settings-title{font-size:.8rem;font-weight:700;margin-bottom:.9rem;color:var(--text-1)}
-.settings-row{margin-bottom:.85rem}
-.settings-row label{display:block;font-size:.7rem;font-weight:600;color:var(--text-3);margin-bottom:.3rem;letter-spacing:.05em;text-transform:uppercase}
-.settings-row select, .settings-row input{width:100%;padding:.4rem .65rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.8rem;outline:none}
-.settings-row select:focus, .settings-row input:focus{border-color:var(--border-focus)}
+/* Overlays */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);
+  z-index:600;display:none;align-items:center;justify-content:center}
+.overlay.open{display:flex}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:1.5rem;max-width:480px;width:90%;box-shadow:0 24px 64px rgba(0,0,0,.6)}
+.modal-title{font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--t1)}
+.modal-field{margin-bottom:.75rem}
+.modal-field label{display:block;font-size:.72rem;font-weight:700;color:var(--t3);
+  letter-spacing:.05em;text-transform:uppercase;margin-bottom:.28rem}
+.modal-field input,.modal-field select{width:100%;padding:.45rem .65rem;
+  background:var(--inp);border:1px solid var(--border);border-radius:var(--r);
+  color:var(--t1);font-size:.83rem;outline:none}
+.modal-field input:focus,.modal-field select:focus{border-color:var(--acc)}
+.modal-actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
+.theme-swatch{padding:.45rem .5rem;border-radius:var(--r);cursor:pointer;
+  font-size:.72rem;font-weight:600;text-align:center;border:1px solid var(--border);
+  transition:all var(--tr);color:var(--t2)}
+.theme-swatch:hover{border-color:var(--acc)}
+.theme-swatch.active{border-color:var(--acc);color:var(--acc-h);background:rgba(59,130,246,.1)}
 
-/* Snippet library */
-.snippets{display:flex;flex-direction:column;gap:.35rem;margin-top:.3rem}
-.snippet-btn{padding:.4rem .65rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);font-size:.75rem;color:var(--text-2);cursor:pointer;text-align:left;transition:all var(--transition)}
-.snippet-btn:hover{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.25);color:var(--text-1)}
-
-/* SEO footer */
-.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.35rem .8rem;padding:.45rem .85rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.67rem;color:var(--text-3);flex-shrink:0}
-.seo-footer a{color:var(--text-3)}
-.seo-footer a:hover{color:var(--text-2)}
-.seo-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
-
-/* Toast */
-.toasts{position:fixed;bottom:1rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
-.toast{padding:.55rem .9rem;border-radius:var(--r-md);font-size:.75rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:0 8px 32px rgba(0,0,0,.5);animation:tin .22s ease;pointer-events:auto}
-.toast.ok{border-color:rgba(16,185,129,.3);color:var(--green)}
-.toast.err{border-color:rgba(239,68,68,.3);color:#f87171}
+.toasts{position:fixed;bottom:2.5rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
+.toast{padding:.5rem .85rem;border-radius:var(--r);font-size:.75rem;font-weight:600;
+  background:var(--card);border:1px solid var(--border);color:var(--t1);
+  box-shadow:0 6px 24px rgba(0,0,0,.5);animation:tin .2s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}
+.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}
+.toast.info{border-color:rgba(59,130,246,.35);color:var(--acc-h)}
 @keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-/* Resizer */
-.resizer{width:4px;background:var(--bg-base);cursor:col-resize;flex-shrink:0;transition:background .15s}
-.resizer:hover{background:var(--accent)}
+.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:.3rem .75rem;padding:.35rem .75rem;border-top:1px solid var(--border);
+  background:var(--surf);font-size:.65rem;color:var(--t3);flex-shrink:0}
+.seo-footer a{color:var(--t3)}.seo-footer a:hover{color:var(--t2);text-decoration:none}
+.sf-links{display:flex;flex-wrap:wrap;gap:.2rem .6rem}
 
-@media(max-width:700px){
-  .editor-col{width:100%;border-right:none}
-  .preview-col{display:none}
-  .preview-col.show-mobile{display:flex}
-}
+@media(max-width:900px){.left-sidebar{display:none}.right-panel.open{width:280px}}
+@media(max-width:640px){.right-panel.open{position:fixed;inset:0;width:100%;z-index:400;border:none}}
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<header class="topbar" role="banner">
-  <a href="https://universeinvedors.tech/tools" class="logo" aria-label="Universe Tools home">
-    <span class="logo-icon">⌨️</span>
-    <span>Universe Tools</span>
-    <span class="logo-sep">/</span>
-    <span style="color:var(--accent-h)">Code Playground</span>
+<!-- ── TOPBAR ─────────────────────────────────────────────── -->
+<header class="topbar">
+  <!-- Logo -->
+  <a href="https://universeinvedors.tech/tools" class="logo" title="All Tools">
+    ⌨️ <span style="color:var(--acc-h)">Code IDE</span>
   </a>
 
-  <!-- Engine switcher -->
-  <div class="engine-tabs" role="tablist" aria-label="Editor engine">
-    <button class="etab active" role="tab" aria-selected="true" onclick="switchEngine('monaco',this)">
-      Monaco <span class="etab-badge">VS Code</span>
+  <!-- Language selector -->
+  <div class="lang-select-wrap" id="lang-wrap">
+    <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
+      <span id="lang-display">🌐 HTML/CSS/JS</span>
+      <span style="font-size:.65rem;opacity:.5">▾</span>
     </button>
-    <button class="etab" role="tab" aria-selected="false" onclick="switchEngine('cm',this)">
-      CodeMirror <span class="etab-badge">Lite</span>
-    </button>
-    <button class="etab" role="tab" aria-selected="false" onclick="switchEngine('split',this)">
-      Split View
-    </button>
+    <div class="lang-dropdown" id="lang-dropdown">
+      <div class="lang-search">
+        <input type="text" placeholder="Search language…" id="lang-filter" oninput="filterLangs(this.value)" autofocus>
+      </div>
+      <div class="lang-list" id="lang-list"></div>
+    </div>
   </div>
 
-  <div class="spacer"></div>
+  <!-- Theme -->
+  <button class="btn btn-ghost btn-sm" onclick="openThemes()" title="Themes">🎨</button>
 
-  <div style="display:flex;align-items:center;gap:.4rem">
-    <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format code (Shift+Alt+F)">⚡ Format</button>
-    <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">Copy</button>
-    <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share code via URL">Share</button>
-    <button class="btn btn-ghost btn-sm" onclick="toggleSettings()" title="Settings" aria-expanded="false" id="settings-btn">⚙</button>
-    <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">▶ Run</button>
+  <!-- Sidebar toggle -->
+  <button class="btn btn-ghost btn-sm" onclick="toggleLeftSidebar()" title="File Explorer">📂</button>
+
+  <div class="sp"></div>
+
+  <!-- Interview mode -->
+  <div class="timer-badge" id="timer-badge">
+    <span class="timer-dot"></span>
+    <span id="timer-display">45:00</span>
+    <button onclick="stopInterview()" style="margin-left:.3rem;background:none;border:none;color:var(--red);cursor:pointer;font-size:.8rem" title="End interview">✕</button>
   </div>
+
+  <!-- AI badge -->
+  <div class="ai-badge" id="ai-badge" onclick="openPanel('ai')" title="AI Code Assistant">
+    🤖 AI Assist
+  </div>
+
+  <!-- Action buttons -->
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('cdn')" title="Add CDN Library">📦 CDN</button>
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('interview')" title="Interview Mode">🎯 Interview</button>
+  <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format (Shift+Alt+F)">⚡ Format</button>
+  <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">📋</button>
+  <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share via URL">🔗 Share</button>
+  <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">▶ Run</button>
 </header>
 
-<!-- LANGUAGE TABS -->
-<div class="lang-tabs" role="tablist" aria-label="File type">
-  <button class="ltab active" role="tab" onclick="switchLang('html',this)" data-lang="html">index.html</button>
-  <button class="ltab" role="tab" onclick="switchLang('css',this)" data-lang="css">style.css</button>
-  <button class="ltab" role="tab" onclick="switchLang('js',this)" data-lang="js">script.js</button>
-  <button class="ltab" role="tab" onclick="switchLang('console',this)" data-lang="console" id="console-tab">Console</button>
-</div>
+<!-- ── FILE TABS ─────────────────────────────────────────── -->
+<div class="file-tabs" id="file-tabs"></div>
 
-<!-- MAIN -->
-<div class="main" id="main-area">
+<!-- ── MAIN ──────────────────────────────────────────────── -->
+<div class="main-area">
 
-  <!-- Editor column -->
-  <div class="editor-col" id="editor-col">
-    <div class="panel-header">
-      <span class="panel-dot"></span>
-      <span id="panel-engine-label">Monaco Editor</span>
-      <span class="panel-header-right">
-        <span style="font-size:.65rem;color:var(--text-4)">Ctrl+Enter to run</span>
-      </span>
+  <!-- Left sidebar -->
+  <aside class="left-sidebar" id="left-sidebar">
+    <div class="ls-header">
+      <span>Explorer</span>
+      <button onclick="newFile()" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:.85rem" title="New file">+</button>
     </div>
-    <!-- Monaco -->
-    <div id="monaco-editor" style="flex:1;display:flex;flex-direction:column;overflow:hidden"></div>
-    <!-- CodeMirror (hidden until selected) -->
-    <div id="cm-editor" style="flex:1;overflow:hidden;display:none"></div>
-    <!-- Console output (hidden by default) -->
-    <div id="console-panel" style="display:none;flex-direction:column;flex:1;overflow:hidden">
-      <div class="panel-header"><span class="panel-dot g"></span>Console</div>
-      <div id="console-out"></div>
+    <div class="ls-body" id="ls-body">
+      <div class="tool-label">Files</div>
+      <div id="file-tree"></div>
+      <div class="tree-sep"></div>
+      <div class="tool-section">
+        <div class="tool-label">Tools</div>
+        <button class="tool-btn" onclick="openPanel('ai')">🤖 AI Assistant</button>
+        <button class="tool-btn" onclick="openPanel('cdn')">📦 CDN Picker</button>
+        <button class="tool-btn" onclick="openPanel('interview')">🎯 Interview Mode</button>
+        <button class="tool-btn" onclick="openBottomPanel('console')">🖥 Console</button>
+        <button class="tool-btn" onclick="openBottomPanel('terminal')">$ Terminal</button>
+      </div>
+      <div class="tree-sep"></div>
+      <div class="tool-section">
+        <div class="tool-label">Snippets</div>
+        <button class="tool-btn" onclick="insertSnippet('fetch')">↳ fetch()</button>
+        <button class="tool-btn" onclick="insertSnippet('async')">↳ async/await</button>
+        <button class="tool-btn" onclick="insertSnippet('class')">↳ ES6 Class</button>
+        <button class="tool-btn" onclick="insertSnippet('canvas')">↳ Canvas 2D</button>
+        <button class="tool-btn" onclick="insertSnippet('react')">↳ React CDN</button>
+        <button class="tool-btn" onclick="insertSnippet('vue')">↳ Vue 3 CDN</button>
+        <button class="tool-btn" onclick="insertSnippet('tailwind')">↳ Tailwind CSS</button>
+        <button class="tool-btn" onclick="insertSnippet('d3')">↳ D3.js chart</button>
+        <button class="tool-btn" onclick="insertSnippet('three')">↳ Three.js scene</button>
+        <button class="tool-btn" onclick="insertSnippet('worker')">↳ Web Worker</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Editor + bottom panel -->
+  <div class="editor-area">
+    <div id="monaco-host"></div>
+
+    <!-- Bottom panel -->
+    <div class="bottom-panel" id="bottom-panel">
+      <div class="bp-tabs">
+        <div class="bpt active" onclick="openBottomPanel('console',this)" id="bpt-console">🖥 Console</div>
+        <div class="bpt" onclick="openBottomPanel('preview',this)" id="bpt-preview">👁 Preview</div>
+        <div class="bpt" onclick="openBottomPanel('terminal',this)" id="bpt-terminal">$ Terminal</div>
+        <div class="sp"></div>
+        <button class="btn btn-ghost btn-sm" onclick="toggleBottomPanel()" style="margin:0 .35rem;height:22px" title="Toggle panel">⌃</button>
+      </div>
+      <div class="bp-body">
+        <!-- Console -->
+        <div id="panel-console" class="console-out"></div>
+        <!-- Preview -->
+        <div id="panel-preview" style="display:none;height:calc(100% - 2px)">
+          <iframe id="preview-iframe" style="width:100%;height:100%;border:0;background:#fff" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+        </div>
+        <!-- Terminal sim -->
+        <div id="panel-terminal" style="display:none" class="console-out">
+          <div class="cl sys"><span class="cl-icon">$</span><span class="cl-msg">Universe IDE Terminal Simulator — commands run in the browser sandbox</span></div>
+          <div id="term-output"></div>
+          <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem">
+            <span style="color:var(--green);font-family:var(--mono);font-size:.75rem">$</span>
+            <input id="term-input" type="text" style="flex:1;background:transparent;border:none;color:var(--t1);font-family:var(--mono);font-size:.75rem;outline:none" placeholder="Type a command…" onkeydown="handleTermInput(event)">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Resize handle -->
-  <div class="resizer" id="resizer" aria-hidden="true"></div>
-
-  <!-- Preview column -->
-  <div class="preview-col" id="preview-col">
-    <div class="panel-header">
-      <span class="panel-dot g"></span>
-      <span>Preview</span>
-      <span class="panel-header-right">
-        <button class="btn btn-ghost btn-sm" onclick="openFullscreen()">⤡</button>
-        <button class="btn btn-ghost btn-sm" onclick="clearPreview()">Clear</button>
-      </span>
+  <!-- Right panel -->
+  <aside class="right-panel" id="right-panel">
+    <!-- AI Assistant -->
+    <div id="rp-ai" style="display:flex;flex-direction:column;height:100%">
+      <div class="rp-header">
+        <span class="rp-title">🤖 AI Code Assistant</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+      </div>
+      <div class="rp-body" style="display:flex;flex-direction:column;gap:.4rem">
+        <div class="ai-key-row">
+          <input type="password" id="ai-key" placeholder="OpenAI API key (sk-…) or compatible" />
+          <select id="ai-model" style="padding:.38rem .5rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.72rem;outline:none">
+            <option value="gpt-4o-mini">GPT-4o mini</option>
+            <option value="gpt-4o">GPT-4o</option>
+            <option value="gpt-3.5-turbo">GPT-3.5</option>
+          </select>
+          <button class="btn btn-sm" style="background:var(--violet);color:#fff" onclick="testAI()">Test</button>
+        </div>
+        <p style="font-size:.68rem;color:var(--t3)">Your key is only stored in your browser — never sent to our servers. Works with any OpenAI-compatible endpoint.</p>
+        <div id="ai-messages" class="ai-messages"></div>
+        <div class="ai-input-row">
+          <textarea id="ai-input" placeholder="Ask anything: explain code, fix bugs, generate functions, suggest improvements…" onkeydown="aiKeydown(event)"></textarea>
+          <button class="btn btn-violet btn-sm" onclick="sendAI()" id="ai-send-btn" style="align-self:flex-end">Send</button>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.15rem">
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Explain this code')">Explain</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Find and fix bugs')">Fix bugs</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Optimise for performance')">Optimise</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Add comments')">Comment</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Write unit tests')">Tests</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Convert to TypeScript')">→ TypeScript</button>
+        </div>
+      </div>
     </div>
-    <iframe id="preview-frame" title="Code preview" sandbox="allow-scripts allow-same-origin"></iframe>
-  </div>
+
+    <!-- CDN Picker -->
+    <div id="rp-cdn" style="display:none;flex-direction:column;height:100%">
+      <div class="rp-header">
+        <span class="rp-title">📦 CDN Library Picker</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+      </div>
+      <div class="rp-body">
+        <div class="cdn-search">
+          <input type="text" id="cdn-search-input" placeholder="Search npm packages (e.g. lodash, axios, d3)…" oninput="searchCDN(this.value)">
+        </div>
+        <div id="cdn-results" class="cdn-results"></div>
+        <div style="margin-top:.75rem">
+          <p style="font-size:.7rem;font-weight:700;color:var(--t3);margin-bottom:.35rem;letter-spacing:.05em;text-transform:uppercase">Added Libraries</p>
+          <div id="cdn-added" class="cdn-added">
+            <p style="font-size:.72rem;color:var(--t4)">No libraries added yet</p>
+          </div>
+        </div>
+        <div style="margin-top:.65rem">
+          <p style="font-size:.7rem;font-weight:700;color:var(--t3);margin-bottom:.35rem;letter-spacing:.05em;text-transform:uppercase">Popular</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.25rem" id="popular-pkgs"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interview Mode -->
+    <div id="rp-interview" style="display:none;flex-direction:column;height:100%">
+      <div class="rp-header">
+        <span class="rp-title">🎯 Interview Mode</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+      </div>
+      <div class="rp-body">
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.75rem">
+          <button class="btn btn-ghost btn-sm" onclick="newProblem('easy')">Easy</button>
+          <button class="btn btn-ghost btn-sm" onclick="newProblem('medium')">Medium</button>
+          <button class="btn btn-ghost btn-sm" onclick="newProblem('hard')">Hard</button>
+          <button class="btn btn-ghost btn-sm" onclick="newProblem()">Random</button>
+        </div>
+        <div id="problem-display">
+          <p style="font-size:.78rem;color:var(--t3)">Pick a difficulty or click Random to load a coding problem.</p>
+        </div>
+        <div style="margin-top:.75rem">
+          <p style="font-size:.7rem;font-weight:700;color:var(--t3);margin-bottom:.35rem;letter-spacing:.05em;text-transform:uppercase">Timer</p>
+          <div style="display:flex;gap:.35rem;align-items:center;margin-bottom:.4rem">
+            <select id="timer-duration" style="padding:.35rem .5rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.78rem;outline:none">
+              <option value="15">15 min</option>
+              <option value="30">30 min</option>
+              <option value="45" selected>45 min</option>
+              <option value="60">60 min</option>
+              <option value="90">90 min</option>
+            </select>
+            <button class="btn btn-green" onclick="startTimer()">▶ Start</button>
+            <button class="btn btn-ghost btn-sm" onclick="stopInterview()">Stop</button>
+          </div>
+        </div>
+        <div style="margin-top:.5rem">
+          <p style="font-size:.7rem;font-weight:700;color:var(--t3);margin-bottom:.35rem;letter-spacing:.05em;text-transform:uppercase">Interview Checklist</p>
+          <div style="font-size:.75rem;color:var(--t2);display:flex;flex-direction:column;gap:.3rem" id="checklist">
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Clarify requirements</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Discuss approach before coding</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Consider edge cases</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Analyse time complexity</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Analyse space complexity</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Test with examples</label>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer"><input type="checkbox" style="accent-color:var(--acc)"> Discuss optimisations</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
 </div>
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span class="status-dot"></span>
-  <span class="status-lang" id="status-lang">HTML</span>
-  <span id="status-cursor">Ln 1, Col 1</span>
-  <span style="margin-left:auto">
-    <span class="kbd"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> run &nbsp;·&nbsp; <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>F</kbd> format</span>
+  <span class="sb-green">●</span>
+  <span id="sb-lang" class="sb-blue">HTML</span>
+  <span id="sb-cursor">Ln 1, Col 1</span>
+  <span id="sb-vim" style="display:none;color:var(--orange);font-weight:700">VIM</span>
+  <span class="sb-right">
+    <span id="sb-words" style="color:var(--t4)">0 chars</span>
+    <span style="color:var(--t4)">·</span>
+    <span style="color:var(--t4)">Ctrl+Enter run · Shift+Alt+F format · Ctrl+P command palette</span>
   </span>
 </div>
 
 <!-- SEO footer -->
 <footer class="seo-footer">
-  <div class="seo-links">
+  <div class="sf-links">
     <a href="https://universeinvedors.tech">Universe Invedors</a>
     <a href="https://universeinvedors.tech/tools">All Tools</a>
     <a href="https://diagram.universeinvedors.tech">Diagrams</a>
@@ -267,402 +533,1399 @@ body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);
     <a href="https://map.universeinvedors.tech">Maps</a>
     <a href="https://media.universeinvedors.tech">Media</a>
   </div>
-  <span>© 2024 Universe Invedors · Free online code editor · Monaco &amp; CodeMirror</span>
+  <span>© 2024 Universe Invedors · Monaco Editor · AI Assist · 50+ Languages · Free Online IDE</span>
 </footer>
 
-<!-- Settings panel -->
-<div class="settings-panel" id="settings-panel" aria-label="Editor settings">
-  <div class="settings-title">Editor Settings</div>
-  <div class="settings-row">
-    <label>Font size</label>
-    <input type="range" min="11" max="22" value="13" id="font-size-range" oninput="setFontSize(this.value)">
-    <span style="font-size:.72rem;color:var(--text-3)" id="font-size-label">13px</span>
+<!-- Theme overlay -->
+<div class="overlay" id="theme-overlay" onclick="closeThemes()">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-title">🎨 Editor Theme</div>
+    <div class="theme-grid" id="theme-grid"></div>
+    <div class="modal-actions"><button class="btn btn-ghost" onclick="closeThemes()">Close</button></div>
   </div>
-  <div class="settings-row">
-    <label>Theme</label>
-    <select id="theme-select" onchange="setTheme(this.value)">
-      <option value="vs-dark">Dark (default)</option>
-      <option value="vs">Light</option>
-      <option value="hc-black">High Contrast</option>
-    </select>
-  </div>
-  <div class="settings-row">
-    <label>Tab size</label>
-    <select id="tab-size" onchange="setTabSize(this.value)">
-      <option value="2">2 spaces</option>
-      <option value="4">4 spaces</option>
-    </select>
-  </div>
-  <div class="settings-row">
-    <label>Word wrap</label>
-    <select id="word-wrap" onchange="setWordWrap(this.value)">
-      <option value="on">On</option>
-      <option value="off">Off</option>
-    </select>
-  </div>
-  <div style="margin-top:1rem">
-    <div class="settings-title" style="font-size:.75rem;margin-bottom:.5rem">Snippets</div>
-    <div class="snippets">
-      <button class="snippet-btn" onclick="insertSnippet('fetch')">fetch() template</button>
-      <button class="snippet-btn" onclick="insertSnippet('async')">async/await</button>
-      <button class="snippet-btn" onclick="insertSnippet('class')">ES6 Class</button>
-      <button class="snippet-btn" onclick="insertSnippet('canvas')">Canvas 2D</button>
-      <button class="snippet-btn" onclick="insertSnippet('tailwind')">Tailwind starter</button>
-      <button class="snippet-btn" onclick="insertSnippet('react')">React CDN starter</button>
-    </div>
-  </div>
-  <button class="btn btn-ghost btn-sm" style="margin-top:1rem;width:100%" onclick="toggleSettings()">Close</button>
 </div>
 
 <!-- Toasts -->
 <div class="toasts" id="toasts"></div>
 
-<!-- Monaco loader -->
+<!-- Monaco -->
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs/loader.js"></script>
 <!-- Prettier -->
 <script src="https://unpkg.com/prettier@3.3.3/standalone.js"></script>
 <script src="https://unpkg.com/prettier@3.3.3/plugins/babel.js"></script>
 <script src="https://unpkg.com/prettier@3.3.3/plugins/html.js"></script>
 <script src="https://unpkg.com/prettier@3.3.3/plugins/postcss.js"></script>
-<!-- DOMPurify -->
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
-<!-- CodeMirror 6 -->
-<script type="module">
-import { EditorView, basicSetup } from 'https://cdn.jsdelivr.net/npm/codemirror@6.0.1/+esm'
-import { javascript } from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-javascript@6.2.2/+esm'
-import { html }       from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-html@6.4.9/+esm'
-import { css }        from 'https://cdn.jsdelivr.net/npm/@codemirror/lang-css@6.3.1/+esm'
-import { oneDark }    from 'https://cdn.jsdelivr.net/npm/@codemirror/theme-one-dark@6.1.2/+esm'
-
-window.__cmDeps = { EditorView, basicSetup, javascript, html, css, oneDark }
-</script>
 
 <script>
-// ── State ─────────────────────────────────────────────────
-const files = {
-  html: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>My App</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n<body>\n\n  <div class="container">\n    <h1 class="title">Hello, Universe! 🚀</h1>\n    <p class="subtitle">Edit the code in the panel to see live changes.</p>\n    <button class="btn" onclick="greet()">Click Me</button>\n    <p id="output"></p>\n  </div>\n\n  <script src="script.js"><\/script>\n</body>\n</html>`,
-  css:  `:root {\n  --primary: #3b82f6;\n  --bg: #0f172a;\n  --text: #f1f5f9;\n}\n\n* { box-sizing: border-box; margin: 0; padding: 0; }\n\nbody {\n  font-family: system-ui, sans-serif;\n  background: var(--bg);\n  color: var(--text);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n}\n\n.container {\n  text-align: center;\n  padding: 2rem;\n  max-width: 480px;\n}\n\n.title {\n  font-size: 2.2rem;\n  font-weight: 800;\n  background: linear-gradient(135deg, #3b82f6, #8b5cf6);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  margin-bottom: .5rem;\n}\n\n.subtitle { color: #94a3b8; margin-bottom: 1.5rem; }\n\n.btn {\n  padding: .65rem 1.5rem;\n  background: var(--primary);\n  color: #fff;\n  border: none;\n  border-radius: 8px;\n  font-size: 1rem;\n  font-weight: 600;\n  cursor: pointer;\n  transition: .2s;\n}\n.btn:hover { background: #2563eb; transform: translateY(-1px); }\n\n#output { margin-top: 1rem; color: #10b981; font-weight: 600; }`,
-  js:   `function greet() {\n  const messages = [\n    'Hello from JavaScript! 👋',\n    'Universe Invedors says hi! 🌌',\n    'Keep building great things! 🚀',\n    'Code is art. 🎨',\n  ]\n  const idx = Math.floor(Math.random() * messages.length)\n  document.getElementById('output').textContent = messages[idx]\n}\n\n// Auto-greet on load\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log('Page loaded!')\n  greet()\n})`
+// ── LANGUAGE DATABASE ────────────────────────────────────
+const LANGS = {
+  web:[
+    {id:'html', label:'HTML/CSS/JS', icon:'🌐', monacoLang:'html', badge:'Live Preview'},
+    {id:'css',  label:'CSS',         icon:'🎨', monacoLang:'css'},
+    {id:'js',   label:'JavaScript',  icon:'🟡', monacoLang:'javascript'},
+    {id:'ts',   label:'TypeScript',  icon:'🔷', monacoLang:'typescript'},
+    {id:'jsx',  label:'React JSX',   icon:'⚛',  monacoLang:'javascript'},
+    {id:'vue',  label:'Vue.js',      icon:'💚', monacoLang:'html'},
+    {id:'json', label:'JSON',        icon:'{}', monacoLang:'json'},
+  ],
+  backend:[
+    {id:'python',  label:'Python',     icon:'🐍', monacoLang:'python'},
+    {id:'node',    label:'Node.js',    icon:'🟢', monacoLang:'javascript'},
+    {id:'ruby',    label:'Ruby',       icon:'💎', monacoLang:'ruby'},
+    {id:'php',     label:'PHP',        icon:'🐘', monacoLang:'php'},
+    {id:'go',      label:'Go',         icon:'🔵', monacoLang:'go'},
+    {id:'rust',    label:'Rust',       icon:'🦀', monacoLang:'rust'},
+    {id:'java',    label:'Java',       icon:'☕', monacoLang:'java'},
+    {id:'csharp',  label:'C#',         icon:'🔷', monacoLang:'csharp'},
+    {id:'cpp',     label:'C++',        icon:'⚙',  monacoLang:'cpp'},
+    {id:'c',       label:'C',          icon:'🔧', monacoLang:'c'},
+    {id:'swift',   label:'Swift',      icon:'🧡', monacoLang:'swift'},
+    {id:'kotlin',  label:'Kotlin',     icon:'🟣', monacoLang:'kotlin'},
+    {id:'dart',    label:'Dart/Flutter',icon:'🎯', monacoLang:'dart'},
+    {id:'scala',   label:'Scala',      icon:'🔴', monacoLang:'scala'},
+    {id:'r',       label:'R',          icon:'📊', monacoLang:'r'},
+    {id:'matlab',  label:'MATLAB',     icon:'📐', monacoLang:'matlab'},
+  ],
+  data:[
+    {id:'sql',    label:'SQL',          icon:'🗄', monacoLang:'sql'},
+    {id:'graphql',label:'GraphQL',      icon:'🕸', monacoLang:'graphql'},
+    {id:'yaml',   label:'YAML',         icon:'📄', monacoLang:'yaml'},
+    {id:'xml',    label:'XML',          icon:'📝', monacoLang:'xml'},
+    {id:'toml',   label:'TOML',         icon:'⚙',  monacoLang:'ini'},
+    {id:'dockerfile',label:'Dockerfile',icon:'🐳', monacoLang:'dockerfile'},
+    {id:'bash',   label:'Bash/Shell',   icon:'💻', monacoLang:'shell'},
+    {id:'powershell',label:'PowerShell',icon:'🖥', monacoLang:'powershell'},
+  ],
+  markup:[
+    {id:'markdown',label:'Markdown',   icon:'📄', monacoLang:'markdown'},
+    {id:'latex',   label:'LaTeX',      icon:'📐', monacoLang:'latex'},
+    {id:'svelte',  label:'Svelte',     icon:'🔥', monacoLang:'html'},
+  ]
 }
 
-let currentLang = 'html'
-let currentEngine = 'monaco'
-let monacoEditor = null
-let cmEditor = null
-let runTimer = null
-let settingsOpen = false
+const ALL_LANGS = Object.values(LANGS).flat()
+
+// ── STARTER TEMPLATES ────────────────────────────────────
+const TEMPLATES = {
+  html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: .5rem;
+    }
+    p { color: #94a3b8; margin-bottom: 1.5rem; }
+    button {
+      padding: .65rem 1.5rem;
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button:hover { background: #2563eb; }
+    #output { margin-top: 1rem; color: #10b981; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hello, Universe! 🚀</h1>
+    <p>Edit this code to build your project.</p>
+    <button onclick="greet()">Click Me</button>
+    <p id="output"></p>
+  </div>
+  <script>
+    const messages = [
+      'Hello from Universe Invedors! 🌌',
+      'Keep building great things! 🚀',
+      'Code is art. 🎨',
+      'Ship it! 📦',
+    ]
+    let i = 0
+    function greet() {
+      document.getElementById('output').textContent = messages[i++ % messages.length]
+    }
+  <\/script>
+</body>
+</html>`,
+  python:`# Python — runs in browser sandbox (limited stdlib)
+# Full Python via Pyodide is loaded when you run
+
+def fibonacci(n):
+    """Generate Fibonacci sequence up to n terms."""
+    a, b = 0, 1
+    result = []
+    for _ in range(n):
+        result.append(a)
+        a, b = b, a + b
+    return result
+
+def is_prime(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+# Main
+fibs = fibonacci(10)
+print("Fibonacci:", fibs)
+
+primes = [x for x in range(2, 50) if is_prime(x)]
+print("Primes < 50:", primes)
+
+# Data processing example
+data = [4, 2, 9, 1, 7, 3, 8, 5, 6]
+print(f"Original:  {data}")
+print(f"Sorted:    {sorted(data)}")
+print(f"Reversed:  {sorted(data, reverse=True)}")
+print(f"Sum: {sum(data)}, Mean: {sum(data)/len(data):.2f}")`,
+  js:`// JavaScript — runs live in browser
+// Try: ES2024 features, DOM APIs, fetch, WebGL…
+
+class EventEmitter {
+  #listeners = new Map()
+
+  on(event, fn) {
+    if (!this.#listeners.has(event)) this.#listeners.set(event, [])
+    this.#listeners.get(event).push(fn)
+    return this
+  }
+
+  emit(event, ...args) {
+    this.#listeners.get(event)?.forEach(fn => fn(...args))
+    return this
+  }
+
+  off(event, fn) {
+    const fns = this.#listeners.get(event)
+    if (fns) this.#listeners.set(event, fns.filter(f => f !== fn))
+    return this
+  }
+}
+
+// Demo
+const emitter = new EventEmitter()
+
+emitter.on('data', value => console.log('Received:', value))
+emitter.on('data', value => console.log('Count:', value.length))
+
+const data = ['hello', 'world', 'from', 'universe']
+data.forEach(word => emitter.emit('data', word))
+
+// Modern JS features
+const result = data
+  .filter(w => w.length > 4)
+  .map(w => w.toUpperCase())
+  .reduce((acc, w) => \`\${acc} \${w}\`, '')
+  .trim()
+
+console.log('Result:', result)`,
+  ts:`// TypeScript — syntax highlighting + type checking in editor
+
+interface User {
+  id: number
+  name: string
+  email: string
+  role: 'admin' | 'user' | 'guest'
+  createdAt: Date
+}
+
+type ApiResponse<T> = {
+  data: T
+  status: number
+  message: string
+}
+
+class UserService {
+  private users: Map<number, User> = new Map()
+  private nextId = 1
+
+  create(name: string, email: string, role: User['role'] = 'user'): User {
+    const user: User = {
+      id: this.nextId++,
+      name,
+      email,
+      role,
+      createdAt: new Date(),
+    }
+    this.users.set(user.id, user)
+    return user
+  }
+
+  findById(id: number): User | undefined {
+    return this.users.get(id)
+  }
+
+  findByRole(role: User['role']): User[] {
+    return Array.from(this.users.values()).filter(u => u.role === role)
+  }
+
+  toResponse<T>(data: T, status = 200): ApiResponse<T> {
+    return { data, status, message: 'OK' }
+  }
+}
+
+const svc = new UserService()
+svc.create('Alice', 'alice@example.com', 'admin')
+svc.create('Bob', 'bob@example.com')
+svc.create('Carol', 'carol@example.com', 'guest')
+
+console.log(svc.toResponse(svc.findByRole('user')))`,
+}
 
 const SNIPPETS = {
-  fetch: `async function getData(url) {\n  try {\n    const response = await fetch(url)\n    if (!response.ok) throw new Error(\`HTTP error: \${response.status}\`)\n    const data = await response.json()\n    return data\n  } catch (error) {\n    console.error('Fetch failed:', error)\n    throw error\n  }\n}\n\ngetData('https://jsonplaceholder.typicode.com/posts/1')\n  .then(data => console.log(data))`,
-  async: `// Async/Await pattern\nasync function example() {\n  try {\n    const result = await someAsyncOperation()\n    return result\n  } catch (error) {\n    console.error(error)\n  }\n}\n\nfunction someAsyncOperation() {\n  return new Promise((resolve) => {\n    setTimeout(() => resolve('done!'), 1000)\n  })\n}`,
-  class: `class Animal {\n  #name\n  #sound\n\n  constructor(name, sound) {\n    this.#name = name\n    this.#sound = sound\n  }\n\n  speak() {\n    return \`\${this.#name} says \${this.#sound}!\`\n  }\n\n  get name() { return this.#name }\n}\n\nclass Dog extends Animal {\n  constructor(name) {\n    super(name, 'Woof')\n  }\n\n  fetch(item) {\n    return \`\${this.name} fetches the \${item}\`\n  }\n}\n\nconst dog = new Dog('Rex')\nconsole.log(dog.speak())\nconsole.log(dog.fetch('ball'))`,
-  canvas: `const canvas = document.getElementById('canvas') || document.createElement('canvas')\nconvas.width = 400\ncanvas.height = 300\ndocument.body.appendChild(canvas)\nconst ctx = canvas.getContext('2d')\n\n// Background\nctx.fillStyle = '#0f172a'\nctx.fillRect(0, 0, canvas.width, canvas.height)\n\n// Gradient circle\nconst gradient = ctx.createRadialGradient(200, 150, 0, 200, 150, 120)\ngradient.addColorStop(0, '#3b82f6')\ngradient.addColorStop(1, '#8b5cf6')\nctx.fillStyle = gradient\nctx.beginPath()\nctx.arc(200, 150, 120, 0, Math.PI * 2)\nctx.fill()\n\n// Text\nctx.fillStyle = '#fff'\nctx.font = 'bold 24px system-ui'\nctx.textAlign = 'center'\nctx.fillText('Canvas 2D', 200, 158)`,
-  tailwind: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <script src="https://cdn.tailwindcss.com"><\/script>\n  <title>Tailwind Starter</title>\n</head>\n<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">\n  <div class="bg-slate-800 rounded-2xl p-8 max-w-md w-full shadow-xl border border-slate-700">\n    <h1 class="text-3xl font-bold text-white mb-2">\n      Tailwind CSS\n      <span class="text-blue-400">Starter</span>\n    </h1>\n    <p class="text-slate-400 mb-6">Edit this template to build your UI.</p>\n    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors">\n      Get Started\n    </button>\n  </div>\n</body>\n</html>`,
-  react: `<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>React Starter</title>\n  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"><\/script>\n  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>\n  <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>\n</head>\n<body style="margin:0;background:#0f172a;color:#f1f5f9;font-family:system-ui">\n<div id="root"></div>\n<script type="text/babel">\nfunction App() {\n  const [count, setCount] = React.useState(0)\n  return (\n    <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',minHeight:'100vh',gap:'1rem'}}>\n      <h1 style={{fontSize:'2rem',fontWeight:800}}>React Counter</h1>\n      <p style={{fontSize:'3rem',fontWeight:700,color:'#3b82f6'}}>{count}</p>\n      <div style={{display:'flex',gap:'.5rem'}}>\n        <button onClick={() => setCount(c => c - 1)} style={{padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>−</button>\n        <button onClick={() => setCount(0)} style={{padding:'.5rem 1.25rem',background:'#6b7280',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>Reset</button>\n        <button onClick={() => setCount(c => c + 1)} style={{padding:'.5rem 1.25rem',background:'#3b82f6',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer',fontSize:'1rem'}}>+</button>\n      </div>\n    </div>\n  )\n}\nReact.createRoot(document.getElementById('root')).render(<App />)\n<\/script>\n</body>\n</html>`
+  fetch:`async function getData(url) {
+  try {
+    const response = await fetch(url)
+    if (!response.ok) throw new Error(\`HTTP \${response.status}\`)
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error('Fetch failed:', error)
+    throw error
+  }
 }
 
-// ── Monaco setup ───────────────────────────────────────────
+// Example
+getData('https://jsonplaceholder.typicode.com/posts/1')
+  .then(data => console.log(data))`,
+  async:`async function withRetry(fn, retries = 3, delay = 1000) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      return await fn()
+    } catch (err) {
+      if (attempt === retries) throw err
+      console.log(\`Attempt \${attempt} failed. Retrying in \${delay}ms...\`)
+      await new Promise(r => setTimeout(r, delay))
+      delay *= 2
+    }
+  }
+}
+
+// Usage
+const result = await withRetry(() =>
+  fetch('https://api.example.com/data').then(r => r.json())
+)`,
+  class:`class EventBus {
+  #events = new Map()
+
+  on(event, handler) {
+    const handlers = this.#events.get(event) ?? []
+    this.#events.set(event, [...handlers, handler])
+    return () => this.off(event, handler)
+  }
+
+  off(event, handler) {
+    const handlers = this.#events.get(event) ?? []
+    this.#events.set(event, handlers.filter(h => h !== handler))
+  }
+
+  emit(event, payload) {
+    this.#events.get(event)?.forEach(h => h(payload))
+  }
+
+  once(event, handler) {
+    const unsubscribe = this.on(event, payload => {
+      handler(payload)
+      unsubscribe()
+    })
+    return unsubscribe
+  }
+}
+
+const bus = new EventBus()
+bus.on('message', msg => console.log('Received:', msg))
+bus.emit('message', 'Hello World!')`,
+  canvas:`const canvas = document.getElementById('c') || (() => {
+  const c = document.createElement('canvas')
+  c.id = 'c'; c.width = 600; c.height = 400
+  document.body.appendChild(c)
+  document.body.style.cssText = 'margin:0;background:#000;display:flex;align-items:center;justify-content:center;height:100vh'
+  return c
+})()
+
+const ctx = canvas.getContext('2d')
+let t = 0
+
+function draw() {
+  ctx.fillStyle = 'rgba(0,0,0,0.05)'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+  for (let i = 0; i < 5; i++) {
+    const x = canvas.width/2 + Math.cos(t + i * 1.2) * 150
+    const y = canvas.height/2 + Math.sin(t * 1.3 + i) * 100
+    const r = 20 + Math.sin(t * 2 + i) * 10
+    const hue = (t * 30 + i * 60) % 360
+
+    ctx.beginPath()
+    ctx.arc(x, y, r, 0, Math.PI * 2)
+    ctx.fillStyle = \`hsla(\${hue}, 80%, 60%, 0.8)\`
+    ctx.fill()
+  }
+  t += 0.02
+  requestAnimationFrame(draw)
+}
+draw()`,
+  react:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"><\/script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>
+  <style>body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React
+
+function useFetch(url) {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  useEffect(() => {
+    fetch(url).then(r => r.json()).then(setData).catch(setError).finally(() => setLoading(false))
+  }, [url])
+  return { data, loading, error }
+}
+
+function App() {
+  const [count, setCount] = useState(0)
+  const { data, loading } = useFetch('https://jsonplaceholder.typicode.com/users/1')
+
+  return (
+    <div style={{textAlign:'center',padding:'2rem'}}>
+      <h1 style={{fontSize:'2rem',fontWeight:800,marginBottom:'1rem',background:'linear-gradient(135deg,#3b82f6,#8b5cf6)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent'}}>
+        React 18 IDE
+      </h1>
+      <p style={{color:'#94a3b8',marginBottom:'1.5rem'}}>
+        {loading ? 'Loading user...' : \`Welcome, \${data?.name}!\`}
+      </p>
+      <p style={{fontSize:'3rem',fontWeight:700,color:'#3b82f6'}}>{count}</p>
+      <div style={{display:'flex',gap:'.5rem',justifyContent:'center',marginTop:'1rem'}}>
+        <button onClick={() => setCount(c => c-1)} style={{padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>−</button>
+        <button onClick={() => setCount(0)} style={{padding:'.5rem 1.25rem',background:'#6b7280',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>Reset</button>
+        <button onClick={() => setCount(c => c+1)} style={{padding:'.5rem 1.25rem',background:'#3b82f6',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>+</button>
+      </div>
+    </div>
+  )
+}
+React.createRoot(document.getElementById('root')).render(<App/>)
+<\/script>
+</body>
+</html>`,
+  vue:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"><\/script>
+  <style>body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
+</head>
+<body>
+<div id="app">
+  <div :style="{textAlign:'center',padding:'2rem'}">
+    <h1 :style="{fontSize:'2rem',fontWeight:800,color:'#42d392'}">{{ title }}</h1>
+    <p :style="{color:'#94a3b8',margin:'1rem 0'}">{{ message }}</p>
+    <div :style="{fontSize:'3rem',fontWeight:700,color:'#3b82f6',margin:'1rem 0'}">{{ count }}</div>
+    <div :style="{display:'flex',gap:'.5rem',justifyContent:'center'}">
+      <button @click="count--" :style="btnStyle">−</button>
+      <button @click="count = 0" :style="{...btnStyle,background:'#6b7280'}">Reset</button>
+      <button @click="count++" :style="{...btnStyle,background:'#3b82f6'}">+</button>
+    </div>
+    <ul :style="{textAlign:'left',maxWidth:'320px',margin:'1.5rem auto',color:'#94a3b8'}">
+      <li v-for="item in todoList" :key="item" style="padding:.25rem 0">{{ item }}</li>
+    </ul>
+    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add todo…"
+      :style="{padding:'.5rem .75rem',background:'#1e293b',border:'1px solid #334155',borderRadius:'8px',color:'#fff',width:'200px',outline:'none'}">
+  </div>
+</div>
+<script>
+Vue.createApp({
+  data() { return { title:'Vue 3 IDE', count:0, message:'Reactive UI made simple.', newTodo:'', todoList:['Learn Vue 3','Build something cool','Ship it!'] } },
+  computed: { btnStyle: () => ({padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}) },
+  methods: { addTodo() { if(this.newTodo.trim()) { this.todoList.push(this.newTodo.trim()); this.newTodo='' } } }
+}).mount('#app')
+<\/script>
+</body>
+</html>`,
+  tailwind:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.tailwindcss.com"><\/script>
+  <title>Tailwind CSS</title>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-slate-800 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-slate-700">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-xl">⚡</div>
+      <div>
+        <h1 class="text-xl font-bold text-white">Tailwind CSS Starter</h1>
+        <p class="text-slate-400 text-sm">Build fast, style anything</p>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Your name…">
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" type="email" placeholder="Email address…">
+      <button onclick="this.textContent='✓ Submitted!';this.classList.replace('bg-blue-600','bg-green-600')"
+        class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
+        Get Started
+      </button>
+    </div>
+    <p class="text-slate-500 text-xs text-center mt-4">No credit card required</p>
+  </div>
+</body>
+</html>`,
+  d3:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"><\/script>
+  <style>body{margin:0;background:#0f172a;display:flex;align-items:center;justify-content:center;height:100vh}</style>
+</head>
+<body>
+<script>
+const data = [
+  {label:'React',value:42,color:'#61dafb'},
+  {label:'Vue',value:28,color:'#42d392'},
+  {label:'Angular',value:18,color:'#dd1b16'},
+  {label:'Svelte',value:12,color:'#ff3e00'},
+]
+const W=500, H=400, R=150, CX=W/2, CY=H/2
+const svg=d3.select('body').append('svg').attr('width',W).attr('height',H)
+const pie=d3.pie().value(d=>d.value).sort(null)
+const arc=d3.arc().innerRadius(80).outerRadius(R)
+const arcHover=d3.arc().innerRadius(80).outerRadius(R+12)
+const g=svg.append('g').attr('transform',\`translate(\${CX},\${CY})\`)
+const arcs=g.selectAll('path').data(pie(data)).enter().append('path')
+  .attr('d',arc).attr('fill',d=>d.data.color).attr('stroke','#0f172a').attr('stroke-width',2)
+  .style('cursor','pointer')
+  .on('mouseover',function(e,d){
+    d3.select(this).transition().duration(200).attr('d',arcHover)
+    label.text(\`\${d.data.label}: \${d.data.value}%\`)
+  })
+  .on('mouseout',function(){
+    d3.select(this).transition().duration(200).attr('d',arc)
+    label.text('D3.js Donut Chart')
+  })
+const label=svg.append('text').attr('x',CX).attr('y',CY).attr('text-anchor','middle')
+  .attr('fill','#e2e8f0').attr('font-size',16).attr('font-weight','bold').text('D3.js Donut Chart')
+const legend=svg.append('g').attr('transform',\`translate(20,20)\`)
+data.forEach((d,i)=>{
+  const row=legend.append('g').attr('transform',\`translate(0,\${i*28})\`)
+  row.append('rect').attr('width',14).attr('height',14).attr('rx',3).attr('fill',d.color)
+  row.append('text').attr('x',20).attr('y',11).attr('fill','#94a3b8').attr('font-size',13).text(\`\${d.label} \${d.value}%\`)
+})
+<\/script>
+</body>
+</html>`,
+  three:`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169/examples/jsm/"}}<\/script>
+  <style>*{margin:0}canvas{display:block}</style>
+</head>
+<body>
+<script type="module">
+import * as THREE from 'three'
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
+
+const renderer=new THREE.WebGLRenderer({antialias:true})
+renderer.setSize(window.innerWidth,window.innerHeight)
+renderer.shadowMap.enabled=true
+document.body.appendChild(renderer.domElement)
+
+const scene=new THREE.Scene()
+scene.background=new THREE.Color('#070b14')
+scene.fog=new THREE.FogExp2('#070b14',.04)
+
+const camera=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,100)
+camera.position.set(0,3,8)
+const controls=new OrbitControls(camera,renderer.domElement)
+controls.enableDamping=true; controls.autoRotate=true; controls.autoRotateSpeed=.5
+
+// Lights
+scene.add(new THREE.AmbientLight(0xffffff,.3))
+const dir=new THREE.DirectionalLight(0xffffff,2); dir.position.set(5,8,5); dir.castShadow=true; scene.add(dir)
+scene.add(Object.assign(new THREE.PointLight(0x3b82f6,3,20),{position:{x:-5,y:4,z:3}}))
+scene.add(Object.assign(new THREE.PointLight(0x8b5cf6,2,15),{position:{x:5,y:2,z:-4}}))
+
+// Objects
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(20,20),new THREE.MeshStandardMaterial({color:'#111827',roughness:.8}))
+floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; scene.add(floor)
+
+const grid=new THREE.GridHelper(20,20,0x1e2535,0x1e2535); scene.add(grid)
+
+const shapes=[
+  {geo:new THREE.BoxGeometry(1.5,1.5,1.5),pos:[0,0.75,0],color:'#3b82f6'},
+  {geo:new THREE.SphereGeometry(1,32,32),pos:[-3,1,0],color:'#8b5cf6'},
+  {geo:new THREE.TorusKnotGeometry(.7,.2,100,16),pos:[3,1,0],color:'#10b981'},
+  {geo:new THREE.ConeGeometry(.8,1.8,32),pos:[0,0.9,-3],color:'#f97316'},
+]
+shapes.forEach(({geo,pos,color})=>{
+  const m=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color,metalness:.3,roughness:.4}))
+  m.position.set(...pos); m.castShadow=true; scene.add(m)
+})
+
+function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera)}
+animate()
+window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)})
+<\/script>
+</body>
+</html>`,
+  worker:`// Web Worker example
+const workerCode = \`
+  self.onmessage = function(e) {
+    const { type, data } = e.data
+
+    if (type === 'fibonacci') {
+      function fib(n) {
+        if (n <= 1) return n
+        return fib(n-1) + fib(n-2)
+      }
+      const result = fib(data)
+      self.postMessage({ type: 'result', value: result })
+    }
+
+    if (type === 'primes') {
+      const primes = []
+      for (let i = 2; i <= data; i++) {
+        let isPrime = true
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j === 0) { isPrime = false; break }
+        }
+        if (isPrime) primes.push(i)
+      }
+      self.postMessage({ type: 'primes', value: primes })
+    }
+  }
+\`
+
+const blob = new Blob([workerCode], { type: 'application/javascript' })
+const worker = new Worker(URL.createObjectURL(blob))
+
+worker.onmessage = (e) => {
+  const { type, value } = e.data
+  if (type === 'result') console.log('Fibonacci result:', value)
+  if (type === 'primes') console.log(\`Found \${value.length} primes:\`, value.slice(0,10), '...')
+}
+
+// Run heavy computations off main thread
+console.log('Starting heavy computations in background...')
+worker.postMessage({ type: 'fibonacci', data: 35 })
+worker.postMessage({ type: 'primes', data: 10000 })
+console.log('Main thread still responsive!')`
+}
+
+// ── INTERVIEW PROBLEMS ──────────────────────────────────
+const PROBLEMS = {
+  easy:[
+    {title:'Two Sum',difficulty:'Easy',desc:'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.',example:'Input: nums=[2,7,11,15], target=9\nOutput: [0,1]\nExplanation: nums[0]+nums[1]=9',starter:`function twoSum(nums, target) {
+  // Your solution here
+}
+
+// Test cases
+console.log(twoSum([2,7,11,15], 9))  // [0,1]
+console.log(twoSum([3,2,4], 6))       // [1,2]`},
+    {title:'Palindrome Check',difficulty:'Easy',desc:'Write a function that returns true if a given string is a palindrome (reads the same forwards and backwards), false otherwise.',example:'Input: "racecar"\nOutput: true\n\nInput: "hello"\nOutput: false',starter:`function isPalindrome(s) {
+  // Your solution here
+}
+
+console.log(isPalindrome('racecar'))    // true
+console.log(isPalindrome('A man a plan a canal Panama'.replace(/\\s/g,'').toLowerCase())) // true
+console.log(isPalindrome('hello'))      // false`},
+    {title:'FizzBuzz',difficulty:'Easy',desc:'Print numbers 1–100. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", for both print "FizzBuzz".',example:'1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz...',starter:`function fizzBuzz(n) {
+  for (let i = 1; i <= n; i++) {
+    // Your solution here
+  }
+}
+
+fizzBuzz(20)`},
+  ],
+  medium:[
+    {title:'Longest Substring Without Repeating Characters',difficulty:'Medium',desc:'Given a string s, find the length of the longest substring without repeating characters.',example:'Input: "abcabcbb"\nOutput: 3 ("abc")\n\nInput: "pwwkew"\nOutput: 3 ("wke")',starter:`function lengthOfLongestSubstring(s) {
+  // Your solution here
+}
+
+console.log(lengthOfLongestSubstring('abcabcbb'))  // 3
+console.log(lengthOfLongestSubstring('bbbbb'))     // 1
+console.log(lengthOfLongestSubstring('pwwkew'))    // 3`},
+    {title:'Valid Parentheses',difficulty:'Medium',desc:'Given a string s containing just the characters \'(\', \')\', \'{\', \'}\', \'[\' and \']\', determine if the input string is valid.',example:'Input: "()[]{}"\nOutput: true\n\nInput: "([)]"\nOutput: false',starter:`function isValid(s) {
+  // Your solution here
+}
+
+console.log(isValid('()'))       // true
+console.log(isValid('()[]{}'))   // true
+console.log(isValid('(]'))       // false
+console.log(isValid('([)]'))     // false`},
+    {title:'Binary Search',difficulty:'Medium',desc:'Given a sorted array of n integers and a target value, return the index if the target is found. If not, return -1.',example:'Input: nums=[-1,0,3,5,9,12], target=9\nOutput: 4',starter:`function search(nums, target) {
+  // Your solution here (use O(log n) approach)
+}
+
+console.log(search([-1,0,3,5,9,12], 9))   // 4
+console.log(search([-1,0,3,5,9,12], 2))   // -1`},
+  ],
+  hard:[
+    {title:'Merge K Sorted Lists',difficulty:'Hard',desc:'You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.',example:'Input: [[1,4,5],[1,3,4],[2,6]]\nOutput: [1,1,2,3,4,4,5,6]',starter:`class ListNode {
+  constructor(val, next = null) { this.val = val; this.next = next }
+}
+
+function mergeKLists(lists) {
+  // Your solution here
+}
+
+function toList(arr) {
+  let dummy = new ListNode(0), cur = dummy
+  arr.forEach(v => { cur.next = new ListNode(v); cur = cur.next })
+  return dummy.next
+}
+function toArray(node) {
+  const arr = []; while(node) { arr.push(node.val); node = node.next }; return arr
+}
+
+const lists = [[1,4,5],[1,3,4],[2,6]].map(toList)
+console.log(toArray(mergeKLists(lists))) // [1,1,2,3,4,4,5,6]`},
+    {title:'LRU Cache',difficulty:'Hard',desc:'Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement LRUCache class with get and put operations in O(1) time.',example:'LRUCache lru = new LRUCache(2)\nlru.put(1, 1) // cache: {1:1}\nlru.put(2, 2) // cache: {1:1, 2:2}\nlru.get(1)   // returns 1\nlru.put(3, 3) // evicts key 2',starter:`class LRUCache {
+  constructor(capacity) {
+    this.capacity = capacity
+    // Your implementation
+  }
+
+  get(key) {
+    // Return value if key exists, -1 otherwise
+  }
+
+  put(key, value) {
+    // Insert or update value, evict LRU if at capacity
+  }
+}
+
+const lru = new LRUCache(2)
+lru.put(1, 1); lru.put(2, 2)
+console.log(lru.get(1))   // 1
+lru.put(3, 3)
+console.log(lru.get(2))   // -1 (evicted)
+console.log(lru.get(3))   // 3`},
+  ]
+}
+
+const POPULAR_PACKAGES = [
+  {name:'lodash',desc:'Utility library'},
+  {name:'axios',desc:'HTTP client'},
+  {name:'dayjs',desc:'Date library'},
+  {name:'d3',desc:'Data visualization'},
+  {name:'chart.js',desc:'Charts'},
+  {name:'three',desc:'3D graphics'},
+  {name:'gsap',desc:'Animation'},
+  {name:'marked',desc:'Markdown parser'},
+  {name:'zod',desc:'Schema validation'},
+  {name:'immer',desc:'Immutable state'},
+  {name:'rxjs',desc:'Reactive extensions'},
+  {name:'uuid',desc:'UUID generation'},
+]
+
+const THEMES = [
+  {id:'universe-dark',label:'Universe Dark',bg:'#090c13'},
+  {id:'vs-dark',label:'VS Dark',bg:'#1e1e1e'},
+  {id:'vs',label:'VS Light',bg:'#ffffff'},
+  {id:'hc-black',label:'High Contrast',bg:'#000000'},
+  {id:'monokai',label:'Monokai',bg:'#272822'},
+  {id:'dracula',label:'Dracula',bg:'#282a36'},
+  {id:'github-dark',label:'GitHub Dark',bg:'#0d1117'},
+  {id:'nord',label:'Nord',bg:'#2e3440'},
+  {id:'solarized-dark',label:'Solarized Dark',bg:'#002b36'},
+]
+
+// ── STATE ──────────────────────────────────────────────
+let editor = null
+let currentLangId = 'html'
+let currentPanel = null
+let cdnLibraries = []
+let timerInterval = null
+let timerSeconds = 0
+let aiMessages = []
+let files = [
+  { id: 'index.html', name: 'index.html', lang: 'html', content: TEMPLATES.html },
+  { id: 'style.css',  name: 'style.css',  lang: 'css',  content: '/* Your styles */\nbody { font-family: system-ui, sans-serif; }' },
+  { id: 'script.js',  name: 'script.js',  lang: 'js',   content: '// Your JavaScript\nconsole.log("Hello from script.js")' },
+]
+let activeFileId = 'index.html'
+let runTimer = null
+
+// ── MONACO SETUP ────────────────────────────────────────
 require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs' } })
 require(['vs/editor/editor.main'], () => {
+  // Custom dark theme
   monaco.editor.defineTheme('universe-dark', {
-    base: 'vs-dark',
-    inherit: true,
-    rules: [{ background: '090c13' }],
+    base: 'vs-dark', inherit: true,
+    rules: [
+      { token: '', foreground: 'c9d1d9', background: '090c13' },
+      { token: 'comment', foreground: '6b7685', fontStyle: 'italic' },
+      { token: 'keyword', foreground: '60a5fa' },
+      { token: 'string', foreground: '34d399' },
+      { token: 'number', foreground: 'fb923c' },
+    ],
     colors: {
       'editor.background': '#090c13',
-      'editor.lineHighlightBackground': '#141b28',
-      'editorGutter.background': '#090c13',
+      'editor.foreground': '#c9d1d9',
+      'editor.lineHighlightBackground': '#0d1117',
+      'editor.selectionBackground': '#1e3a5f',
       'editorLineNumber.foreground': '#3d4f6e',
-      'editorLineNumber.activeForeground': '#3b82f6',
+      'editorLineNumber.activeForeground': '#60a5fa',
+      'editorGutter.background': '#090c13',
+      'editorWidget.background': '#141b28',
+      'editorSuggestWidget.background': '#141b28',
+      'editorSuggestWidget.border': '#1e2a3a',
     }
   })
 
-  monacoEditor = monaco.editor.create(document.getElementById('monaco-editor'), {
-    value: files.html,
-    language: 'html',
+  editor = monaco.editor.create(document.getElementById('monaco-host'), {
+    value: files.find(f => f.id === activeFileId)?.content || '',
+    language: getLang(currentLangId).monacoLang,
     theme: 'universe-dark',
-    fontSize: 13,
-    fontFamily: "'JetBrains Mono','Fira Code',Consolas,monospace",
+    fontSize: 14,
+    fontFamily: "'JetBrains Mono','Fira Code','Cascadia Code',Consolas,monospace",
     fontLigatures: true,
-    minimap: { enabled: false },
+    minimap: { enabled: true, maxColumn: 80 },
     lineNumbers: 'on',
     wordWrap: 'on',
     scrollBeyondLastLine: false,
     automaticLayout: true,
-    padding: { top: 12, bottom: 12 },
+    padding: { top: 14, bottom: 14 },
     smoothScrolling: true,
     cursorBlinking: 'smooth',
-    renderLineHighlight: 'gutter',
+    cursorSmoothCaretAnimation: 'on',
     bracketPairColorization: { enabled: true },
+    guides: { bracketPairs: true, indentation: true },
+    renderLineHighlight: 'gutter',
+    suggest: { showFields: true, showFunctions: true, showModules: true },
+    quickSuggestions: { strings: true },
+    tabSize: 2,
+    formatOnPaste: true,
+    scrollbar: { vertical: 'auto', horizontal: 'auto' },
   })
 
-  monacoEditor.onDidChangeModelContent(() => {
-    files[currentLang] = monacoEditor.getValue()
+  editor.onDidChangeModelContent(() => {
+    const f = files.find(f => f.id === activeFileId)
+    if (f) f.content = editor.getValue()
+    updateStatusBar()
     scheduleRun()
   })
 
-  monacoEditor.onDidChangeCursorPosition(e => {
-    document.getElementById('status-cursor').textContent = `Ln ${e.position.lineNumber}, Col ${e.position.column}`
+  editor.onDidChangeCursorPosition(e => {
+    const { lineNumber, column } = e.position
+    document.getElementById('sb-cursor').textContent = `Ln ${lineNumber}, Col ${column}`
   })
 
-  monacoEditor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, runCode)
-  monacoEditor.addCommand(monaco.KeyMod.Shift | monaco.KeyMod.Alt | monaco.KeyCode.KeyF, formatCode)
+  // Keyboard shortcuts
+  editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, runCode)
+  editor.addCommand(monaco.KeyMod.Shift | monaco.KeyMod.Alt | monaco.KeyCode.KeyF, formatCode)
+  editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, formatCode)
 
+  initLangList()
+  renderFileTabs()
+  renderFileTree()
+  renderPopularPackages()
   runCode()
   loadFromURL()
 })
 
-// ── CodeMirror 6 setup (loaded after module) ───────────────
-function initCM() {
-  const { EditorView, basicSetup, javascript, html, css, oneDark } = window.__cmDeps || {}
-  if (!EditorView || cmEditor) return
+// ── LANGUAGE ────────────────────────────────────────────
+function getLang(id) { return ALL_LANGS.find(l => l.id === id) || ALL_LANGS[0] }
 
-  const langMap = { html, css, js: javascript }
-  cmEditor = new EditorView({
-    doc: files[currentLang],
-    extensions: [basicSetup, oneDark, (langMap[currentLang] || javascript)()],
-    parent: document.getElementById('cm-editor'),
-    dispatch(tr) {
-      cmEditor.update([tr])
-      if (tr.docChanged) {
-        files[currentLang] = cmEditor.state.doc.toString()
-        scheduleRun()
-      }
-    }
-  })
+function initLangList() {
+  renderLangList(ALL_LANGS)
 }
 
-// ── Engine switcher ────────────────────────────────────────
-function switchEngine(engine, btn) {
-  currentEngine = engine
-  document.querySelectorAll('.etab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false') })
-  btn.classList.add('active'); btn.setAttribute('aria-selected','true')
-
-  const monacoEl = document.getElementById('monaco-editor')
-  const cmEl     = document.getElementById('cm-editor')
-
-  if (engine === 'monaco') {
-    monacoEl.style.display = 'flex'
-    cmEl.style.display = 'none'
-    document.getElementById('panel-engine-label').textContent = 'Monaco Editor'
-    if (monacoEditor) monacoEditor.layout()
-  } else if (engine === 'cm') {
-    monacoEl.style.display = 'none'
-    cmEl.style.display = 'flex'
-    document.getElementById('panel-engine-label').textContent = 'CodeMirror 6'
-    setTimeout(initCM, 200)
-  } else if (engine === 'split') {
-    monacoEl.style.display = 'flex'
-    cmEl.style.display = 'none'
-    document.getElementById('panel-engine-label').textContent = 'Monaco Editor (Split)'
-    if (monacoEditor) monacoEditor.layout()
+function renderLangList(langs) {
+  const list = document.getElementById('lang-list')
+  const groups = { web: '🌐 Web', backend: '⚙ Backend', data: '📊 Data & Infra', markup: '📝 Markup' }
+  let html = ''
+  for (const [gid, glabel] of Object.entries(groups)) {
+    const glangs = langs.filter(l => LANGS[gid]?.includes(l))
+    if (!glangs.length) continue
+    html += `<div class="lang-group">${glabel}</div>`
+    glangs.forEach(l => {
+      html += `<div class="lang-item ${l.id === currentLangId ? 'selected' : ''}" onclick="selectLang('${l.id}')">
+        <span class="lang-icon">${l.icon}</span>
+        <span>${l.label}</span>
+        ${l.badge ? `<span class="lang-badge">${l.badge}</span>` : ''}
+      </div>`
+    })
   }
+  list.innerHTML = html
 }
 
-// ── Language switcher ──────────────────────────────────────
-function switchLang(lang, btn) {
-  // Save current
-  if (currentLang !== 'console') {
-    if (currentEngine === 'monaco' && monacoEditor) files[currentLang] = monacoEditor.getValue()
-    else if (currentEngine === 'cm' && cmEditor) files[currentLang] = cmEditor.state.doc.toString()
+function filterLangs(q) {
+  const filtered = ALL_LANGS.filter(l => l.label.toLowerCase().includes(q.toLowerCase()) || l.id.toLowerCase().includes(q.toLowerCase()))
+  renderLangList(filtered)
+}
+
+function selectLang(id) {
+  currentLangId = id
+  const lang = getLang(id)
+  document.getElementById('lang-display').innerHTML = `${lang.icon} ${lang.label}`
+  document.getElementById('sb-lang').textContent = lang.label
+  document.getElementById('lang-dropdown').classList.remove('open')
+
+  // Update current file language
+  const file = files.find(f => f.id === activeFileId)
+  if (file) file.lang = id
+
+  // Switch Monaco language
+  if (editor) {
+    const model = editor.getModel()
+    if (model) monaco.editor.setModelLanguage(model, lang.monacoLang)
   }
 
-  currentLang = lang
-  document.querySelectorAll('.ltab').forEach(t => t.classList.remove('active'))
-  btn.classList.add('active')
-  document.getElementById('status-lang').textContent = lang.toUpperCase()
-
-  const consolePanel = document.getElementById('console-panel')
-  const monacoEl = document.getElementById('monaco-editor')
-  const cmEl = document.getElementById('cm-editor')
-
-  if (lang === 'console') {
-    consolePanel.style.display = 'flex'
-    monacoEl.style.display = 'none'
-    cmEl.style.display = 'none'
-    return
+  // If template exists, offer to load
+  if (TEMPLATES[id] && (!editor?.getValue()?.trim() || confirm(`Load ${lang.label} starter template?`))) {
+    file.content = TEMPLATES[id]
+    editor?.setValue(TEMPLATES[id])
   }
 
-  consolePanel.style.display = 'none'
+  runCode()
+  toast(`${lang.icon} ${lang.label}`, 'info')
+}
 
-  if (currentEngine === 'cm') {
-    cmEl.style.display = 'flex'; monacoEl.style.display = 'none'
-  } else {
-    monacoEl.style.display = 'flex'; cmEl.style.display = 'none'
-  }
-
-  const langMap = { html: 'html', css: 'css', js: 'javascript' }
-  if (currentEngine === 'monaco' && monacoEditor) {
-    const model = monaco.editor.createModel(files[lang], langMap[lang])
-    monacoEditor.setModel(model)
-    monacoEditor.layout()
+function toggleLangDropdown() {
+  const dd = document.getElementById('lang-dropdown')
+  dd.classList.toggle('open')
+  if (dd.classList.contains('open')) {
+    setTimeout(() => document.getElementById('lang-filter')?.focus(), 50)
   }
 }
 
-// ── Run code ───────────────────────────────────────────────
-let runCount = 0
+document.addEventListener('click', e => {
+  if (!e.target.closest('#lang-wrap')) {
+    document.getElementById('lang-dropdown').classList.remove('open')
+  }
+})
+
+// ── FILE MANAGEMENT ─────────────────────────────────────
+function renderFileTabs() {
+  const container = document.getElementById('file-tabs')
+  let html = files.map(f => `
+    <div class="file-tab ${f.id === activeFileId ? 'active' : ''}" onclick="switchFile('${f.id}')">
+      <span>${getFileIcon(f.name)} ${f.name}</span>
+      <button class="file-tab-close" onclick="event.stopPropagation();closeFile('${f.id}')" title="Close">✕</button>
+    </div>`).join('')
+  html += `<div class="add-tab" onclick="newFile()" title="New file">+</div>`
+  container.innerHTML = html
+}
+
+function renderFileTree() {
+  document.getElementById('file-tree').innerHTML = files.map(f => `
+    <div class="tree-item ${f.id === activeFileId ? 'active' : ''}" onclick="switchFile('${f.id}')">
+      <span class="tree-icon">${getFileIcon(f.name)}</span>${f.name}
+    </div>`).join('')
+}
+
+function getFileIcon(name) {
+  const ext = name.split('.').pop()
+  const icons = { html:'🌐',css:'🎨',js:'🟡',ts:'🔷',jsx:'⚛',tsx:'⚛',py:'🐍',go:'🔵',rb:'💎',java:'☕',cpp:'⚙',c:'🔧',rs:'🦀',json:'{}',md:'📄',yaml:'📋',sh:'💻',sql:'🗄',dockerfile:'🐳' }
+  return icons[ext] || '📄'
+}
+
+function switchFile(id) {
+  const oldFile = files.find(f => f.id === activeFileId)
+  if (oldFile && editor) oldFile.content = editor.getValue()
+  activeFileId = id
+  const file = files.find(f => f.id === id)
+  if (file && editor) {
+    editor.setValue(file.content)
+    const lang = getLang(file.lang)
+    monaco.editor.setModelLanguage(editor.getModel(), lang.monacoLang)
+    document.getElementById('lang-display').innerHTML = `${lang.icon} ${lang.label}`
+    currentLangId = file.lang
+  }
+  renderFileTabs()
+  renderFileTree()
+}
+
+function closeFile(id) {
+  if (files.length <= 1) { toast('Keep at least one file', 'err'); return }
+  files = files.filter(f => f.id !== id)
+  if (activeFileId === id) switchFile(files[0].id)
+  else { renderFileTabs(); renderFileTree() }
+}
+
+function newFile() {
+  const name = prompt('File name (e.g. app.js, main.py):')
+  if (!name?.trim()) return
+  const ext = name.split('.').pop()
+  const langMap = { html:'html',css:'css',js:'js',ts:'ts',jsx:'jsx',py:'python',go:'go',rb:'ruby',java:'java',cpp:'cpp',c:'c',rs:'rust',json:'json',md:'markdown',yaml:'yaml',sh:'bash',sql:'sql' }
+  const id = name + '-' + Date.now()
+  files.push({ id, name: name.trim(), lang: langMap[ext] || 'js', content: `// ${name}\n` })
+  switchFile(id)
+  toast(`Created ${name}`, 'ok')
+}
+
+// ── RUN CODE ────────────────────────────────────────────
+function scheduleRun() { clearTimeout(runTimer); runTimer = setTimeout(runCode, 800) }
+
 function runCode() {
-  const frame = document.getElementById('preview-frame')
   clearConsole()
+  const code = editor?.getValue() || ''
+  const lang = getLang(currentLangId)
 
-  let html = files.html
-  // Inject CSS
-  if (files.css.trim()) html = html.replace('</head>', `<style>\n${files.css}\n</style>\n</head>`)
-  // Inject JS with console capture
-  const consoleCapture = `
-    <script>
-    (function(){
-      const _log = console.log, _warn = console.warn, _err = console.error, _info = console.info
-      function post(type, args) {
-        window.parent.postMessage({ type:'console', level:type, msg:Array.from(args).map(a=>{
-          if(typeof a==='object'){try{return JSON.stringify(a,null,2)}catch{return String(a)}}
-          return String(a)
-        }).join(' ')}, '*')
-      }
-      console.log   = (...a) => { _log(...a);  post('log',  a) }
-      console.warn  = (...a) => { _warn(...a); post('warn', a) }
-      console.error = (...a) => { _err(...a);  post('error',a) }
-      console.info  = (...a) => { _info(...a); post('info', a) }
-      window.addEventListener('error', e => post('error', [e.message + ' (line ' + e.lineno + ')']))
-    })()
-    <\/script>`
-  if (files.js.trim()) html = html.replace('</body>', `${consoleCapture}<script>\n${files.js}\n<\/script>\n</body>`)
-
-  frame.srcdoc = html
-  runCount++
+  if (['html','vue','jsx','svelte'].includes(currentLangId)) {
+    runHTML(code)
+  } else if (['js','ts'].includes(currentLangId)) {
+    runJS(code)
+  } else if (currentLangId === 'python') {
+    runPython(code)
+  } else {
+    addConsole('sys', `${lang.icon} ${lang.label} — syntax highlighted but not executable in browser`)
+    addConsole('sys', 'Switch to HTML/JS to see live preview, or Python for execution via Pyodide')
+  }
 }
 
-function scheduleRun() {
-  clearTimeout(runTimer)
-  runTimer = setTimeout(runCode, 700)
+function runHTML(code) {
+  const consoleCapture = `<script>
+;(function(){
+  const _l=console.log,_w=console.warn,_e=console.error,_i=console.info
+  function post(type,args){window.parent.postMessage({type:'console',level:type,msg:Array.from(args).map(a=>{if(typeof a==='object'){try{return JSON.stringify(a,null,2)}catch{}}return String(a)}).join(' ')},'*')}
+  console.log=(...a)=>{_l(...a);post('log',a)}
+  console.warn=(...a)=>{_w(...a);post('warn',a)}
+  console.error=(...a)=>{_e(...a);post('error',a)}
+  console.info=(...a)=>{_i(...a);post('info',a)}
+  window.addEventListener('error',e=>post('error',[e.message+' (line '+e.lineno+')']))
+})()
+<\/script>`
+
+  // Inject CDN libraries
+  let scriptTags = cdnLibraries.map(l => `<script src="${l.url}"><\/script>`).join('\n')
+  let html = code
+  if (!html.includes('</head>') && !html.includes('<html')) {
+    html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}</head><body>${html}</body></html>`
+  } else {
+    html = html.replace('</head>', `${scriptTags}${consoleCapture}</head>`)
+  }
+
+  document.getElementById('preview-iframe').srcdoc = html
+  openBottomPanel('preview')
 }
 
-// ── Console ────────────────────────────────────────────────
-function clearConsole() { document.getElementById('console-out').innerHTML = '' }
+function runJS(code) {
+  openBottomPanel('console')
+  try {
+    const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+    const fn = new AsyncFunction('console', code)
+    fn(createConsoleProxy())
+  } catch(e) {
+    addConsole('error', e.message)
+  }
+}
+
+async function runPython(code) {
+  openBottomPanel('console')
+  addConsole('sys', '🐍 Loading Pyodide (Python runtime)…')
+  try {
+    if (!window.loadPyodide) {
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js'
+      await new Promise((res, rej) => { script.onload = res; script.onerror = rej; document.head.appendChild(script) })
+    }
+    if (!window.__pyodide) {
+      window.__pyodide = await loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.26.2/full/' })
+    }
+    addConsole('sys', '✓ Python ready')
+    let output = ''
+    window.__pyodide.setStdout({ batched: s => { output += s + '\n' } })
+    window.__pyodide.setStderr({ batched: s => addConsole('error', s) })
+    await window.__pyodide.runPythonAsync(code)
+    output.trim().split('\n').filter(Boolean).forEach(l => addConsole('log', l))
+  } catch(e) {
+    addConsole('error', String(e))
+  }
+}
+
+function createConsoleProxy() {
+  return {
+    log:   (...a) => addConsole('log',  a.map(x => typeof x === 'object' ? JSON.stringify(x, null, 2) : String(x)).join(' ')),
+    warn:  (...a) => addConsole('warn', a.join(' ')),
+    error: (...a) => addConsole('error',a.join(' ')),
+    info:  (...a) => addConsole('info', a.join(' ')),
+    table: (d)    => addConsole('log',  JSON.stringify(d, null, 2)),
+    time:  (l)    => addConsole('sys',  `⏱ ${l} started`),
+    timeEnd:(l)   => addConsole('sys',  `⏱ ${l} ended`),
+    clear: ()     => clearConsole(),
+    group: (l)    => addConsole('sys',  `▸ ${l}`),
+    groupEnd:()   => {},
+  }
+}
 
 window.addEventListener('message', e => {
   if (e.data?.type !== 'console') return
-  const out = document.getElementById('console-out')
-  const line = document.createElement('div')
-  line.className = `console-line ${e.data.level}`
-  line.textContent = `[${e.data.level.toUpperCase()}] ${e.data.msg}`
-  out.appendChild(line)
-  out.scrollTop = out.scrollHeight
+  addConsole(e.data.level, e.data.msg)
 })
 
-// ── Format ─────────────────────────────────────────────────
-async function formatCode() {
-  if (typeof prettier === 'undefined') { toast('Prettier loading…', 'err'); return }
-  const langMap = { html: 'html', css: 'css', js: 'babel' }
-  const parser = langMap[currentLang] || 'babel'
-  const code = currentEngine === 'monaco' && monacoEditor ? monacoEditor.getValue() : files[currentLang]
+// ── CONSOLE ──────────────────────────────────────────────
+const CONSOLE_ICONS = { log:'›', warn:'⚠', error:'✕', info:'ℹ', sys:'·' }
+function addConsole(level, msg) {
+  const out = document.getElementById('panel-console')
+  const div = document.createElement('div'); div.className = `cl ${level}`
+  div.innerHTML = `<span class="cl-icon">${CONSOLE_ICONS[level]||'›'}</span><span class="cl-msg">${escHTML(msg)}</span>`
+  out.appendChild(div); out.scrollTop = out.scrollHeight
+}
+function clearConsole() { document.getElementById('panel-console').innerHTML = '' }
+function escHTML(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
+
+// ── BOTTOM PANEL ─────────────────────────────────────────
+let bottomCollapsed = false
+function openBottomPanel(tab, btnEl) {
+  ;['console','preview','terminal'].forEach(t => {
+    document.getElementById(`panel-${t}`).style.display = t === tab ? (t==='preview'?'block':'block') : 'none'
+    document.getElementById(`bpt-${t}`)?.classList.toggle('active', t === tab)
+  })
+  if (bottomCollapsed) { document.getElementById('bottom-panel').style.height = '200px'; bottomCollapsed = false }
+}
+function toggleBottomPanel() {
+  bottomCollapsed = !bottomCollapsed
+  document.getElementById('bottom-panel').style.height = bottomCollapsed ? '32px' : '200px'
+}
+
+// ── TERMINAL SIM ─────────────────────────────────────────
+const TERM_CMDS = {
+  help: () => 'Available: help, clear, echo [text], date, time, ls, pwd, node -v, npm -v',
+  clear: () => { document.getElementById('term-output').innerHTML = ''; return '' },
+  date: () => new Date().toLocaleDateString(),
+  time: () => new Date().toLocaleTimeString(),
+  ls: () => files.map(f => f.name).join('  '),
+  pwd: () => '/workspace/universe-ide',
+  'node -v': () => 'v20.0.0 (simulated)',
+  'npm -v': () => '10.0.0 (simulated)',
+}
+function handleTermInput(e) {
+  if (e.key !== 'Enter') return
+  const input = document.getElementById('term-input')
+  const cmd = input.value.trim(); input.value = ''
+  const out = document.getElementById('term-output')
+  const line = document.createElement('div'); line.className = 'cl log'
+  line.innerHTML = `<span class="cl-icon" style="color:var(--green)">$</span><span class="cl-msg">${escHTML(cmd)}</span>`
+  out.appendChild(line)
+  if (!cmd) return
+  let result
+  if (cmd.startsWith('echo ')) result = cmd.slice(5)
+  else result = TERM_CMDS[cmd]?.() ?? `Command not found: ${cmd}. Type 'help' for available commands.`
+  if (result) {
+    const res = document.createElement('div'); res.className = 'cl sys'
+    res.innerHTML = `<span class="cl-icon">·</span><span class="cl-msg">${escHTML(result)}</span>`
+    out.appendChild(res)
+  }
+  out.scrollTop = out.scrollHeight
+}
+
+// ── RIGHT PANELS ─────────────────────────────────────────
+function openPanel(panel) {
+  const rp = document.getElementById('right-panel')
+  if (currentPanel === panel && rp.classList.contains('open')) { closePanel(); return }
+  ;['ai','cdn','interview'].forEach(p => {
+    document.getElementById(`rp-${p}`).style.display = p === panel ? 'flex' : 'none'
+  })
+  rp.classList.add('open'); currentPanel = panel
+}
+function closePanel() {
+  document.getElementById('right-panel').classList.remove('open')
+  currentPanel = null
+}
+
+// ── AI ASSISTANT ─────────────────────────────────────────
+async function sendAI() {
+  const key = document.getElementById('ai-key').value.trim()
+  if (!key) { toast('Enter your OpenAI API key first', 'err'); return }
+  const input = document.getElementById('ai-input')
+  const q = input.value.trim(); if (!q) return
+  input.value = ''
+
+  const code = editor?.getValue() || ''
+  const lang = getLang(currentLangId).label
+  addAIMsg('user', q)
+
+  const systemPrompt = `You are an expert ${lang} programmer and coding assistant in Universe IDE. When showing code, use markdown code blocks. Be concise but thorough. Current code context:\n\`\`\`${lang}\n${code.slice(0,2000)}\n\`\`\``
+
   try {
-    const plugins = [prettierPlugins.babel, prettierPlugins.html, prettierPlugins.postcss].filter(Boolean)
-    const formatted = await prettier.format(code, { parser, plugins, printWidth: 100, tabWidth: 2, singleQuote: true })
-    files[currentLang] = formatted
-    if (currentEngine === 'monaco' && monacoEditor) monacoEditor.setValue(formatted)
-    toast('Formatted ✓', 'ok')
+    document.getElementById('ai-send-btn').disabled = true
+    const msgs = [{ role:'system', content: systemPrompt }, ...aiMessages.slice(-10), { role:'user', content: q }]
+    const model = document.getElementById('ai-model').value
+
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}` },
+      body: JSON.stringify({ model, messages: msgs, max_tokens: 1500, temperature: 0.7 })
+    })
+    if (!resp.ok) throw new Error(`API error ${resp.status}`)
+    const data = await resp.json()
+    const reply = data.choices[0].message.content
+    addAIMsg('assistant', reply)
+    aiMessages.push({ role:'user', content: q }, { role:'assistant', content: reply })
+    document.getElementById('ai-badge').classList.add('connected')
+    document.getElementById('ai-badge').textContent = '🤖 AI Active'
   } catch(e) {
-    toast('Format error: ' + e.message.slice(0,50), 'err')
+    addAIMsg('assistant', `❌ Error: ${e.message}\n\nCheck your API key and make sure it has chat completions access.`)
+  } finally {
+    document.getElementById('ai-send-btn').disabled = false
   }
 }
 
-// ── Copy & Share ───────────────────────────────────────────
+function aiKeydown(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendAI() } }
+
+function aiQuick(prompt) {
+  document.getElementById('ai-input').value = prompt
+  sendAI()
+}
+
+async function testAI() {
+  const key = document.getElementById('ai-key').value.trim()
+  if (!key) { toast('Enter an API key first', 'err'); return }
+  try {
+    const r = await fetch('https://api.openai.com/v1/models', { headers: { Authorization: `Bearer ${key}` } })
+    if (r.ok) { toast('✓ API key valid', 'ok'); document.getElementById('ai-badge').classList.add('connected') }
+    else throw new Error('Invalid')
+  } catch { toast('API key invalid or no access', 'err') }
+}
+
+function addAIMsg(role, content) {
+  const el = document.getElementById('ai-messages')
+  const md = content.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) =>
+    `<pre><code>${escHTML(code.trim())}</code></pre>`)
+    .replace(/`([^`]+)`/g, '<code style="background:rgba(0,0,0,.3);padding:.1rem .25rem;border-radius:3px">$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>')
+  const div = document.createElement('div')
+  div.className = `ai-msg ${role}`
+  div.innerHTML = md
+  el.appendChild(div)
+  el.scrollTop = el.scrollHeight
+}
+
+// ── CDN PICKER ────────────────────────────────────────────
+let cdnSearchTimer = null
+function searchCDN(q) {
+  clearTimeout(cdnSearchTimer)
+  if (!q.trim()) { document.getElementById('cdn-results').innerHTML = ''; return }
+  cdnSearchTimer = setTimeout(async () => {
+    try {
+      const r = await fetch(`https://api.cdnjs.com/libraries?search=${encodeURIComponent(q)}&fields=name,description,version,latest&limit=8`)
+      const { results } = await r.json()
+      document.getElementById('cdn-results').innerHTML = results.map(p => `
+        <div class="cdn-item" onclick="addCDN('${p.name}','${p.latest}','${p.description?.replace(/'/g,'').slice(0,60)||''}')">
+          <div class="cdn-name">${p.name}</div>
+          <div class="cdn-desc">${p.description?.slice(0,60) || ''}</div>
+          <div class="cdn-ver">v${p.version} · cdnjs</div>
+        </div>`).join('') || '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">No results</p>'
+    } catch {
+      document.getElementById('cdn-results').innerHTML = '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">Search unavailable</p>'
+    }
+  }, 400)
+}
+
+function addCDN(name, version, desc) {
+  if (cdnLibraries.find(l => l.name === name)) { toast(`${name} already added`, 'err'); return }
+  const url = `https://cdnjs.cloudflare.com/ajax/libs/${name}/${version}/${name}.min.js`
+  cdnLibraries.push({ name, version, url, desc })
+  renderCDNAdded()
+  runCode()
+  toast(`📦 Added ${name} v${version}`, 'ok')
+}
+
+function removeCDN(name) {
+  cdnLibraries = cdnLibraries.filter(l => l.name !== name)
+  renderCDNAdded()
+  runCode()
+}
+
+function renderCDNAdded() {
+  const el = document.getElementById('cdn-added')
+  el.innerHTML = cdnLibraries.length
+    ? cdnLibraries.map(l => `<div class="cdn-added-item">${l.name} v${l.version}<button onclick="removeCDN('${l.name}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:.75rem;margin-left:.25rem">✕</button></div>`).join('')
+    : '<p style="font-size:.72rem;color:var(--t4)">No libraries added yet</p>'
+}
+
+function renderPopularPackages() {
+  document.getElementById('popular-pkgs').innerHTML = POPULAR_PACKAGES.map(p =>
+    `<button class="btn btn-ghost btn-sm" onclick="addCDN('${p.name}','latest','${p.desc}')" title="${p.desc}">${p.name}</button>`).join('')
+}
+
+// ── INTERVIEW MODE ───────────────────────────────────────
+function newProblem(diff) {
+  const all = diff ? PROBLEMS[diff] : Object.values(PROBLEMS).flat()
+  const prob = all[Math.floor(Math.random() * all.length)]
+  if (!prob) return
+  document.getElementById('problem-display').innerHTML = `
+    <div class="problem-card">
+      <div class="prob-title">${prob.title}</div>
+      <div class="prob-diff diff-${prob.difficulty.toLowerCase()}">${prob.difficulty}</div>
+      <div class="prob-desc">${prob.desc}</div>
+      <pre class="prob-example">${prob.example}</pre>
+    </div>
+    <button class="btn btn-acc btn-sm" style="width:100%;justify-content:center" onclick="loadProblemCode(\`${prob.starter?.replace(/`/g,'\\`')}\`)">Load Starter Code</button>`
+}
+
+function loadProblemCode(code) {
+  if (!editor) return
+  const file = files.find(f => f.id === activeFileId) || files[0]
+  file.content = code; file.lang = 'js'
+  if (file.id === activeFileId) {
+    editor.setValue(code)
+    monaco.editor.setModelLanguage(editor.getModel(), 'javascript')
+  }
+  toast('Starter code loaded', 'ok')
+}
+
+function startTimer() {
+  if (timerInterval) clearInterval(timerInterval)
+  const mins = parseInt(document.getElementById('timer-duration').value)
+  timerSeconds = mins * 60
+  document.getElementById('timer-badge').classList.add('active')
+  updateTimerDisplay()
+  timerInterval = setInterval(() => {
+    timerSeconds--
+    updateTimerDisplay()
+    if (timerSeconds <= 0) { stopInterview(); toast('⏰ Time is up!', 'err') }
+    if (timerSeconds === 300) toast('⚠️ 5 minutes remaining', 'info')
+  }, 1000)
+  toast(`Interview timer started: ${mins} min`, 'ok')
+}
+
+function updateTimerDisplay() {
+  const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0')
+  const s = (timerSeconds % 60).toString().padStart(2, '0')
+  document.getElementById('timer-display').textContent = `${m}:${s}`
+  if (timerSeconds <= 60) document.getElementById('timer-badge').style.animation = 'blink .5s infinite'
+}
+
+function stopInterview() {
+  clearInterval(timerInterval); timerInterval = null
+  document.getElementById('timer-badge').classList.remove('active')
+  document.getElementById('timer-badge').style.animation = ''
+}
+
+// ── FORMAT ────────────────────────────────────────────────
+async function formatCode() {
+  if (!editor || typeof prettier === 'undefined') { toast('Formatter loading…', 'err'); return }
+  const parserMap = { html:'html', css:'css', js:'babel', ts:'babel', jsx:'babel', tsx:'babel', json:'json' }
+  const parser = parserMap[currentLangId]
+  if (!parser) { toast('Auto-format not available for this language', 'info'); return }
+  try {
+    const code = editor.getValue()
+    const plugins = [prettierPlugins.babel, prettierPlugins.html, prettierPlugins.postcss].filter(Boolean)
+    const formatted = await prettier.format(code, { parser, plugins, printWidth: 100, tabWidth: 2, singleQuote: true, semi: true })
+    const pos = editor.getPosition()
+    editor.setValue(formatted)
+    editor.setPosition(pos)
+    toast('Formatted ✓', 'ok')
+  } catch(e) { toast('Format error: ' + e.message.slice(0, 60), 'err') }
+}
+
+// ── COPY & SHARE ──────────────────────────────────────────
 function copyCode() {
-  const code = currentEngine === 'monaco' && monacoEditor ? monacoEditor.getValue() : files[currentLang]
-  navigator.clipboard.writeText(code).then(() => toast('Copied to clipboard', 'ok'))
+  navigator.clipboard.writeText(editor?.getValue() || '').then(() => toast('Code copied', 'ok'))
 }
 
 function shareCode() {
-  const state = { html: files.html, css: files.css, js: files.js }
-  const b64 = btoa(encodeURIComponent(JSON.stringify(state)))
-  const url = location.origin + location.pathname + '?code=' + b64
+  const state = { lang: currentLangId, files: files.map(({ id, name, lang, content }) => ({ id, name, lang, content })) }
+  const url = location.origin + location.pathname + '?s=' + btoa(encodeURIComponent(JSON.stringify(state)))
   navigator.clipboard.writeText(url).then(() => toast('Share URL copied!', 'ok'))
 }
 
 function loadFromURL() {
   const params = new URLSearchParams(location.search)
-  if (params.has('code')) {
-    try {
-      const state = JSON.parse(decodeURIComponent(atob(params.get('code'))))
-      Object.assign(files, state)
-      if (monacoEditor) monacoEditor.setValue(files.html)
-      runCode()
-    } catch {}
-  }
+  const s = params.get('s') || params.get('code')
+  if (!s) return
+  try {
+    const state = JSON.parse(decodeURIComponent(atob(s)))
+    if (state.files) { files = state.files; currentLangId = state.lang || 'html'; switchFile(files[0].id) }
+    else if (state.html) { files[0].content = state.html; switchFile(files[0].id) }
+    toast('Shared code loaded', 'ok')
+  } catch {}
 }
 
-// ── Snippets ───────────────────────────────────────────────
+// ── THEMES ───────────────────────────────────────────────
+function openThemes() {
+  document.getElementById('theme-grid').innerHTML = THEMES.map(t => `
+    <div class="theme-swatch ${t.id === 'universe-dark' ? 'active' : ''}" 
+      onclick="setTheme('${t.id}',this)" 
+      style="background:${t.bg};color:${t.bg === '#ffffff' ? '#333' : '#ccc'}">
+      ${t.label}
+    </div>`).join('')
+  document.getElementById('theme-overlay').classList.add('open')
+}
+function closeThemes() { document.getElementById('theme-overlay').classList.remove('open') }
+function setTheme(id, el) {
+  document.querySelectorAll('.theme-swatch').forEach(s => s.classList.remove('active'))
+  el.classList.add('active')
+  monaco.editor.setTheme(id === 'universe-dark' ? 'universe-dark' : id)
+  toast(`Theme: ${id}`, 'info')
+}
+
+// ── SNIPPETS ──────────────────────────────────────────────
 function insertSnippet(name) {
-  const code = SNIPPETS[name]
-  if (!code) return
-  if (name === 'tailwind' || name === 'react') {
-    files.html = code; files.css = ''; files.js = ''
-    if (monacoEditor) { monacoEditor.setValue(files.html); switchLang('html', document.querySelector('[data-lang=html]')) }
+  const code = SNIPPETS[name]; if (!code || !editor) return
+  const isFullDoc = code.includes('<!DOCTYPE')
+  if (isFullDoc) {
+    const file = files.find(f => f.id === activeFileId)
+    if (file) { file.content = code; file.lang = 'html' }
+    editor.setValue(code)
+    selectLang('html')
   } else {
-    files.js = code
-    if (currentLang !== 'js') switchLang('js', document.querySelector('[data-lang=js]'))
-    else if (monacoEditor) monacoEditor.setValue(code)
+    const pos = editor.getPosition()
+    editor.executeEdits('', [{ range: new monaco.Range(pos.lineNumber, pos.column, pos.lineNumber, pos.column), text: '\n' + code + '\n' }])
   }
   runCode()
-  toast('Snippet inserted', 'ok')
+  toast(`Snippet inserted: ${name}`, 'ok')
 }
 
-// ── Settings ───────────────────────────────────────────────
-function toggleSettings() {
-  settingsOpen = !settingsOpen
-  document.getElementById('settings-panel').classList.toggle('open', settingsOpen)
-  document.getElementById('settings-btn').setAttribute('aria-expanded', settingsOpen)
-}
-function setFontSize(v) {
-  document.getElementById('font-size-label').textContent = v + 'px'
-  if (monacoEditor) monacoEditor.updateOptions({ fontSize: parseInt(v) })
-}
-function setTheme(v) {
-  if (monacoEditor) monaco.editor.setTheme(v === 'vs-dark' ? 'universe-dark' : v)
-}
-function setTabSize(v) {
-  if (monacoEditor) monacoEditor.updateOptions({ tabSize: parseInt(v) })
-}
-function setWordWrap(v) {
-  if (monacoEditor) monacoEditor.updateOptions({ wordWrap: v })
+// ── SIDEBAR ───────────────────────────────────────────────
+function toggleLeftSidebar() {
+  document.getElementById('left-sidebar').classList.toggle('collapsed')
+  setTimeout(() => editor?.layout(), 300)
 }
 
-// ── Preview utils ──────────────────────────────────────────
-function clearPreview() { document.getElementById('preview-frame').srcdoc = '' }
-function openFullscreen() {
-  const w = window.open()
-  w.document.write(document.getElementById('preview-frame').srcdoc)
-  w.document.close()
+// ── STATUS BAR ────────────────────────────────────────────
+function updateStatusBar() {
+  const code = editor?.getValue() || ''
+  document.getElementById('sb-words').textContent = `${code.length} chars`
 }
 
-// ── Resize panes ───────────────────────────────────────────
-(function() {
-  const resizer = document.getElementById('resizer')
-  const left    = document.getElementById('editor-col')
-  let dragging  = false, startX, startW
-
-  resizer.addEventListener('mousedown', e => {
-    dragging = true; startX = e.clientX; startW = left.offsetWidth
-    document.body.style.cursor = 'col-resize'; document.body.style.userSelect = 'none'
-  })
-  document.addEventListener('mousemove', e => {
-    if (!dragging) return
-    const newW = Math.max(200, Math.min(window.innerWidth - 200, startW + e.clientX - startX))
-    left.style.width = newW + 'px'
-    if (monacoEditor) monacoEditor.layout()
-  })
-  document.addEventListener('mouseup', () => {
-    dragging = false; document.body.style.cursor = ''; document.body.style.userSelect = ''
-  })
-})()
-
-// ── Toast ──────────────────────────────────────────────────
+// ── TOAST ──────────────────────────────────────────────────
 function toast(msg, type = '') {
   const el = document.createElement('div')
   el.className = 'toast' + (type ? ' ' + type : ''); el.textContent = msg
-  const container = document.getElementById('toasts')
-  container.appendChild(el)
+  document.getElementById('toasts').appendChild(el)
   setTimeout(() => el.remove(), 2800)
 }
 </script>
