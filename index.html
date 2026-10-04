@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Code IDE — Free Online Code Editor | 50+ Languages, AI Assist, Interview Mode | Universe Invedors</title>
+<title>Code IDE � Free Online Code Editor | 50+ Languages, AI Assist, Interview Mode | Universe Invedors</title>
 <meta name="description" content="Free professional online code editor with 50+ languages, AI code assistance, interview mode with timer, CDN library picker, multi-file tabs, Vim mode, 10+ themes. Monaco Editor powered."/>
 <meta name="keywords" content="online code editor free,AI code assistant,interview coding tool,JavaScript IDE online,Python editor online,Monaco editor,multi-language IDE,coding interview practice"/>
 <link rel="canonical" href="https://code.universeinvedors.tech/"/>
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
 <meta name="author" content="Universe Invedors"/>
-<meta property="og:title" content="Code IDE — Free Online Editor with AI Assist and Interview Mode"/>
+<meta property="og:title" content="Code IDE � Free Online Editor with AI Assist and Interview Mode"/>
 <meta property="og:description" content="50+ languages, AI code help, interview timer, CDN picker, Vim mode. The complete free online IDE."/>
 <meta property="og:url" content="https://code.universeinvedors.tech/"/>
 <meta property="og:type" content="website"/>
@@ -30,285 +30,117 @@ gtag('js',new Date());gtag('config','G-3GH7524RVW',{page_title:document.title,pa
 function gaEvent(action,category,label,value){gtag('event',action,{event_category:category,event_label:label,value:value});}
 </script>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Code IDE","url":"https://code.universeinvedors.tech","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["50+ programming languages","AI code assistant","Interview mode with timer","CDN library picker","Multi-file tabs","Vim mode","10+ themes"],"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Code IDE","item":"https://code.universeinvedors.tech"}]}]</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#090c13;--surf:#0d1117;--elev:#141b28;--card:#1a2235;--inp:#111827;
-  --t1:#f0f4ff;--t2:#a8b5cc;--t3:#64748b;--t4:#3d4f6e;
-  --acc:#3b82f6;--acc-h:#60a5fa;--acc-glow:rgba(59,130,246,.22);
-  --green:#10b981;--violet:#8b5cf6;--cyan:#06b6d4;--orange:#f97316;--red:#ef4444;
-  --border:rgba(255,255,255,.07);--bh:rgba(255,255,255,.13);
-  --font:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-  --mono:'JetBrains Mono','Fira Code',Consolas,monospace;
-  --r:8px;--th:50px;--tr:160ms cubic-bezier(.4,0,.2,1);
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
 }
 html{font-size:16px;-webkit-text-size-adjust:100%}
-body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:5px;height:5px}
-::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.22)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
-
-/* ── TOPBAR ─────────────────────────────────────────────── */
-.topbar{
-  height:var(--th);background:rgba(9,12,19,.97);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);display:flex;align-items:center;
-  gap:.45rem;padding:0 .75rem;flex-shrink:0;z-index:300;position:relative;
-}
-.logo{display:flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:700;
-  color:var(--t1);text-decoration:none;white-space:nowrap;flex-shrink:0}
-.logo:hover{color:var(--acc-h);text-decoration:none}
-
-/* Language selector */
-.lang-select-wrap{position:relative;flex-shrink:0}
-.lang-btn{display:flex;align-items:center;gap:.4rem;padding:.28rem .65rem;
-  border-radius:var(--r);background:var(--elev);border:1px solid var(--border);
-  color:var(--t2);font-size:.75rem;font-weight:600;cursor:pointer;
-  transition:all var(--tr);white-space:nowrap;min-width:130px;justify-content:space-between}
-.lang-btn:hover{border-color:var(--acc);color:var(--t1)}
-.lang-dropdown{position:absolute;top:calc(100% + 4px);left:0;width:280px;
-  background:var(--card);border:1px solid var(--border);border-radius:10px;
-  box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:500;display:none;overflow:hidden}
-.lang-dropdown.open{display:block}
-.lang-search{padding:.55rem;border-bottom:1px solid var(--border)}
-.lang-search input{width:100%;padding:.38rem .6rem;background:var(--inp);
-  border:1px solid var(--border);border-radius:var(--r);color:var(--t1);
-  font-size:.8rem;outline:none}
-.lang-list{max-height:280px;overflow-y:auto}
-.lang-group{padding:.35rem .6rem .1rem;font-size:.62rem;font-weight:700;
-  letter-spacing:.09em;text-transform:uppercase;color:var(--t4)}
-.lang-item{display:flex;align-items:center;gap:.5rem;padding:.38rem .7rem;
-  cursor:pointer;font-size:.8rem;color:var(--t2);transition:all var(--tr)}
-.lang-item:hover,.lang-item.selected{background:rgba(59,130,246,.1);color:var(--acc-h)}
-.lang-icon{font-size:.9rem;width:18px;text-align:center}
-.lang-badge{margin-left:auto;font-size:.6rem;padding:.08rem .3rem;
-  border-radius:3px;background:rgba(16,185,129,.15);color:var(--green);font-weight:700}
-
-/* Action buttons */
-.btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .7rem;
-  border-radius:var(--r);font-size:.73rem;font-weight:600;cursor:pointer;border:none;
-  transition:all var(--tr);white-space:nowrap}
-.btn-ghost{background:rgba(255,255,255,.05);color:var(--t2);border:1px solid var(--border)}
-.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--bh);color:var(--t1)}
-.btn-acc{background:var(--acc);color:#fff}
-.btn-acc:hover{background:var(--acc-h);box-shadow:0 0 12px var(--acc-glow)}
-.btn-green{background:var(--green);color:#000}
-.btn-green:hover{background:#0ea371}
-.btn-violet{background:var(--violet);color:#fff}
-.btn-violet:hover{background:#7c3aed}
-.btn-orange{background:var(--orange);color:#fff}
-.btn-sm{padding:.22rem .55rem;font-size:.68rem}
-.btn:disabled{opacity:.4;cursor:not-allowed}
-.sp{flex:1}
-
-/* Interview timer badge */
-.timer-badge{display:none;align-items:center;gap:.4rem;padding:.28rem .7rem;
-  border-radius:var(--r);background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);
-  font-size:.78rem;font-weight:700;color:var(--red);font-family:var(--mono)}
-.timer-badge.active{display:flex}
-.timer-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1s infinite}
-
-/* AI badge */
-.ai-badge{display:flex;align-items:center;gap:.3rem;padding:.2rem .5rem;
-  border-radius:var(--r);background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);
-  font-size:.68rem;font-weight:700;color:#a78bfa;cursor:pointer;transition:all var(--tr)}
-.ai-badge:hover{background:rgba(139,92,246,.2)}
-.ai-badge.connected{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.25);color:var(--green)}
-
-/* ── FILE TABS ───────────────────────────────────────────── */
-.file-tabs{display:flex;align-items:center;background:var(--surf);
-  border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0;height:36px}
-.file-tab{display:flex;align-items:center;gap:.4rem;padding:0 .85rem;height:100%;
-  font-size:.75rem;font-weight:500;color:var(--t3);cursor:pointer;border-right:1px solid var(--border);
-  white-space:nowrap;transition:all var(--tr);flex-shrink:0;min-width:90px;border-bottom:2px solid transparent}
-.file-tab:hover{color:var(--t2);background:rgba(255,255,255,.03)}
-.file-tab.active{color:var(--t1);background:rgba(59,130,246,.05);border-bottom-color:var(--acc)}
-.file-tab-close{width:16px;height:16px;border-radius:3px;display:flex;align-items:center;
-  justify-content:center;font-size:.6rem;opacity:0;transition:all var(--tr);
-  background:transparent;border:none;color:var(--t3);cursor:pointer;margin-left:.1rem}
-.file-tab:hover .file-tab-close,.file-tab.active .file-tab-close{opacity:1}
-.file-tab-close:hover{background:rgba(239,68,68,.2);color:var(--red)}
-.add-tab{display:flex;align-items:center;justify-content:center;width:32px;height:100%;
-  color:var(--t4);cursor:pointer;flex-shrink:0;font-size:1rem;transition:all var(--tr)}
-.add-tab:hover{color:var(--t1);background:rgba(255,255,255,.04)}
-
-/* ── MAIN LAYOUT ─────────────────────────────────────────── */
-.main-area{display:flex;flex:1;overflow:hidden}
-
-/* Left sidebar (file tree + tools) */
-.left-sidebar{width:200px;background:var(--surf);border-right:1px solid var(--border);
-  display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:width var(--tr)}
-.left-sidebar.collapsed{width:0}
-.ls-header{padding:.45rem .65rem;border-bottom:1px solid var(--border);font-size:.65rem;
-  font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--t4);
-  display:flex;align-items:center;justify-content:space-between}
-.ls-body{flex:1;overflow-y:auto;padding:.4rem}
-.tree-item{display:flex;align-items:center;gap:.4rem;padding:.3rem .5rem;border-radius:6px;
-  cursor:pointer;font-size:.78rem;color:var(--t2);transition:all var(--tr)}
-.tree-item:hover{background:rgba(255,255,255,.05);color:var(--t1)}
-.tree-item.active{background:rgba(59,130,246,.1);color:var(--acc-h)}
-.tree-icon{font-size:.85rem;width:16px;text-align:center;flex-shrink:0}
-.tree-sep{height:1px;background:var(--border);margin:.3rem 0}
-.tool-section{padding:.3rem 0}
-.tool-label{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--t4);padding:.4rem .5rem .15rem}
-.tool-btn{display:flex;align-items:center;gap:.45rem;width:100%;padding:.32rem .5rem;
-  border-radius:6px;font-size:.76rem;color:var(--t2);cursor:pointer;border:none;
-  background:transparent;text-align:left;transition:all var(--tr)}
-.tool-btn:hover{background:rgba(255,255,255,.05);color:var(--t1)}
-.tool-btn.active{background:rgba(59,130,246,.1);color:var(--acc-h)}
-
-/* Editor area */
-.editor-area{display:flex;flex-direction:column;flex:1;overflow:hidden}
-#monaco-host{flex:1;overflow:hidden}
-
-/* Bottom panel */
-.bottom-panel{height:200px;display:flex;flex-direction:column;border-top:1px solid var(--border);
-  background:var(--bg);transition:height var(--tr)}
-.bottom-panel.collapsed{height:32px}
-.bp-tabs{display:flex;align-items:center;height:32px;border-bottom:1px solid var(--border);
-  background:var(--surf);flex-shrink:0;overflow-x:auto}
-.bpt{padding:0 .75rem;height:100%;display:flex;align-items:center;font-size:.7rem;
-  font-weight:600;cursor:pointer;color:var(--t3);border-bottom:2px solid transparent;
-  transition:all var(--tr);white-space:nowrap}
-.bpt:hover{color:var(--t2)}
-.bpt.active{color:var(--acc-h);border-bottom-color:var(--acc)}
-.bp-body{flex:1;overflow:auto}
-.console-out{padding:.5rem .75rem;font-family:var(--mono);font-size:12.5px;line-height:1.55}
-.cl{padding:.08rem 0;display:flex;gap:.5rem}
-.cl.log{color:var(--t2)}.cl.info{color:var(--cyan)}.cl.warn{color:var(--orange)}.cl.error{color:#f87171}.cl.sys{color:var(--t4)}
-.cl-icon{font-size:.7rem;opacity:.6;flex-shrink:0;margin-top:.15rem}
-.cl-msg{white-space:pre-wrap;word-break:break-all}
-
-/* Right panel: AI + CDN + Interview */
-.right-panel{width:0;background:var(--surf);border-left:1px solid var(--border);
-  overflow:hidden;transition:width var(--tr);display:flex;flex-direction:column;flex-shrink:0}
-.right-panel.open{width:340px}
-.rp-header{padding:.55rem .75rem;border-bottom:1px solid var(--border);display:flex;
-  align-items:center;justify-content:space-between;flex-shrink:0}
-.rp-title{font-size:.8rem;font-weight:700;color:var(--t1)}
-.rp-body{flex:1;overflow-y:auto;padding:.75rem}
-
-/* AI Chat */
-.ai-messages{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.5rem;min-height:100px}
-.ai-msg{padding:.55rem .7rem;border-radius:var(--r);font-size:.78rem;line-height:1.55}
-.ai-msg.user{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);color:var(--t1);align-self:flex-end;max-width:90%}
-.ai-msg.assistant{background:var(--card);border:1px solid var(--border);color:var(--t2);align-self:flex-start;max-width:95%}
-.ai-msg.assistant pre{background:rgba(0,0,0,.3);border-radius:5px;padding:.5rem;margin-top:.35rem;overflow-x:auto;font-size:11px}
-.ai-input-row{display:flex;gap:.4rem;align-items:flex-end}
-.ai-input-row textarea{flex:1;padding:.45rem .6rem;background:var(--inp);border:1px solid var(--border);
-  border-radius:var(--r);color:var(--t1);font-size:.78rem;font-family:var(--font);
-  resize:none;outline:none;min-height:60px;line-height:1.5;transition:border-color var(--tr)}
-.ai-input-row textarea:focus{border-color:rgba(59,130,246,.5)}
-.ai-key-row{display:flex;gap:.4rem;margin-bottom:.5rem;align-items:center}
-.ai-key-row input{flex:1;padding:.38rem .55rem;background:var(--inp);border:1px solid var(--border);
-  border-radius:var(--r);color:var(--t1);font-size:.75rem;outline:none;font-family:var(--mono)}
-.ai-key-row input:focus{border-color:rgba(139,92,246,.5)}
-
-/* CDN picker */
-.cdn-search input{width:100%;padding:.4rem .65rem;background:var(--inp);border:1px solid var(--border);
-  border-radius:var(--r);color:var(--t1);font-size:.8rem;outline:none;margin-bottom:.5rem}
-.cdn-results{display:flex;flex-direction:column;gap:.3rem;max-height:240px;overflow-y:auto}
-.cdn-item{padding:.5rem .6rem;border-radius:var(--r);background:var(--card);
-  border:1px solid var(--border);cursor:pointer;transition:all var(--tr)}
-.cdn-item:hover{border-color:rgba(6,182,212,.35);background:rgba(6,182,212,.06)}
-.cdn-name{font-size:.78rem;font-weight:600;color:var(--t1)}
-.cdn-desc{font-size:.68rem;color:var(--t3);margin-top:.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cdn-ver{font-size:.65rem;color:var(--cyan);margin-top:.08rem;font-family:var(--mono)}
-.cdn-added{display:flex;flex-direction:column;gap:.25rem;margin-top:.5rem}
-.cdn-added-item{display:flex;align-items:center;justify-content:space-between;
-  padding:.32rem .55rem;border-radius:6px;background:rgba(6,182,212,.07);
-  border:1px solid rgba(6,182,212,.2);font-size:.72rem;color:var(--cyan);font-family:var(--mono)}
-
-/* Interview mode */
-.problem-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:.75rem;margin-bottom:.6rem}
-.prob-title{font-size:.82rem;font-weight:700;color:var(--t1);margin-bottom:.35rem}
-.prob-diff{display:inline-block;font-size:.65rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-bottom:.4rem}
-.diff-easy{background:rgba(16,185,129,.12);color:var(--green)}
-.diff-med{background:rgba(245,158,11,.12);color:#f59e0b}
-.diff-hard{background:rgba(239,68,68,.12);color:var(--red)}
-.prob-desc{font-size:.76rem;color:var(--t2);line-height:1.6}
-.prob-example{background:var(--inp);border-radius:6px;padding:.5rem .6rem;margin-top:.4rem;font-family:var(--mono);font-size:.72rem;color:var(--cyan)}
-
-/* Status bar */
-.statusbar{display:flex;align-items:center;gap:.6rem;padding:.2rem .75rem;
-  background:var(--surf);border-top:1px solid var(--border);font-size:.67rem;
-  color:var(--t3);flex-shrink:0;overflow:hidden}
-.sb-green{color:var(--green)}
-.sb-blue{color:var(--acc-h)}
-.sb-right{margin-left:auto;display:flex;gap:.6rem}
-
-/* Overlays */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);
-  z-index:600;display:none;align-items:center;justify-content:center}
-.overlay.open{display:flex}
-.modal{background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:1.5rem;max-width:480px;width:90%;box-shadow:0 24px 64px rgba(0,0,0,.6)}
-.modal-title{font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--t1)}
-.modal-field{margin-bottom:.75rem}
-.modal-field label{display:block;font-size:.72rem;font-weight:700;color:var(--t3);
-  letter-spacing:.05em;text-transform:uppercase;margin-bottom:.28rem}
-.modal-field input,.modal-field select{width:100%;padding:.45rem .65rem;
-  background:var(--inp);border:1px solid var(--border);border-radius:var(--r);
-  color:var(--t1);font-size:.83rem;outline:none}
-.modal-field input:focus,.modal-field select:focus{border-color:var(--acc)}
-.modal-actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
-.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
-.theme-swatch{padding:.45rem .5rem;border-radius:var(--r);cursor:pointer;
-  font-size:.72rem;font-weight:600;text-align:center;border:1px solid var(--border);
-  transition:all var(--tr);color:var(--t2)}
-.theme-swatch:hover{border-color:var(--acc)}
-.theme-swatch.active{border-color:var(--acc);color:var(--acc-h);background:rgba(59,130,246,.1)}
-
-.toasts{position:fixed;bottom:2.5rem;right:1rem;z-index:999;display:flex;flex-direction:column;gap:.4rem;pointer-events:none}
-.toast{padding:.5rem .85rem;border-radius:var(--r);font-size:.75rem;font-weight:600;
-  background:var(--card);border:1px solid var(--border);color:var(--t1);
-  box-shadow:0 6px 24px rgba(0,0,0,.5);animation:tin .2s ease;pointer-events:auto}
-.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}
-.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}
-.toast.info{border-color:rgba(59,130,246,.35);color:var(--acc-h)}
-@keyframes tin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-
-.seo-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
-  gap:.3rem .75rem;padding:.35rem .75rem;border-top:1px solid var(--border);
-  background:var(--surf);font-size:.65rem;color:var(--t3);flex-shrink:0}
-.seo-footer a{color:var(--t3)}.seo-footer a:hover{color:var(--t2);text-decoration:none}
-.sf-links{display:flex;flex-wrap:wrap;gap:.2rem .6rem}
-
-@media(max-width:900px){.left-sidebar{display:none}.right-panel.open{width:280px}}
-@media(max-width:640px){.right-panel.open{position:fixed;inset:0;width:100%;z-index:400;border:none}}
-</style>
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 
-<!-- ── TOPBAR ─────────────────────────────────────────────── -->
+<!-- -- TOPBAR ----------------------------------------------- -->
 <header class="topbar">
   <!-- Logo -->
-  <a href="https://universeinvedors.tech/tools" class="logo" title="All Tools">
-    ⌨️ <span style="color:var(--acc-h)">Code IDE</span>
+  <a href="https://universeinvedors.tech/tools" class="topbar-logo" aria-label="All Tools">
+    <div class="topbar-logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+    </div>
+    <div class="topbar-logo-text">
+      <span class="topbar-logo-company">Universe Invedors</span>
+      <span class="topbar-logo-tool">Code IDE</span>
+    </div>
   </a>
+  <div class="topbar-sep"></div>
 
   <!-- Language selector -->
   <div class="lang-select-wrap" id="lang-wrap">
     <button class="lang-btn" id="lang-btn" onclick="toggleLangDropdown()">
-      <span id="lang-display">🌐 HTML/CSS/JS</span>
-      <span style="font-size:.65rem;opacity:.5">▾</span>
+      <span id="lang-display">?? HTML/CSS/JS</span>
+      <span style="font-size:.65rem;opacity:.5">?</span>
     </button>
     <div class="lang-dropdown" id="lang-dropdown">
       <div class="lang-search">
-        <input type="text" placeholder="Search language…" id="lang-filter" oninput="filterLangs(this.value)" autofocus>
+        <input type="text" placeholder="Search language�" id="lang-filter" oninput="filterLangs(this.value)" autofocus>
       </div>
       <div class="lang-list" id="lang-list"></div>
     </div>
   </div>
 
   <!-- Theme -->
-  <button class="btn btn-ghost btn-sm" onclick="openThemes()" title="Themes">🎨</button>
+  <button class="btn btn-ghost btn-sm" onclick="openThemes()" title="Themes">??</button>
 
   <!-- Sidebar toggle -->
-  <button class="btn btn-ghost btn-sm" onclick="toggleLeftSidebar()" title="File Explorer">📂</button>
+  <button class="btn btn-ghost btn-sm" onclick="toggleLeftSidebar()" title="File Explorer">??</button>
 
   <div class="sp"></div>
 
@@ -316,27 +148,27 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
   <div class="timer-badge" id="timer-badge">
     <span class="timer-dot"></span>
     <span id="timer-display">45:00</span>
-    <button onclick="stopInterview()" style="margin-left:.3rem;background:none;border:none;color:var(--red);cursor:pointer;font-size:.8rem" title="End interview">✕</button>
+    <button onclick="stopInterview()" style="margin-left:.3rem;background:none;border:none;color:var(--red);cursor:pointer;font-size:.8rem" title="End interview">?</button>
   </div>
 
   <!-- AI badge -->
   <div class="ai-badge" id="ai-badge" onclick="openPanel('ai')" title="AI Code Assistant">
-    🤖 AI Assist
+    ?? AI Assist
   </div>
 
   <!-- Action buttons -->
-  <button class="btn btn-ghost btn-sm" onclick="openPanel('cdn')" title="Add CDN Library">📦 CDN</button>
-  <button class="btn btn-ghost btn-sm" onclick="openPanel('interview')" title="Interview Mode">🎯 Interview</button>
-  <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format (Shift+Alt+F)">⚡ Format</button>
-  <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">📋</button>
-  <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share via URL">🔗 Share</button>
-  <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">▶ Run</button>
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('cdn')" title="Add CDN Library">?? CDN</button>
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('interview')" title="Interview Mode">?? Interview</button>
+  <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format (Shift+Alt+F)">? Format</button>
+  <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">??</button>
+  <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share via URL">?? Share</button>
+  <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">? Run</button>
 </header>
 
-<!-- ── FILE TABS ─────────────────────────────────────────── -->
+<!-- -- FILE TABS ------------------------------------------- -->
 <div class="file-tabs" id="file-tabs"></div>
 
-<!-- ── MAIN ──────────────────────────────────────────────── -->
+<!-- -- MAIN ------------------------------------------------ -->
 <div class="main-area">
 
   <!-- Left sidebar -->
@@ -351,25 +183,25 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
       <div class="tree-sep"></div>
       <div class="tool-section">
         <div class="tool-label">Tools</div>
-        <button class="tool-btn" onclick="openPanel('ai')">🤖 AI Assistant</button>
-        <button class="tool-btn" onclick="openPanel('cdn')">📦 CDN Picker</button>
-        <button class="tool-btn" onclick="openPanel('interview')">🎯 Interview Mode</button>
-        <button class="tool-btn" onclick="openBottomPanel('console')">🖥 Console</button>
+        <button class="tool-btn" onclick="openPanel('ai')">?? AI Assistant</button>
+        <button class="tool-btn" onclick="openPanel('cdn')">?? CDN Picker</button>
+        <button class="tool-btn" onclick="openPanel('interview')">?? Interview Mode</button>
+        <button class="tool-btn" onclick="openBottomPanel('console')">?? Console</button>
         <button class="tool-btn" onclick="openBottomPanel('terminal')">$ Terminal</button>
       </div>
       <div class="tree-sep"></div>
       <div class="tool-section">
         <div class="tool-label">Snippets</div>
-        <button class="tool-btn" onclick="insertSnippet('fetch')">↳ fetch()</button>
-        <button class="tool-btn" onclick="insertSnippet('async')">↳ async/await</button>
-        <button class="tool-btn" onclick="insertSnippet('class')">↳ ES6 Class</button>
-        <button class="tool-btn" onclick="insertSnippet('canvas')">↳ Canvas 2D</button>
-        <button class="tool-btn" onclick="insertSnippet('react')">↳ React CDN</button>
-        <button class="tool-btn" onclick="insertSnippet('vue')">↳ Vue 3 CDN</button>
-        <button class="tool-btn" onclick="insertSnippet('tailwind')">↳ Tailwind CSS</button>
-        <button class="tool-btn" onclick="insertSnippet('d3')">↳ D3.js chart</button>
-        <button class="tool-btn" onclick="insertSnippet('three')">↳ Three.js scene</button>
-        <button class="tool-btn" onclick="insertSnippet('worker')">↳ Web Worker</button>
+        <button class="tool-btn" onclick="insertSnippet('fetch')">? fetch()</button>
+        <button class="tool-btn" onclick="insertSnippet('async')">? async/await</button>
+        <button class="tool-btn" onclick="insertSnippet('class')">? ES6 Class</button>
+        <button class="tool-btn" onclick="insertSnippet('canvas')">? Canvas 2D</button>
+        <button class="tool-btn" onclick="insertSnippet('react')">? React CDN</button>
+        <button class="tool-btn" onclick="insertSnippet('vue')">? Vue 3 CDN</button>
+        <button class="tool-btn" onclick="insertSnippet('tailwind')">? Tailwind CSS</button>
+        <button class="tool-btn" onclick="insertSnippet('d3')">? D3.js chart</button>
+        <button class="tool-btn" onclick="insertSnippet('three')">? Three.js scene</button>
+        <button class="tool-btn" onclick="insertSnippet('worker')">? Web Worker</button>
       </div>
     </div>
   </aside>
@@ -381,11 +213,11 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
     <!-- Bottom panel -->
     <div class="bottom-panel" id="bottom-panel">
       <div class="bp-tabs">
-        <div class="bpt active" onclick="openBottomPanel('console',this)" id="bpt-console">🖥 Console</div>
-        <div class="bpt" onclick="openBottomPanel('preview',this)" id="bpt-preview">👁 Preview</div>
+        <div class="bpt active" onclick="openBottomPanel('console',this)" id="bpt-console">?? Console</div>
+        <div class="bpt" onclick="openBottomPanel('preview',this)" id="bpt-preview">?? Preview</div>
         <div class="bpt" onclick="openBottomPanel('terminal',this)" id="bpt-terminal">$ Terminal</div>
         <div class="sp"></div>
-        <button class="btn btn-ghost btn-sm" onclick="toggleBottomPanel()" style="margin:0 .35rem;height:22px" title="Toggle panel">⌃</button>
+        <button class="btn btn-ghost btn-sm" onclick="toggleBottomPanel()" style="margin:0 .35rem;height:22px" title="Toggle panel">^</button>
       </div>
       <div class="bp-body">
         <!-- Console -->
@@ -396,11 +228,11 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
         </div>
         <!-- Terminal sim -->
         <div id="panel-terminal" style="display:none" class="console-out">
-          <div class="cl sys"><span class="cl-icon">$</span><span class="cl-msg">Universe IDE Terminal Simulator — commands run in the browser sandbox</span></div>
+          <div class="cl sys"><span class="cl-icon">$</span><span class="cl-msg">Universe IDE Terminal Simulator � commands run in the browser sandbox</span></div>
           <div id="term-output"></div>
           <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem">
             <span style="color:var(--green);font-family:var(--mono);font-size:.75rem">$</span>
-            <input id="term-input" type="text" style="flex:1;background:transparent;border:none;color:var(--t1);font-family:var(--mono);font-size:.75rem;outline:none" placeholder="Type a command…" onkeydown="handleTermInput(event)">
+            <input id="term-input" type="text" style="flex:1;background:transparent;border:none;color:var(--t1);font-family:var(--mono);font-size:.75rem;outline:none" placeholder="Type a command�" onkeydown="handleTermInput(event)">
           </div>
         </div>
       </div>
@@ -412,12 +244,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
     <!-- AI Assistant -->
     <div id="rp-ai" style="display:flex;flex-direction:column;height:100%">
       <div class="rp-header">
-        <span class="rp-title">🤖 AI Code Assistant</span>
-        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+        <span class="rp-title">?? AI Code Assistant</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">?</button>
       </div>
       <div class="rp-body" style="display:flex;flex-direction:column;gap:.4rem">
         <div class="ai-key-row">
-          <input type="password" id="ai-key" placeholder="OpenAI API key (sk-…) or compatible" />
+          <input type="password" id="ai-key" placeholder="OpenAI API key (sk-�) or compatible" />
           <select id="ai-model" style="padding:.38rem .5rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.72rem;outline:none">
             <option value="gpt-4o-mini">GPT-4o mini</option>
             <option value="gpt-4o">GPT-4o</option>
@@ -425,10 +257,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
           </select>
           <button class="btn btn-sm" style="background:var(--violet);color:#fff" onclick="testAI()">Test</button>
         </div>
-        <p style="font-size:.68rem;color:var(--t3)">Your key is only stored in your browser — never sent to our servers. Works with any OpenAI-compatible endpoint.</p>
+        <p style="font-size:.68rem;color:var(--t3)">Your key is only stored in your browser � never sent to our servers. Works with any OpenAI-compatible endpoint.</p>
         <div id="ai-messages" class="ai-messages"></div>
         <div class="ai-input-row">
-          <textarea id="ai-input" placeholder="Ask anything: explain code, fix bugs, generate functions, suggest improvements…" onkeydown="aiKeydown(event)"></textarea>
+          <textarea id="ai-input" placeholder="Ask anything: explain code, fix bugs, generate functions, suggest improvements�" onkeydown="aiKeydown(event)"></textarea>
           <button class="btn btn-violet btn-sm" onclick="sendAI()" id="ai-send-btn" style="align-self:flex-end">Send</button>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.15rem">
@@ -437,7 +269,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
           <button class="btn btn-ghost btn-sm" onclick="aiQuick('Optimise for performance')">Optimise</button>
           <button class="btn btn-ghost btn-sm" onclick="aiQuick('Add comments')">Comment</button>
           <button class="btn btn-ghost btn-sm" onclick="aiQuick('Write unit tests')">Tests</button>
-          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Convert to TypeScript')">→ TypeScript</button>
+          <button class="btn btn-ghost btn-sm" onclick="aiQuick('Convert to TypeScript')">? TypeScript</button>
         </div>
       </div>
     </div>
@@ -445,12 +277,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
     <!-- CDN Picker -->
     <div id="rp-cdn" style="display:none;flex-direction:column;height:100%">
       <div class="rp-header">
-        <span class="rp-title">📦 CDN Library Picker</span>
-        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+        <span class="rp-title">?? CDN Library Picker</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">?</button>
       </div>
       <div class="rp-body">
         <div class="cdn-search">
-          <input type="text" id="cdn-search-input" placeholder="Search npm packages (e.g. lodash, axios, d3)…" oninput="searchCDN(this.value)">
+          <input type="text" id="cdn-search-input" placeholder="Search npm packages (e.g. lodash, axios, d3)�" oninput="searchCDN(this.value)">
         </div>
         <div id="cdn-results" class="cdn-results"></div>
         <div style="margin-top:.75rem">
@@ -469,8 +301,8 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
     <!-- Interview Mode -->
     <div id="rp-interview" style="display:none;flex-direction:column;height:100%">
       <div class="rp-header">
-        <span class="rp-title">🎯 Interview Mode</span>
-        <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕</button>
+        <span class="rp-title">?? Interview Mode</span>
+        <button class="btn btn-ghost btn-sm" onclick="closePanel()">?</button>
       </div>
       <div class="rp-body">
         <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.75rem">
@@ -492,7 +324,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
               <option value="60">60 min</option>
               <option value="90">90 min</option>
             </select>
-            <button class="btn btn-green" onclick="startTimer()">▶ Start</button>
+            <button class="btn btn-green" onclick="startTimer()">? Start</button>
             <button class="btn btn-ghost btn-sm" onclick="stopInterview()">Stop</button>
           </div>
         </div>
@@ -515,14 +347,14 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span class="sb-green">●</span>
+  <span class="sb-green">?</span>
   <span id="sb-lang" class="sb-blue">HTML</span>
   <span id="sb-cursor">Ln 1, Col 1</span>
   <span id="sb-vim" style="display:none;color:var(--orange);font-weight:700">VIM</span>
   <span class="sb-right">
     <span id="sb-words" style="color:var(--t4)">0 chars</span>
-    <span style="color:var(--t4)">·</span>
-    <span style="color:var(--t4)">Ctrl+Enter run · Shift+Alt+F format · Ctrl+P command palette</span>
+    <span style="color:var(--t4)">�</span>
+    <span style="color:var(--t4)">Ctrl+Enter run � Shift+Alt+F format � Ctrl+P command palette</span>
   </span>
 </div>
 
@@ -540,13 +372,13 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
     <a href="https://map.universeinvedors.tech">Maps</a>
     <a href="https://media.universeinvedors.tech">Media</a>
   </div>
-  <span>© 2024 Universe Invedors · Monaco Editor · AI Assist · 50+ Languages · Free Online IDE</span>
+  <span>� 2024 Universe Invedors � Monaco Editor � AI Assist � 50+ Languages � Free Online IDE</span>
 </footer>
 
 <!-- Theme overlay -->
 <div class="overlay" id="theme-overlay" onclick="closeThemes()">
   <div class="modal" onclick="event.stopPropagation()">
-    <div class="modal-title">🎨 Editor Theme</div>
+    <div class="modal-title">?? Editor Theme</div>
     <div class="theme-grid" id="theme-grid"></div>
     <div class="modal-actions"><button class="btn btn-ghost" onclick="closeThemes()">Close</button></div>
   </div>
@@ -564,55 +396,55 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
 <script src="https://unpkg.com/prettier@3.3.3/plugins/postcss.js"></script>
 
 <script>
-// ── LANGUAGE DATABASE ────────────────────────────────────
+// -- LANGUAGE DATABASE ------------------------------------
 const LANGS = {
   web:[
-    {id:'html', label:'HTML/CSS/JS', icon:'🌐', monacoLang:'html', badge:'Live Preview'},
-    {id:'css',  label:'CSS',         icon:'🎨', monacoLang:'css'},
-    {id:'js',   label:'JavaScript',  icon:'🟡', monacoLang:'javascript'},
-    {id:'ts',   label:'TypeScript',  icon:'🔷', monacoLang:'typescript'},
-    {id:'jsx',  label:'React JSX',   icon:'⚛',  monacoLang:'javascript'},
-    {id:'vue',  label:'Vue.js',      icon:'💚', monacoLang:'html'},
+    {id:'html', label:'HTML/CSS/JS', icon:'??', monacoLang:'html', badge:'Live Preview'},
+    {id:'css',  label:'CSS',         icon:'??', monacoLang:'css'},
+    {id:'js',   label:'JavaScript',  icon:'??', monacoLang:'javascript'},
+    {id:'ts',   label:'TypeScript',  icon:'??', monacoLang:'typescript'},
+    {id:'jsx',  label:'React JSX',   icon:'?',  monacoLang:'javascript'},
+    {id:'vue',  label:'Vue.js',      icon:'??', monacoLang:'html'},
     {id:'json', label:'JSON',        icon:'{}', monacoLang:'json'},
   ],
   backend:[
-    {id:'python',  label:'Python',     icon:'🐍', monacoLang:'python'},
-    {id:'node',    label:'Node.js',    icon:'🟢', monacoLang:'javascript'},
-    {id:'ruby',    label:'Ruby',       icon:'💎', monacoLang:'ruby'},
-    {id:'php',     label:'PHP',        icon:'🐘', monacoLang:'php'},
-    {id:'go',      label:'Go',         icon:'🔵', monacoLang:'go'},
-    {id:'rust',    label:'Rust',       icon:'🦀', monacoLang:'rust'},
-    {id:'java',    label:'Java',       icon:'☕', monacoLang:'java'},
-    {id:'csharp',  label:'C#',         icon:'🔷', monacoLang:'csharp'},
-    {id:'cpp',     label:'C++',        icon:'⚙',  monacoLang:'cpp'},
-    {id:'c',       label:'C',          icon:'🔧', monacoLang:'c'},
-    {id:'swift',   label:'Swift',      icon:'🧡', monacoLang:'swift'},
-    {id:'kotlin',  label:'Kotlin',     icon:'🟣', monacoLang:'kotlin'},
-    {id:'dart',    label:'Dart/Flutter',icon:'🎯', monacoLang:'dart'},
-    {id:'scala',   label:'Scala',      icon:'🔴', monacoLang:'scala'},
-    {id:'r',       label:'R',          icon:'📊', monacoLang:'r'},
-    {id:'matlab',  label:'MATLAB',     icon:'📐', monacoLang:'matlab'},
+    {id:'python',  label:'Python',     icon:'??', monacoLang:'python'},
+    {id:'node',    label:'Node.js',    icon:'??', monacoLang:'javascript'},
+    {id:'ruby',    label:'Ruby',       icon:'??', monacoLang:'ruby'},
+    {id:'php',     label:'PHP',        icon:'??', monacoLang:'php'},
+    {id:'go',      label:'Go',         icon:'??', monacoLang:'go'},
+    {id:'rust',    label:'Rust',       icon:'??', monacoLang:'rust'},
+    {id:'java',    label:'Java',       icon:'?', monacoLang:'java'},
+    {id:'csharp',  label:'C#',         icon:'??', monacoLang:'csharp'},
+    {id:'cpp',     label:'C++',        icon:'?',  monacoLang:'cpp'},
+    {id:'c',       label:'C',          icon:'??', monacoLang:'c'},
+    {id:'swift',   label:'Swift',      icon:'??', monacoLang:'swift'},
+    {id:'kotlin',  label:'Kotlin',     icon:'??', monacoLang:'kotlin'},
+    {id:'dart',    label:'Dart/Flutter',icon:'??', monacoLang:'dart'},
+    {id:'scala',   label:'Scala',      icon:'??', monacoLang:'scala'},
+    {id:'r',       label:'R',          icon:'??', monacoLang:'r'},
+    {id:'matlab',  label:'MATLAB',     icon:'??', monacoLang:'matlab'},
   ],
   data:[
-    {id:'sql',    label:'SQL',          icon:'🗄', monacoLang:'sql'},
-    {id:'graphql',label:'GraphQL',      icon:'🕸', monacoLang:'graphql'},
-    {id:'yaml',   label:'YAML',         icon:'📄', monacoLang:'yaml'},
-    {id:'xml',    label:'XML',          icon:'📝', monacoLang:'xml'},
-    {id:'toml',   label:'TOML',         icon:'⚙',  monacoLang:'ini'},
-    {id:'dockerfile',label:'Dockerfile',icon:'🐳', monacoLang:'dockerfile'},
-    {id:'bash',   label:'Bash/Shell',   icon:'💻', monacoLang:'shell'},
-    {id:'powershell',label:'PowerShell',icon:'🖥', monacoLang:'powershell'},
+    {id:'sql',    label:'SQL',          icon:'??', monacoLang:'sql'},
+    {id:'graphql',label:'GraphQL',      icon:'??', monacoLang:'graphql'},
+    {id:'yaml',   label:'YAML',         icon:'??', monacoLang:'yaml'},
+    {id:'xml',    label:'XML',          icon:'??', monacoLang:'xml'},
+    {id:'toml',   label:'TOML',         icon:'?',  monacoLang:'ini'},
+    {id:'dockerfile',label:'Dockerfile',icon:'??', monacoLang:'dockerfile'},
+    {id:'bash',   label:'Bash/Shell',   icon:'??', monacoLang:'shell'},
+    {id:'powershell',label:'PowerShell',icon:'??', monacoLang:'powershell'},
   ],
   markup:[
-    {id:'markdown',label:'Markdown',   icon:'📄', monacoLang:'markdown'},
-    {id:'latex',   label:'LaTeX',      icon:'📐', monacoLang:'latex'},
-    {id:'svelte',  label:'Svelte',     icon:'🔥', monacoLang:'html'},
+    {id:'markdown',label:'Markdown',   icon:'??', monacoLang:'markdown'},
+    {id:'latex',   label:'LaTeX',      icon:'??', monacoLang:'latex'},
+    {id:'svelte',  label:'Svelte',     icon:'??', monacoLang:'html'},
   ]
 }
 
 const ALL_LANGS = Object.values(LANGS).flat()
 
-// ── STARTER TEMPLATES ────────────────────────────────────
+// -- STARTER TEMPLATES ------------------------------------
 const TEMPLATES = {
   html:`<!DOCTYPE html>
 <html lang="en">
@@ -620,63 +452,95 @@ const TEMPLATES = {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Project</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 16px;
-      padding: 2.5rem;
-      text-align: center;
-      max-width: 420px;
-      width: 90%;
-    }
-    h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: .5rem;
-    }
-    p { color: #94a3b8; margin-bottom: 1.5rem; }
-    button {
-      padding: .65rem 1.5rem;
-      background: #3b82f6;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .2s;
-    }
-    button:hover { background: #2563eb; }
-    #output { margin-top: 1rem; color: #10b981; font-weight: 600; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
   <div class="card">
-    <h1>Hello, Universe! 🚀</h1>
+    <h1>Hello, Universe! ??</h1>
     <p>Edit this code to build your project.</p>
     <button onclick="greet()">Click Me</button>
     <p id="output"></p>
   </div>
   <script>
     const messages = [
-      'Hello from Universe Invedors! 🌌',
-      'Keep building great things! 🚀',
-      'Code is art. 🎨',
-      'Ship it! 📦',
+      'Hello from Universe Invedors! ??',
+      'Keep building great things! ??',
+      'Code is art. ??',
+      'Ship it! ??',
     ]
     let i = 0
     function greet() {
@@ -685,7 +549,7 @@ const TEMPLATES = {
   <\/script>
 </body>
 </html>`,
-  python:`# Python — runs in browser sandbox (limited stdlib)
+  python:`# Python � runs in browser sandbox (limited stdlib)
 # Full Python via Pyodide is loaded when you run
 
 def fibonacci(n):
@@ -716,8 +580,8 @@ print(f"Original:  {data}")
 print(f"Sorted:    {sorted(data)}")
 print(f"Reversed:  {sorted(data, reverse=True)}")
 print(f"Sum: {sum(data)}, Mean: {sum(data)/len(data):.2f}")`,
-  js:`// JavaScript — runs live in browser
-// Try: ES2024 features, DOM APIs, fetch, WebGL…
+  js:`// JavaScript � runs live in browser
+// Try: ES2024 features, DOM APIs, fetch, WebGL�
 
 class EventEmitter {
   #listeners = new Map()
@@ -757,7 +621,7 @@ const result = data
   .trim()
 
 console.log('Result:', result)`,
-  ts:`// TypeScript — syntax highlighting + type checking in editor
+  ts:`// TypeScript � syntax highlighting + type checking in editor
 
 interface User {
   id: number
@@ -910,7 +774,81 @@ draw()`,
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"><\/script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"><\/script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"><\/script>
-  <style>body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 <div id="root"></div>
@@ -941,7 +879,7 @@ function App() {
       </p>
       <p style={{fontSize:'3rem',fontWeight:700,color:'#3b82f6'}}>{count}</p>
       <div style={{display:'flex',gap:'.5rem',justifyContent:'center',marginTop:'1rem'}}>
-        <button onClick={() => setCount(c => c-1)} style={{padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>−</button>
+        <button onClick={() => setCount(c => c-1)} style={{padding:'.5rem 1.25rem',background:'#374151',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>-</button>
         <button onClick={() => setCount(0)} style={{padding:'.5rem 1.25rem',background:'#6b7280',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>Reset</button>
         <button onClick={() => setCount(c => c+1)} style={{padding:'.5rem 1.25rem',background:'#3b82f6',border:'none',borderRadius:'8px',color:'#fff',cursor:'pointer'}}>+</button>
       </div>
@@ -957,7 +895,81 @@ React.createRoot(document.getElementById('root')).render(<App/>)
 <head>
   <meta charset="UTF-8">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"><\/script>
-  <style>body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 <div id="app">
@@ -966,14 +978,14 @@ React.createRoot(document.getElementById('root')).render(<App/>)
     <p :style="{color:'#94a3b8',margin:'1rem 0'}">{{ message }}</p>
     <div :style="{fontSize:'3rem',fontWeight:700,color:'#3b82f6',margin:'1rem 0'}">{{ count }}</div>
     <div :style="{display:'flex',gap:'.5rem',justifyContent:'center'}">
-      <button @click="count--" :style="btnStyle">−</button>
+      <button @click="count--" :style="btnStyle">-</button>
       <button @click="count = 0" :style="{...btnStyle,background:'#6b7280'}">Reset</button>
       <button @click="count++" :style="{...btnStyle,background:'#3b82f6'}">+</button>
     </div>
     <ul :style="{textAlign:'left',maxWidth:'320px',margin:'1.5rem auto',color:'#94a3b8'}">
       <li v-for="item in todoList" :key="item" style="padding:.25rem 0">{{ item }}</li>
     </ul>
-    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add todo…"
+    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add todo�"
       :style="{padding:'.5rem .75rem',background:'#1e293b',border:'1px solid #334155',borderRadius:'8px',color:'#fff',width:'200px',outline:'none'}">
   </div>
 </div>
@@ -996,16 +1008,16 @@ Vue.createApp({
 <body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
   <div class="bg-slate-800 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-slate-700">
     <div class="flex items-center gap-3 mb-6">
-      <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-xl">⚡</div>
+      <div class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-xl">?</div>
       <div>
         <h1 class="text-xl font-bold text-white">Tailwind CSS Starter</h1>
         <p class="text-slate-400 text-sm">Build fast, style anything</p>
       </div>
     </div>
     <div class="space-y-3">
-      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Your name…">
-      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" type="email" placeholder="Email address…">
-      <button onclick="this.textContent='✓ Submitted!';this.classList.replace('bg-blue-600','bg-green-600')"
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Your name�">
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" type="email" placeholder="Email address�">
+      <button onclick="this.textContent='? Submitted!';this.classList.replace('bg-blue-600','bg-green-600')"
         class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
         Get Started
       </button>
@@ -1019,7 +1031,81 @@ Vue.createApp({
 <head>
   <meta charset="UTF-8">
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"><\/script>
-  <style>body{margin:0;background:#0f172a;display:flex;align-items:center;justify-content:center;height:100vh}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 <script>
@@ -1061,7 +1147,81 @@ data.forEach((d,i)=>{
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <style>*{margin:0}canvas{display:block}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-base:#03050a;--bg-surface:#080d15;--bg-elevated:#0d1421;--bg-card:#111b2e;--bg-input:#0d1421;
+  --text-1:#f0f4ff;--text-2:#a8b8cf;--text-3:#5a6a82;--text-4:#2e3d54;
+  --accent:#3b82f6;--accent-light:#60a5fa;--accent-subtle:rgba(59,130,246,.12);
+  --accent-border:rgba(59,130,246,.30);--accent-glow:rgba(59,130,246,.22);
+  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--cyan:#06b6d4;--violet:#8b5cf6;
+  --border:rgba(255,255,255,.07);--border-hover:rgba(255,255,255,.14);--border-focus:rgba(59,130,246,.50);
+  --shadow-md:0 4px 16px rgba(0,0,0,.50);--shadow-lg:0 12px 40px rgba(0,0,0,.60);
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',Consolas,monospace;
+  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
+  --topbar-h:52px;--t:180ms cubic-bezier(.4,0,.2,1);
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--bg-base);color:var(--text-1);height:100dvh;display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.10);border-radius:3px}::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.20)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+/* TOPBAR */
+.topbar{height:var(--topbar-h);background:rgba(3,5,10,.92);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:300}
+.topbar-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text-1);flex-shrink:0;transition:opacity var(--t)}
+.topbar-logo:hover{opacity:.8;text-decoration:none}
+.topbar-logo-mark{width:26px;height:26px;border-radius:var(--r-sm);background:linear-gradient(135deg,#3b82f6,#06b6d4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.topbar-logo-mark svg{width:14px;height:14px}
+.topbar-logo-text{display:flex;flex-direction:column;line-height:1}
+.topbar-logo-company{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text-1)}
+.topbar-logo-tool{font-size:.67rem;font-weight:500;color:var(--text-3);margin-top:1px}
+.topbar-sep{width:1px;height:18px;background:var(--border);flex-shrink:0}
+.topbar-spacer,.sp{flex:1}
+.badge-free{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .55rem;border-radius:9999px;font-size:.67rem;font-weight:700;background:rgba(16,185,129,.10);color:var(--green);border:1px solid rgba(16,185,129,.22)}
+/* ENGINE TABS */
+.etabs{display:flex;gap:.1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:var(--r-md);padding:2px;overflow-x:auto;flex-shrink:1}
+.et{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .7rem;border-radius:7px;font-size:.73rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--text-3);white-space:nowrap;transition:all var(--t)}
+.et:hover{background:rgba(255,255,255,.06);color:var(--text-2)}
+.et.active{background:var(--accent);color:#fff;box-shadow:0 0 12px var(--accent-glow)}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.38rem .85rem;border-radius:var(--r-md);font-size:.78rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);white-space:nowrap;font-family:var(--font-sans)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px;flex-shrink:0}
+.bg,.btn-ghost{background:rgba(255,255,255,.05);color:var(--text-2);border:1px solid var(--border)}
+.bg:hover,.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:var(--border-hover);color:var(--text-1)}
+.bp,.btn-primary{background:var(--accent);color:#fff;box-shadow:0 2px 8px var(--accent-glow)}
+.bp:hover,.btn-primary:hover{background:var(--accent-light);box-shadow:0 4px 20px var(--accent-glow)}
+.bgr,.btn-success{background:var(--green);color:#000}
+.bgr:hover,.btn-success:hover{background:#0ea371}
+.bsm,.btn-sm{padding:.28rem .65rem;font-size:.72rem}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:#7c3aed}
+.btn:disabled,.btn[disabled]{opacity:.4;cursor:not-allowed}
+/* PANES */
+.pane{display:flex;flex-direction:column;overflow:hidden}
+.pane-head,.ph{display:flex;align-items:center;gap:.5rem;padding:.42rem 1rem;background:var(--bg-surface);border-bottom:1px solid var(--border);font-size:.69rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-3);flex-shrink:0}
+.pd,.pane-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.phr,.pane-actions{margin-left:auto;display:flex;gap:.3rem}
+/* FORM */
+.fl,.field-label{font-size:.71rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin-bottom:.3rem;display:block}
+.fi,input[type=text],input[type=number],select,textarea{width:100%;padding:.45rem .7rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.84rem;font-family:var(--font-sans);outline:none;transition:border-color var(--t),box-shadow var(--t)}
+.fi:focus,input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.10)}
+select option{background:var(--bg-elevated)}
+input[type=range]{accent-color:var(--accent);width:100%}
+/* CARDS */
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.1rem 1.25rem}
+.card:hover{border-color:var(--border-hover)}
+/* TOASTS */
+.toasts{position:fixed;bottom:1.25rem;right:1.25rem;z-index:999;display:flex;flex-direction:column;gap:.45rem;pointer-events:none}
+.toast{display:flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border-radius:var(--r-md);font-size:.8rem;font-weight:600;background:var(--bg-card);border:1px solid var(--border);color:var(--text-1);box-shadow:var(--shadow-lg);animation:toastIn .22s ease;pointer-events:auto}
+.toast.ok{border-color:rgba(16,185,129,.35);color:var(--green)}.toast.err{border-color:rgba(239,68,68,.35);color:#f87171}.toast.info{border-color:var(--accent-border);color:var(--accent-light)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+/* SEO FOOTER */
+.seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
+.seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
+.sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
 </head>
 <body>
 <script type="module">
@@ -1155,7 +1315,7 @@ worker.postMessage({ type: 'primes', data: 10000 })
 console.log('Main thread still responsive!')`
 }
 
-// ── INTERVIEW PROBLEMS ──────────────────────────────────
+// -- INTERVIEW PROBLEMS ----------------------------------
 const PROBLEMS = {
   easy:[
     {title:'Two Sum',difficulty:'Easy',desc:'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.',example:'Input: nums=[2,7,11,15], target=9\nOutput: [0,1]\nExplanation: nums[0]+nums[1]=9',starter:`function twoSum(nums, target) {
@@ -1172,7 +1332,7 @@ console.log(twoSum([3,2,4], 6))       // [1,2]`},
 console.log(isPalindrome('racecar'))    // true
 console.log(isPalindrome('A man a plan a canal Panama'.replace(/\\s/g,'').toLowerCase())) // true
 console.log(isPalindrome('hello'))      // false`},
-    {title:'FizzBuzz',difficulty:'Easy',desc:'Print numbers 1–100. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", for both print "FizzBuzz".',example:'1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz...',starter:`function fizzBuzz(n) {
+    {title:'FizzBuzz',difficulty:'Easy',desc:'Print numbers 1�100. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", for both print "FizzBuzz".',example:'1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz...',starter:`function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
     // Your solution here
   }
@@ -1274,7 +1434,7 @@ const THEMES = [
   {id:'solarized-dark',label:'Solarized Dark',bg:'#002b36'},
 ]
 
-// ── STATE ──────────────────────────────────────────────
+// -- STATE ----------------------------------------------
 let editor = null
 let currentLangId = 'html'
 let currentPanel = null
@@ -1290,7 +1450,7 @@ let files = [
 let activeFileId = 'index.html'
 let runTimer = null
 
-// ── MONACO SETUP ────────────────────────────────────────
+// -- MONACO SETUP ----------------------------------------
 require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs' } })
 require(['vs/editor/editor.main'], () => {
   // Custom dark theme
@@ -1368,7 +1528,7 @@ require(['vs/editor/editor.main'], () => {
   loadFromURL()
 })
 
-// ── LANGUAGE ────────────────────────────────────────────
+// -- LANGUAGE --------------------------------------------
 function getLang(id) { return ALL_LANGS.find(l => l.id === id) || ALL_LANGS[0] }
 
 function initLangList() {
@@ -1377,7 +1537,7 @@ function initLangList() {
 
 function renderLangList(langs) {
   const list = document.getElementById('lang-list')
-  const groups = { web: '🌐 Web', backend: '⚙ Backend', data: '📊 Data & Infra', markup: '📝 Markup' }
+  const groups = { web: '?? Web', backend: '? Backend', data: '?? Data & Infra', markup: '?? Markup' }
   let html = ''
   for (const [gid, glabel] of Object.entries(groups)) {
     const glangs = langs.filter(l => LANGS[gid]?.includes(l))
@@ -1440,13 +1600,13 @@ document.addEventListener('click', e => {
   }
 })
 
-// ── FILE MANAGEMENT ─────────────────────────────────────
+// -- FILE MANAGEMENT -------------------------------------
 function renderFileTabs() {
   const container = document.getElementById('file-tabs')
   let html = files.map(f => `
     <div class="file-tab ${f.id === activeFileId ? 'active' : ''}" onclick="switchFile('${f.id}')">
       <span>${getFileIcon(f.name)} ${f.name}</span>
-      <button class="file-tab-close" onclick="event.stopPropagation();closeFile('${f.id}')" title="Close">✕</button>
+      <button class="file-tab-close" onclick="event.stopPropagation();closeFile('${f.id}')" title="Close">?</button>
     </div>`).join('')
   html += `<div class="add-tab" onclick="newFile()" title="New file">+</div>`
   container.innerHTML = html
@@ -1461,8 +1621,8 @@ function renderFileTree() {
 
 function getFileIcon(name) {
   const ext = name.split('.').pop()
-  const icons = { html:'🌐',css:'🎨',js:'🟡',ts:'🔷',jsx:'⚛',tsx:'⚛',py:'🐍',go:'🔵',rb:'💎',java:'☕',cpp:'⚙',c:'🔧',rs:'🦀',json:'{}',md:'📄',yaml:'📋',sh:'💻',sql:'🗄',dockerfile:'🐳' }
-  return icons[ext] || '📄'
+  const icons = { html:'??',css:'??',js:'??',ts:'??',jsx:'?',tsx:'?',py:'??',go:'??',rb:'??',java:'?',cpp:'?',c:'??',rs:'??',json:'{}',md:'??',yaml:'??',sh:'??',sql:'??',dockerfile:'??' }
+  return icons[ext] || '??'
 }
 
 function switchFile(id) {
@@ -1499,7 +1659,7 @@ function newFile() {
   toast(`Created ${name}`, 'ok')
 }
 
-// ── RUN CODE ────────────────────────────────────────────
+// -- RUN CODE --------------------------------------------
 function scheduleRun() { clearTimeout(runTimer); runTimer = setTimeout(runCode, 800) }
 
 function runCode() {
@@ -1514,7 +1674,7 @@ function runCode() {
   } else if (currentLangId === 'python') {
     runPython(code)
   } else {
-    addConsole('sys', `${lang.icon} ${lang.label} — syntax highlighted but not executable in browser`)
+    addConsole('sys', `${lang.icon} ${lang.label} � syntax highlighted but not executable in browser`)
     addConsole('sys', 'Switch to HTML/JS to see live preview, or Python for execution via Pyodide')
   }
 }
@@ -1539,7 +1699,7 @@ function runHTML(code) {
 
   // Warn if bare specifiers are used without importmap
   if (html.includes("from 'three'") || html.includes('from "three"')) {
-    addConsole('warn', "⚠ Bare specifier 'three' detected — use full CDN URL instead: import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'")
+    addConsole('warn', "? Bare specifier 'three' detected � use full CDN URL instead: import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'")
   }
 
   if (!html.includes('</head>') && !html.includes('<html')) {
@@ -1565,7 +1725,7 @@ function runJS(code) {
 
 async function runPython(code) {
   openBottomPanel('console')
-  addConsole('sys', '🐍 Loading Pyodide (Python runtime)…')
+  addConsole('sys', '?? Loading Pyodide (Python runtime)�')
   try {
     if (!window.loadPyodide) {
       const script = document.createElement('script')
@@ -1575,7 +1735,7 @@ async function runPython(code) {
     if (!window.__pyodide) {
       window.__pyodide = await loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.26.2/full/' })
     }
-    addConsole('sys', '✓ Python ready')
+    addConsole('sys', '? Python ready')
     let output = ''
     window.__pyodide.setStdout({ batched: s => { output += s + '\n' } })
     window.__pyodide.setStderr({ batched: s => addConsole('error', s) })
@@ -1593,10 +1753,10 @@ function createConsoleProxy() {
     error: (...a) => addConsole('error',a.join(' ')),
     info:  (...a) => addConsole('info', a.join(' ')),
     table: (d)    => addConsole('log',  JSON.stringify(d, null, 2)),
-    time:  (l)    => addConsole('sys',  `⏱ ${l} started`),
-    timeEnd:(l)   => addConsole('sys',  `⏱ ${l} ended`),
+    time:  (l)    => addConsole('sys',  `? ${l} started`),
+    timeEnd:(l)   => addConsole('sys',  `? ${l} ended`),
     clear: ()     => clearConsole(),
-    group: (l)    => addConsole('sys',  `▸ ${l}`),
+    group: (l)    => addConsole('sys',  `? ${l}`),
     groupEnd:()   => {},
   }
 }
@@ -1606,18 +1766,18 @@ window.addEventListener('message', e => {
   addConsole(e.data.level, e.data.msg)
 })
 
-// ── CONSOLE ──────────────────────────────────────────────
-const CONSOLE_ICONS = { log:'›', warn:'⚠', error:'✕', info:'ℹ', sys:'·' }
+// -- CONSOLE ----------------------------------------------
+const CONSOLE_ICONS = { log:'�', warn:'?', error:'?', info:'?', sys:'�' }
 function addConsole(level, msg) {
   const out = document.getElementById('panel-console')
   const div = document.createElement('div'); div.className = `cl ${level}`
-  div.innerHTML = `<span class="cl-icon">${CONSOLE_ICONS[level]||'›'}</span><span class="cl-msg">${escHTML(msg)}</span>`
+  div.innerHTML = `<span class="cl-icon">${CONSOLE_ICONS[level]||'�'}</span><span class="cl-msg">${escHTML(msg)}</span>`
   out.appendChild(div); out.scrollTop = out.scrollHeight
 }
 function clearConsole() { document.getElementById('panel-console').innerHTML = '' }
 function escHTML(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
 
-// ── BOTTOM PANEL ─────────────────────────────────────────
+// -- BOTTOM PANEL -----------------------------------------
 let bottomCollapsed = false
 function openBottomPanel(tab, btnEl) {
   ;['console','preview','terminal'].forEach(t => {
@@ -1631,7 +1791,7 @@ function toggleBottomPanel() {
   document.getElementById('bottom-panel').style.height = bottomCollapsed ? '32px' : '200px'
 }
 
-// ── TERMINAL SIM ─────────────────────────────────────────
+// -- TERMINAL SIM -----------------------------------------
 const TERM_CMDS = {
   help: () => 'Available: help, clear, echo [text], date, time, ls, pwd, node -v, npm -v',
   clear: () => { document.getElementById('term-output').innerHTML = ''; return '' },
@@ -1656,13 +1816,13 @@ function handleTermInput(e) {
   else result = TERM_CMDS[cmd]?.() ?? `Command not found: ${cmd}. Type 'help' for available commands.`
   if (result) {
     const res = document.createElement('div'); res.className = 'cl sys'
-    res.innerHTML = `<span class="cl-icon">·</span><span class="cl-msg">${escHTML(result)}</span>`
+    res.innerHTML = `<span class="cl-icon">�</span><span class="cl-msg">${escHTML(result)}</span>`
     out.appendChild(res)
   }
   out.scrollTop = out.scrollHeight
 }
 
-// ── RIGHT PANELS ─────────────────────────────────────────
+// -- RIGHT PANELS -----------------------------------------
 function openPanel(panel) {
   const rp = document.getElementById('right-panel')
   if (currentPanel === panel && rp.classList.contains('open')) { closePanel(); return }
@@ -1676,7 +1836,7 @@ function closePanel() {
   currentPanel = null
 }
 
-// ── AI ASSISTANT ─────────────────────────────────────────
+// -- AI ASSISTANT -----------------------------------------
 async function sendAI() {
   const key = document.getElementById('ai-key').value.trim()
   if (!key) { toast('Enter your OpenAI API key first', 'err'); return }
@@ -1706,9 +1866,9 @@ async function sendAI() {
     addAIMsg('assistant', reply)
     aiMessages.push({ role:'user', content: q }, { role:'assistant', content: reply })
     document.getElementById('ai-badge').classList.add('connected')
-    document.getElementById('ai-badge').textContent = '🤖 AI Active'
+    document.getElementById('ai-badge').textContent = '?? AI Active'
   } catch(e) {
-    addAIMsg('assistant', `❌ Error: ${e.message}\n\nCheck your API key and make sure it has chat completions access.`)
+    addAIMsg('assistant', `? Error: ${e.message}\n\nCheck your API key and make sure it has chat completions access.`)
   } finally {
     document.getElementById('ai-send-btn').disabled = false
   }
@@ -1726,7 +1886,7 @@ async function testAI() {
   if (!key) { toast('Enter an API key first', 'err'); return }
   try {
     const r = await fetch('https://api.openai.com/v1/models', { headers: { Authorization: `Bearer ${key}` } })
-    if (r.ok) { toast('✓ API key valid', 'ok'); document.getElementById('ai-badge').classList.add('connected') }
+    if (r.ok) { toast('? API key valid', 'ok'); document.getElementById('ai-badge').classList.add('connected') }
     else throw new Error('Invalid')
   } catch { toast('API key invalid or no access', 'err') }
 }
@@ -1745,7 +1905,7 @@ function addAIMsg(role, content) {
   el.scrollTop = el.scrollHeight
 }
 
-// ── CDN PICKER ────────────────────────────────────────────
+// -- CDN PICKER --------------------------------------------
 let cdnSearchTimer = null
 function searchCDN(q) {
   clearTimeout(cdnSearchTimer)
@@ -1758,7 +1918,7 @@ function searchCDN(q) {
         <div class="cdn-item" onclick="addCDN('${p.name}','${p.latest}','${p.description?.replace(/'/g,'').slice(0,60)||''}')">
           <div class="cdn-name">${p.name}</div>
           <div class="cdn-desc">${p.description?.slice(0,60) || ''}</div>
-          <div class="cdn-ver">v${p.version} · cdnjs</div>
+          <div class="cdn-ver">v${p.version} � cdnjs</div>
         </div>`).join('') || '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">No results</p>'
     } catch {
       document.getElementById('cdn-results').innerHTML = '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">Search unavailable</p>'
@@ -1772,7 +1932,7 @@ function addCDN(name, version, desc) {
   cdnLibraries.push({ name, version, url, desc })
   renderCDNAdded()
   runCode()
-  toast(`📦 Added ${name} v${version}`, 'ok')
+  toast(`?? Added ${name} v${version}`, 'ok')
 }
 
 function removeCDN(name) {
@@ -1784,7 +1944,7 @@ function removeCDN(name) {
 function renderCDNAdded() {
   const el = document.getElementById('cdn-added')
   el.innerHTML = cdnLibraries.length
-    ? cdnLibraries.map(l => `<div class="cdn-added-item">${l.name} v${l.version}<button onclick="removeCDN('${l.name}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:.75rem;margin-left:.25rem">✕</button></div>`).join('')
+    ? cdnLibraries.map(l => `<div class="cdn-added-item">${l.name} v${l.version}<button onclick="removeCDN('${l.name}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:.75rem;margin-left:.25rem">?</button></div>`).join('')
     : '<p style="font-size:.72rem;color:var(--t4)">No libraries added yet</p>'
 }
 
@@ -1793,7 +1953,7 @@ function renderPopularPackages() {
     `<button class="btn btn-ghost btn-sm" onclick="addCDN('${p.name}','latest','${p.desc}')" title="${p.desc}">${p.name}</button>`).join('')
 }
 
-// ── INTERVIEW MODE ───────────────────────────────────────
+// -- INTERVIEW MODE ---------------------------------------
 function newProblem(diff) {
   const all = diff ? PROBLEMS[diff] : Object.values(PROBLEMS).flat()
   const prob = all[Math.floor(Math.random() * all.length)]
@@ -1828,8 +1988,8 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timerSeconds--
     updateTimerDisplay()
-    if (timerSeconds <= 0) { stopInterview(); toast('⏰ Time is up!', 'err') }
-    if (timerSeconds === 300) toast('⚠️ 5 minutes remaining', 'info')
+    if (timerSeconds <= 0) { stopInterview(); toast('? Time is up!', 'err') }
+    if (timerSeconds === 300) toast('?? 5 minutes remaining', 'info')
   }, 1000)
   toast(`Interview timer started: ${mins} min`, 'ok')
 }
@@ -1847,9 +2007,9 @@ function stopInterview() {
   document.getElementById('timer-badge').style.animation = ''
 }
 
-// ── FORMAT ────────────────────────────────────────────────
+// -- FORMAT ------------------------------------------------
 async function formatCode() {
-  if (!editor || typeof prettier === 'undefined') { toast('Formatter loading…', 'err'); return }
+  if (!editor || typeof prettier === 'undefined') { toast('Formatter loading�', 'err'); return }
   const parserMap = { html:'html', css:'css', js:'babel', ts:'babel', jsx:'babel', tsx:'babel', json:'json' }
   const parser = parserMap[currentLangId]
   if (!parser) { toast('Auto-format not available for this language', 'info'); return }
@@ -1860,11 +2020,11 @@ async function formatCode() {
     const pos = editor.getPosition()
     editor.setValue(formatted)
     editor.setPosition(pos)
-    toast('Formatted ✓', 'ok')
+    toast('Formatted ?', 'ok')
   } catch(e) { toast('Format error: ' + e.message.slice(0, 60), 'err') }
 }
 
-// ── COPY & SHARE ──────────────────────────────────────────
+// -- COPY & SHARE ------------------------------------------
 function copyCode() {
   navigator.clipboard.writeText(editor?.getValue() || '').then(() => toast('Code copied', 'ok'))
 }
@@ -1887,7 +2047,7 @@ function loadFromURL() {
   } catch {}
 }
 
-// ── THEMES ───────────────────────────────────────────────
+// -- THEMES -----------------------------------------------
 function openThemes() {
   document.getElementById('theme-grid').innerHTML = THEMES.map(t => `
     <div class="theme-swatch ${t.id === 'universe-dark' ? 'active' : ''}" 
@@ -1905,7 +2065,7 @@ function setTheme(id, el) {
   toast(`Theme: ${id}`, 'info')
 }
 
-// ── SNIPPETS ──────────────────────────────────────────────
+// -- SNIPPETS ----------------------------------------------
 function insertSnippet(name) {
   const code = SNIPPETS[name]; if (!code || !editor) return
   const isFullDoc = code.includes('<!DOCTYPE')
@@ -1922,19 +2082,19 @@ function insertSnippet(name) {
   toast(`Snippet inserted: ${name}`, 'ok')
 }
 
-// ── SIDEBAR ───────────────────────────────────────────────
+// -- SIDEBAR -----------------------------------------------
 function toggleLeftSidebar() {
   document.getElementById('left-sidebar').classList.toggle('collapsed')
   setTimeout(() => editor?.layout(), 300)
 }
 
-// ── STATUS BAR ────────────────────────────────────────────
+// -- STATUS BAR --------------------------------------------
 function updateStatusBar() {
   const code = editor?.getValue() || ''
   document.getElementById('sb-words').textContent = `${code.length} chars`
 }
 
-// ── TOAST ──────────────────────────────────────────────────
+// -- TOAST --------------------------------------------------
 function toast(msg, type = '') {
   const el = document.createElement('div')
   el.className = 'toast' + (type ? ' ' + type : ''); el.textContent = msg
@@ -1945,9 +2105,9 @@ function toast(msg, type = '') {
 </body>
 </html>
 <script>
-// GA4 Custom Events — Code IDE
+// GA4 Custom Events � Code IDE
 (function(){
-  // Track language selections — most important insight
+  // Track language selections � most important insight
   document.querySelectorAll('.lang-select,select,[data-lang]').forEach(function(el){
     el.addEventListener('change',function(){
       gaEvent('language_selected','Code IDE',this.value||this.textContent.trim());
@@ -1956,7 +2116,7 @@ function toast(msg, type = '') {
   // Track run/execute actions
   document.querySelectorAll('button').forEach(function(btn){
     var t=btn.textContent.trim().toLowerCase();
-    if(t.includes('run')||t.includes('execut')||t.includes('play')||t.includes('▶')){
+    if(t.includes('run')||t.includes('execut')||t.includes('play')||t.includes('?')){
       btn.addEventListener('click',function(){
         gaEvent('code_executed','Code IDE',document.querySelector('.lang-select,select')?.value||'unknown');
       });
@@ -1980,3 +2140,70 @@ function toast(msg, type = '') {
   });
 })();
 </script>
+
+
+/* Code IDE-specific */
+.file-tabs{display:flex;align-items:center;background:var(--bg-surface);border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0;height:36px}
+.file-tab{display:flex;align-items:center;gap:.4rem;padding:0 .85rem;height:100%;font-size:.75rem;font-weight:500;color:var(--text-3);cursor:pointer;border-right:1px solid var(--border);white-space:nowrap;transition:all var(--t);flex-shrink:0;min-width:90px;border-bottom:2px solid transparent}
+.file-tab:hover{color:var(--text-2);background:rgba(255,255,255,.03)}
+.file-tab.active{color:var(--text-1);background:rgba(59,130,246,.05);border-bottom-color:var(--accent)}
+.file-tab-close{width:16px;height:16px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:.6rem;opacity:0;transition:all var(--t);background:transparent;border:none;color:var(--text-3);cursor:pointer}
+.file-tab:hover .file-tab-close,.file-tab.active .file-tab-close{opacity:1}
+.file-tab-close:hover{background:rgba(239,68,68,.2);color:var(--red)}
+.add-tab{display:flex;align-items:center;justify-content:center;width:32px;height:100%;color:var(--text-4);cursor:pointer;flex-shrink:0;font-size:1rem;transition:all var(--t)}
+.add-tab:hover{color:var(--text-1);background:rgba(255,255,255,.04)}
+.main-area{display:flex;flex:1;overflow:hidden}
+.left-sidebar{width:200px;background:var(--bg-surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:width var(--t)}
+.left-sidebar.collapsed{width:0}
+.ls-header{padding:.45rem .65rem;border-bottom:1px solid var(--border);font-size:.65rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-4);display:flex;align-items:center;justify-content:space-between}
+.ls-body{flex:1;overflow-y:auto;padding:.4rem}
+.tree-item{display:flex;align-items:center;gap:.4rem;padding:.3rem .5rem;border-radius:6px;cursor:pointer;font-size:.78rem;color:var(--text-2);transition:all var(--t)}
+.tree-item:hover{background:rgba(255,255,255,.05);color:var(--text-1)}
+.tree-item.active{background:var(--accent-subtle);color:var(--accent-light)}
+.tool-section{margin-top:.5rem}
+.tool-label{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-4);padding:.35rem .35rem .15rem}
+.tool-btn{width:100%;text-align:left;padding:.32rem .5rem;border-radius:6px;font-size:.77rem;color:var(--text-2);cursor:pointer;border:none;background:transparent;transition:all var(--t);display:flex;align-items:center;gap:.4rem}
+.tool-btn:hover{background:rgba(255,255,255,.05);color:var(--text-1)}
+.tree-sep{height:1px;background:var(--border);margin:.4rem .35rem}
+.editor-area{display:flex;flex-direction:column;flex:1;overflow:hidden}
+#monaco-host{flex:1;overflow:hidden}
+.bottom-panel{height:200px;border-top:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;transition:height var(--t)}
+.bottom-panel.collapsed{height:32px}
+.bp-tabs{display:flex;align-items:center;background:var(--bg-surface);border-bottom:1px solid var(--border);height:32px;flex-shrink:0}
+.bpt{padding:0 .85rem;height:100%;display:flex;align-items:center;font-size:.72rem;font-weight:600;color:var(--text-3);cursor:pointer;border-right:1px solid var(--border);transition:all var(--t)}
+.bpt:hover{color:var(--text-2)}
+.bpt.active{color:var(--accent-light);background:rgba(59,130,246,.05)}
+.bp-body{flex:1;overflow:hidden}
+.console-out{flex:1;overflow-y:auto;padding:.6rem .75rem;font-family:var(--font-mono);font-size:.76rem;line-height:1.6;background:var(--bg-base);height:100%;overflow:hidden}
+.cl{display:flex;align-items:baseline;gap:.6rem;padding:.1rem 0}
+.cl-icon{width:16px;flex-shrink:0;font-size:.7rem;text-align:center}
+.cl.log .cl-msg{color:var(--text-2)} .cl.err .cl-msg{color:#f87171} .cl.warn .cl-msg{color:var(--yellow)} .cl.info .cl-msg{color:var(--accent-light)} .cl.sys .cl-msg{color:var(--text-3);font-style:italic}
+.right-panel{width:340px;background:var(--bg-surface);border-left:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow:hidden;transition:width var(--t)}
+.right-panel.closed{width:0}
+.rp-header{display:flex;align-items:center;gap:.5rem;padding:.45rem .75rem;background:var(--bg-elevated);border-bottom:1px solid var(--border);flex-shrink:0}
+.rp-title{font-size:.78rem;font-weight:700;color:var(--text-1)}
+.rp-body{flex:1;overflow-y:auto;padding:.65rem}
+.lang-select-wrap{position:relative;flex-shrink:0}
+.lang-btn{display:flex;align-items:center;gap:.4rem;padding:.28rem .65rem;border-radius:var(--r-md);background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-2);font-size:.75rem;font-weight:600;cursor:pointer;transition:all var(--t);white-space:nowrap;min-width:130px;justify-content:space-between}
+.lang-btn:hover{border-color:var(--accent);color:var(--text-1)}
+.lang-dropdown{position:absolute;top:calc(100% + 4px);left:0;width:280px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:0 16px 48px rgba(0,0,0,.6);z-index:500;display:none;overflow:hidden}
+.lang-dropdown.open{display:block}
+.lang-search{padding:.55rem;border-bottom:1px solid var(--border)}
+.lang-search input{width:100%;padding:.38rem .6rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.8rem;outline:none}
+.lang-list{max-height:280px;overflow-y:auto}
+.lang-group{padding:.35rem .6rem .1rem;font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-4)}
+.lang-item{display:flex;align-items:center;gap:.5rem;padding:.38rem .7rem;cursor:pointer;font-size:.8rem;color:var(--text-2);transition:all var(--t)}
+.lang-item:hover,.lang-item.selected{background:var(--accent-subtle);color:var(--accent-light)}
+.lang-badge{margin-left:auto;font-size:.6rem;padding:.08rem .3rem;border-radius:3px;background:rgba(16,185,129,.15);color:var(--green);font-weight:700}
+.timer-badge{display:none;align-items:center;gap:.4rem;padding:.28rem .7rem;border-radius:var(--r-md);background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);font-size:.78rem;font-weight:700;color:var(--red);font-family:var(--font-mono)}
+.timer-badge.active{display:flex}
+.timer-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.ai-badge{display:flex;align-items:center;gap:.3rem;padding:.2rem .5rem;border-radius:var(--r-md);background:rgba(139,92,246,.10);border:1px solid rgba(139,92,246,.25);font-size:.68rem;font-weight:700;color:#a78bfa;cursor:pointer;transition:all var(--t)}
+.ai-badge:hover{background:rgba(139,92,246,.18)}
+.ai-badge.connected{background:rgba(16,185,129,.10);border-color:rgba(16,185,129,.25);color:var(--green)}
+.statusbar{display:flex;align-items:center;gap:.75rem;padding:0 .75rem;background:var(--bg-surface);border-top:1px solid var(--border);font-size:.67rem;color:var(--text-3);flex-shrink:0;height:24px}
+.sb-item{display:flex;align-items:center;gap:.3rem}
+@media(max-width:900px){.left-sidebar{display:none}}
+@media(max-width:640px){.right-panel.open{position:fixed;inset:0;width:100%;z-index:400;border:none}}
+</style>
