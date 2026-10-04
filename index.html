@@ -385,7 +385,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--t1);height:100dvh;
         <div id="panel-console" class="console-out"></div>
         <!-- Preview -->
         <div id="panel-preview" style="display:none;height:calc(100% - 2px)">
-          <iframe id="preview-iframe" style="width:100%;height:100%;border:0;background:#fff" sandbox="allow-scripts allow-same-origin" title="Preview"></iframe>
+          <iframe id="preview-iframe" style="width:100%;height:100%;border:0;background:#fff" sandbox="allow-scripts allow-same-origin allow-modals allow-forms" title="Preview"></iframe>
         </div>
         <!-- Terminal sim -->
         <div id="panel-terminal" style="display:none" class="console-out">
@@ -1054,13 +1054,12 @@ data.forEach((d,i)=>{
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169/examples/jsm/"}}<\/script>
   <style>*{margin:0}canvas{display:block}</style>
 </head>
 <body>
 <script type="module">
-import * as THREE from 'three'
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'
+import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.169/examples/jsm/controls/OrbitControls.js'
 
 const renderer=new THREE.WebGLRenderer({antialias:true})
 renderer.setSize(window.innerWidth,window.innerHeight)
@@ -1523,12 +1522,19 @@ function runHTML(code) {
   console.error=(...a)=>{_e(...a);post('error',a)}
   console.info=(...a)=>{_i(...a);post('info',a)}
   window.addEventListener('error',e=>post('error',[e.message+' (line '+e.lineno+')']))
+  window.addEventListener('unhandledrejection',e=>post('error',['Unhandled promise rejection: '+(e.reason?.message||e.reason)]))
 })()
 <\/script>`
 
   // Inject CDN libraries
   let scriptTags = cdnLibraries.map(l => `<script src="${l.url}"><\/script>`).join('\n')
   let html = code
+
+  // Warn if bare specifiers are used without importmap
+  if (html.includes("from 'three'") || html.includes('from "three"')) {
+    addConsole('warn', "⚠ Bare specifier 'three' detected — use full CDN URL instead: import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'")
+  }
+
   if (!html.includes('</head>') && !html.includes('<html')) {
     html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}</head><body>${html}</body></html>`
   } else {
