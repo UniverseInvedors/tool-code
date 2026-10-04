@@ -22,6 +22,13 @@
 <meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GH7524RVW"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-3GH7524RVW',{page_title:document.title,page_location:location.href});
+function gaEvent(action,category,label,value){gtag('event',action,{event_category:category,event_label:label,value:value});}
+</script>
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Code IDE","url":"https://code.universeinvedors.tech","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["50+ programming languages","AI code assistant","Interview mode with timer","CDN library picker","Multi-file tabs","Vim mode","10+ themes"],"publisher":{"@type":"Organization","name":"Universe Invedors","url":"https://universeinvedors.tech"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Universe Invedors","item":"https://universeinvedors.tech"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://universeinvedors.tech/tools"},{"@type":"ListItem","position":3,"name":"Code IDE","item":"https://code.universeinvedors.tech"}]}]</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -1937,3 +1944,39 @@ function toast(msg, type = '') {
 </script>
 </body>
 </html>
+<script>
+// GA4 Custom Events — Code IDE
+(function(){
+  // Track language selections — most important insight
+  document.querySelectorAll('.lang-select,select,[data-lang]').forEach(function(el){
+    el.addEventListener('change',function(){
+      gaEvent('language_selected','Code IDE',this.value||this.textContent.trim());
+    });
+  });
+  // Track run/execute actions
+  document.querySelectorAll('button').forEach(function(btn){
+    var t=btn.textContent.trim().toLowerCase();
+    if(t.includes('run')||t.includes('execut')||t.includes('play')||t.includes('▶')){
+      btn.addEventListener('click',function(){
+        gaEvent('code_executed','Code IDE',document.querySelector('.lang-select,select')?.value||'unknown');
+      });
+    }
+    // Track copy
+    if(t.includes('copy')){
+      btn.addEventListener('click',function(){gaEvent('code_copied','Code IDE','snippet');});
+    }
+    // Track format/prettier
+    if(t.includes('format')||t.includes('prettier')||t.includes('beautif')){
+      btn.addEventListener('click',function(){gaEvent('code_formatted','Code IDE','prettier');});
+    }
+    // Track download
+    if(t.includes('download')||t.includes('save')||t.includes('export')){
+      btn.addEventListener('click',function(){gaEvent('code_downloaded','Code IDE','file');});
+    }
+  });
+  // Track theme changes
+  document.querySelectorAll('[data-theme],[onclick*="theme"],[onclick*="Theme"]').forEach(function(el){
+    el.addEventListener('click',function(){gaEvent('theme_changed','Code IDE',this.dataset.theme||this.textContent.trim());});
+  });
+})();
+</script>
