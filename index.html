@@ -19,6 +19,7 @@
 <meta name="twitter:image" content="https://universeinvedors.tech/og-image.jpg"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <link rel="icon" href="https://universeinvedors.tech/favicon.ico" sizes="any"/>
+<link rel="manifest" href="/manifest.json"/>
 <meta name="theme-color" content="#090c13"/>
 <meta name="google-adsense-account" content="ca-pub-8759032363251002"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8759032363251002" crossorigin="anonymous"></script>
@@ -547,6 +548,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
       document.getElementById('output').textContent = messages[i++ % messages.length]
     }
   <\/script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   python:`# Python — runs in browser sandbox (limited stdlib)
@@ -888,6 +892,9 @@ function App() {
 }
 React.createRoot(document.getElementById('root')).render(<App/>)
 <\/script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   vue:`<!DOCTYPE html>
@@ -996,6 +1003,9 @@ Vue.createApp({
   methods: { addTodo() { if(this.newTodo.trim()) { this.todoList.push(this.newTodo.trim()); this.newTodo='' } } }
 }).mount('#app')
 <\/script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   tailwind:`<!DOCTYPE html>
@@ -1024,6 +1034,9 @@ Vue.createApp({
     </div>
     <p class="text-slate-500 text-xs text-center mt-4">No credit card required</p>
   </div>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   d3:`<!DOCTYPE html>
@@ -1141,6 +1154,9 @@ data.forEach((d,i)=>{
   row.append('text').attr('x',20).attr('y',11).attr('fill','#94a3b8').attr('font-size',13).text(\`\${d.label} \${d.value}%\`)
 })
 <\/script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   three:`<!DOCTYPE html>
@@ -1269,6 +1285,9 @@ function animate(){requestAnimationFrame(animate);controls.update();renderer.ren
 animate()
 window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)})
 <\/script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
 </body>
 </html>`,
   worker:`// Web Worker example
@@ -1703,7 +1722,10 @@ function runHTML(code) {
   }
 
   if (!html.includes('</head>') && !html.includes('<html')) {
-    html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}</head><body>${html}</body></html>`
+    html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}</head><body>${html}<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
+</script>
+</body></html>`
   } else {
     html = html.replace('</head>', `${scriptTags}${consoleCapture}</head>`)
   }
@@ -2101,6 +2123,9 @@ function toast(msg, type = '') {
   document.getElementById('toasts').appendChild(el)
   setTimeout(() => el.remove(), 2800)
 }
+</script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
 </script>
 </body>
 </html>

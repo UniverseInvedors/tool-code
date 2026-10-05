@@ -1,0 +1,35 @@
+﻿{
+    "description":  "Online code editor with 50+ languages, live preview, AI assist and interview mode.",
+    "short_name":  "Code",
+    "shortcuts":  [
+                      {
+                          "url":  "/",
+                          "name":  "Code IDE",
+                          "description":  "Online code editor with 50+ languages, live preview, AI assist and interview mode."
+                      }
+                  ],
+    "icons":  [
+                  {
+                      "type":  "image/png",
+                      "sizes":  "192x192",
+                      "src":  "/icons/icon-192.png"
+                  },
+                  {
+                      "purpose":  "maskable",
+                      "type":  "image/png",
+                      "sizes":  "512x512",
+                      "src":  "/icons/icon-512.png"
+                  }
+              ],
+    "theme_color":  "#3b82f6",
+    "display":  "standalone",
+    "name":  "Universe Invedors — Code IDE",
+    "categories":  [
+                       "productivity",
+                       "utilities",
+                       "developer tools"
+                   ],
+    "background_color":  "#03050a",
+    "start_url":  "/",
+    "orientation":  "any"
+}
