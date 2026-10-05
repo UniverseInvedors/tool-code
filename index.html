@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Code IDE — Free Online Code Editor | 50+ Languages, AI Assist, Interview Mode | Universe Invedors</title>
+<title>Code IDE ï¿½ Free Online Code Editor | 50+ Languages, AI Assist, Interview Mode | Universe Invedors</title>
 <meta name="description" content="Free professional online code editor with 50+ languages, AI code assistance, interview mode with timer, CDN library picker, multi-file tabs, Vim mode, 10+ themes. Monaco Editor powered."/>
 <meta name="keywords" content="online code editor free,AI code assistant,interview coding tool,JavaScript IDE online,Python editor online,Monaco editor,multi-language IDE,coding interview practice"/>
 <link rel="canonical" href="https://code.universeinvedors.tech/"/>
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
 <meta name="author" content="Universe Invedors"/>
-<meta property="og:title" content="Code IDE — Free Online Editor with AI Assist and Interview Mode"/>
+<meta property="og:title" content="Code IDE ï¿½ Free Online Editor with AI Assist and Interview Mode"/>
 <meta property="og:description" content="50+ languages, AI code help, interview timer, CDN picker, Vim mode. The complete free online IDE."/>
 <meta property="og:url" content="https://code.universeinvedors.tech/"/>
 <meta property="og:type" content="website"/>
@@ -106,6 +106,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
 
@@ -131,7 +134,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     </button>
     <div class="lang-dropdown" id="lang-dropdown">
       <div class="lang-search">
-        <input type="text" placeholder="Search language…" id="lang-filter" oninput="filterLangs(this.value)" autofocus>
+        <input type="text" placeholder="Search languageï¿½" id="lang-filter" oninput="filterLangs(this.value)" autofocus>
       </div>
       <div class="lang-list" id="lang-list"></div>
     </div>
@@ -230,11 +233,11 @@ input[type=range]{accent-color:var(--accent);width:100%}
         </div>
         <!-- Terminal sim -->
         <div id="panel-terminal" style="display:none" class="console-out">
-          <div class="cl sys"><span class="cl-icon">$</span><span class="cl-msg">Universe IDE Terminal Simulator — commands run in the browser sandbox</span></div>
+          <div class="cl sys"><span class="cl-icon">$</span><span class="cl-msg">Universe IDE Terminal Simulator ï¿½ commands run in the browser sandbox</span></div>
           <div id="term-output"></div>
           <div style="display:flex;align-items:center;gap:.3rem;margin-top:.3rem">
             <span style="color:var(--green);font-family:var(--mono);font-size:.75rem">$</span>
-            <input id="term-input" type="text" style="flex:1;background:transparent;border:none;color:var(--t1);font-family:var(--mono);font-size:.75rem;outline:none" placeholder="Type a command…" onkeydown="handleTermInput(event)">
+            <input id="term-input" type="text" style="flex:1;background:transparent;border:none;color:var(--t1);font-family:var(--mono);font-size:.75rem;outline:none" placeholder="Type a commandï¿½" onkeydown="handleTermInput(event)">
           </div>
         </div>
       </div>
@@ -251,7 +254,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
       </div>
       <div class="rp-body" style="display:flex;flex-direction:column;gap:.4rem">
         <div class="ai-key-row">
-          <input type="password" id="ai-key" placeholder="OpenAI API key (sk-…) or compatible" />
+          <input type="password" id="ai-key" placeholder="OpenAI API key (sk-ï¿½) or compatible" />
           <select id="ai-model" style="padding:.38rem .5rem;background:var(--inp);border:1px solid var(--border);border-radius:var(--r);color:var(--t1);font-size:.72rem;outline:none">
             <option value="gpt-4o-mini">GPT-4o mini</option>
             <option value="gpt-4o">GPT-4o</option>
@@ -259,10 +262,10 @@ input[type=range]{accent-color:var(--accent);width:100%}
           </select>
           <button class="btn btn-sm" style="background:var(--violet);color:#fff" onclick="testAI()">Test</button>
         </div>
-        <p style="font-size:.68rem;color:var(--t3)">Your key is only stored in your browser — never sent to our servers. Works with any OpenAI-compatible endpoint.</p>
+        <p style="font-size:.68rem;color:var(--t3)">Your key is only stored in your browser ï¿½ never sent to our servers. Works with any OpenAI-compatible endpoint.</p>
         <div id="ai-messages" class="ai-messages"></div>
         <div class="ai-input-row">
-          <textarea id="ai-input" placeholder="Ask anything: explain code, fix bugs, generate functions, suggest improvements…" onkeydown="aiKeydown(event)"></textarea>
+          <textarea id="ai-input" placeholder="Ask anything: explain code, fix bugs, generate functions, suggest improvementsï¿½" onkeydown="aiKeydown(event)"></textarea>
           <button class="btn btn-violet btn-sm" onclick="sendAI()" id="ai-send-btn" style="align-self:flex-end">Send</button>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.15rem">
@@ -284,7 +287,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
       </div>
       <div class="rp-body">
         <div class="cdn-search">
-          <input type="text" id="cdn-search-input" placeholder="Search npm packages (e.g. lodash, axios, d3)…" oninput="searchCDN(this.value)">
+          <input type="text" id="cdn-search-input" placeholder="Search npm packages (e.g. lodash, axios, d3)ï¿½" oninput="searchCDN(this.value)">
         </div>
         <div id="cdn-results" class="cdn-results"></div>
         <div style="margin-top:.75rem">
@@ -355,26 +358,41 @@ input[type=range]{accent-color:var(--accent);width:100%}
   <span id="sb-vim" style="display:none;color:var(--orange);font-weight:700">VIM</span>
   <span class="sb-right">
     <span id="sb-words" style="color:var(--t4)">0 chars</span>
-    <span style="color:var(--t4)">·</span>
-    <span style="color:var(--t4)">Ctrl+Enter run · Shift+Alt+F format · Ctrl+P command palette</span>
+    <span style="color:var(--t4)">ï¿½</span>
+    <span style="color:var(--t4)">Ctrl+Enter run ï¿½ Shift+Alt+F format ï¿½ Ctrl+P command palette</span>
   </span>
 </div>
 
 <!-- SEO footer -->
-<footer class="seo-footer">
-  <div class="sf-links">
-    <a href="https://universeinvedors.tech">Universe Invedors</a>
-    <a href="https://universeinvedors.tech/tools">All Tools</a>
-    <a href="https://diagram.universeinvedors.tech">Diagrams</a>
-    <a href="https://chart.universeinvedors.tech">Charts</a>
-    <a href="https://ocr.universeinvedors.tech">OCR</a>
-    <a href="https://pdf.universeinvedors.tech">PDF</a>
-    <a href="https://image.universeinvedors.tech">Image</a>
-    <a href="https://3d.universeinvedors.tech">3D</a>
-    <a href="https://map.universeinvedors.tech">Maps</a>
-    <a href="https://media.universeinvedors.tech">Media</a>
+<footer class="seo-footer" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+  <div style="width:100%">
+    <div class="sf-links" style="margin-bottom:.35rem">
+      <strong style="color:var(--text-2);font-size:.71rem;white-space:nowrap">Free tools:</strong>
+      <a href="https://calc.universeinvedors.tech">Free Online Calculators â€” BMI, EMI, GST, Percentage, Age</a>
+      <a href="https://json.universeinvedors.tech">JSON Studio â€” Format, Validate, Diff &amp; Convert JSON</a>
+      <a href="https://qr.universeinvedors.tech">QR Code Generator â€” URL, WiFi, vCard, SMS Free</a>
+      <a href="https://color.universeinvedors.tech">Color Picker, Palette Generator &amp; Gradient Maker</a>
+      <a href="https://text.universeinvedors.tech">Word Counter, Case Converter &amp; Text Tools Free</a>
+      <a href="https://diagram.universeinvedors.tech">Online Diagram Maker â€” Flowcharts, ERD, UML, Sequence</a>
+      <a href="https://chart.universeinvedors.tech">Online Chart Builder â€” Chart.js, ECharts, Plotly</a>
+      <a href="https://ocr.universeinvedors.tech">Free OCR â€” Image to Text, PDF Text Extraction</a>
+      <a href="https://pdf.universeinvedors.tech">Free PDF Tools â€” Merge, Split, Watermark, Rotate</a>
+      <a href="https://image.universeinvedors.tech">Image Editor â€” Resize, Compress, Convert, Filter Free</a>
+      <a href="https://3d.universeinvedors.tech">3D Studio â€” GLTF Viewer, Scene Builder, Physics</a>
+      <a href="https://map.universeinvedors.tech">Interactive Map Builder â€” Markers, Routes, Heatmap, GeoJSON</a>
+      <a href="https://media.universeinvedors.tech">Media Studio â€” Screen Recorder, Waveform, Thumbnails</a>
+    </div>
+    <div class="sf-links" style="justify-content:space-between;width:100%">
+      <span>
+        <a href="https://universeinvedors.tech">Universe Invedors</a> Â· 
+        <a href="https://universeinvedors.tech/tools">All Free Tools</a> Â· 
+        <a href="https://universeinvedors.tech/services">AI &amp; Software Development</a> Â· 
+        <a href="https://universeinvedors.tech/about">About</a> Â· 
+        <a href="https://universeinvedors.tech/contact">Start a Project</a>
+      </span>
+      <span>Â© 2026 Universe Invedors Â· Free Online Code IDE â€” 50+ Languages, AI Assist</span>
+    </div>
   </div>
-  <span>© 2024 Universe Invedors · Monaco Editor · AI Assist · 50+ Languages · Free Online IDE</span>
 </footer>
 
 <!-- Theme overlay -->
@@ -529,6 +547,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
   <div class="card">
@@ -555,7 +576,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -722,7 +743,7 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
 </script>
 </body>
 </html>`,
-  python:`# Python — runs in browser sandbox (limited stdlib)
+  python:`# Python ï¿½ runs in browser sandbox (limited stdlib)
 # Full Python via Pyodide is loaded when you run
 
 def fibonacci(n):
@@ -753,8 +774,8 @@ print(f"Original:  {data}")
 print(f"Sorted:    {sorted(data)}")
 print(f"Reversed:  {sorted(data, reverse=True)}")
 print(f"Sum: {sum(data)}, Mean: {sum(data)/len(data):.2f}")`,
-  js:`// JavaScript — runs live in browser
-// Try: ES2024 features, DOM APIs, fetch, WebGL…
+  js:`// JavaScript ï¿½ runs live in browser
+// Try: ES2024 features, DOM APIs, fetch, WebGLï¿½
 
 class EventEmitter {
   #listeners = new Map()
@@ -794,7 +815,7 @@ const result = data
   .trim()
 
 console.log('Result:', result)`,
-  ts:`// TypeScript — syntax highlighting + type checking in editor
+  ts:`// TypeScript ï¿½ syntax highlighting + type checking in editor
 
 interface User {
   id: number
@@ -1022,6 +1043,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
 <div id="root"></div>
@@ -1067,7 +1091,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -1314,6 +1338,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
 <div id="app">
@@ -1329,7 +1356,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
     <ul :style="{textAlign:'left',maxWidth:'320px',margin:'1.5rem auto',color:'#94a3b8'}">
       <li v-for="item in todoList" :key="item" style="padding:.25rem 0">{{ item }}</li>
     </ul>
-    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add todo…"
+    <input v-model="newTodo" @keyup.enter="addTodo" placeholder="Add todoï¿½"
       :style="{padding:'.5rem .75rem',background:'#1e293b',border:'1px solid #334155',borderRadius:'8px',color:'#fff',width:'200px',outline:'none'}">
   </div>
 </div>
@@ -1346,7 +1373,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -1519,6 +1546,9 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"><\/script>
   <title>Tailwind CSS</title>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
   <div class="bg-slate-800 rounded-2xl p-8 max-w-md w-full shadow-2xl border border-slate-700">
@@ -1530,8 +1560,8 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
       </div>
     </div>
     <div class="space-y-3">
-      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Your name…">
-      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" type="email" placeholder="Email address…">
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Your nameï¿½">
+      <input class="w-full bg-slate-700 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" type="email" placeholder="Email addressï¿½">
       <button onclick="this.textContent='? Submitted!';this.classList.replace('bg-blue-600','bg-green-600')"
         class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
         Get Started
@@ -1545,7 +1575,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -1792,6 +1822,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
 <script>
@@ -1833,7 +1866,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -2079,6 +2112,9 @@ input[type=range]{accent-color:var(--accent);width:100%}
 .seo-footer,.tool-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem .9rem;padding:.6rem 1rem;border-top:1px solid var(--border);background:var(--bg-surface);font-size:.7rem;color:var(--text-3);flex-shrink:0}
 .seo-footer a,.tool-footer a{color:var(--text-3)}.seo-footer a:hover,.tool-footer a:hover{color:var(--text-2);text-decoration:none}
 .sf-links,.tool-footer-links{display:flex;flex-wrap:wrap;gap:.25rem .65rem}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
 </head>
 <body>
 <script type="module">
@@ -2132,7 +2168,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -2360,7 +2396,7 @@ console.log(twoSum([3,2,4], 6))       // [1,2]`},
 console.log(isPalindrome('racecar'))    // true
 console.log(isPalindrome('A man a plan a canal Panama'.replace(/\\s/g,'').toLowerCase())) // true
 console.log(isPalindrome('hello'))      // false`},
-    {title:'FizzBuzz',difficulty:'Easy',desc:'Print numbers 1–100. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", for both print "FizzBuzz".',example:'1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz...',starter:`function fizzBuzz(n) {
+    {title:'FizzBuzz',difficulty:'Easy',desc:'Print numbers 1ï¿½100. For multiples of 3 print "Fizz", for multiples of 5 print "Buzz", for both print "FizzBuzz".',example:'1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz...',starter:`function fizzBuzz(n) {
   for (let i = 1; i <= n; i++) {
     // Your solution here
   }
@@ -2702,7 +2738,7 @@ function runCode() {
   } else if (currentLangId === 'python') {
     runPython(code)
   } else {
-    addConsole('sys', `${lang.icon} ${lang.label} — syntax highlighted but not executable in browser`)
+    addConsole('sys', `${lang.icon} ${lang.label} ï¿½ syntax highlighted but not executable in browser`)
     addConsole('sys', 'Switch to HTML/JS to see live preview, or Python for execution via Pyodide')
   }
 }
@@ -2727,17 +2763,23 @@ function runHTML(code) {
 
   // Warn if bare specifiers are used without importmap
   if (html.includes("from 'three'") || html.includes('from "three"')) {
-    addConsole('warn', "? Bare specifier 'three' detected — use full CDN URL instead: import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'")
+    addConsole('warn', "? Bare specifier 'three' detected ï¿½ use full CDN URL instead: import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js'")
   }
 
-  if (!html.includes('</head>') && !html.includes('<html')) {
-    html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}</head><body>${html}<script>
+  if (!html.includes('
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
+</head>') && !html.includes('<html')) {
+    html = `<!DOCTYPE html><html><head><meta charset="UTF-8">${scriptTags}${consoleCapture}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
+</head><body>${html}<script>
 if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
 </script>
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -2904,7 +2946,13 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
 </script>
 </body></html>`
   } else {
-    html = html.replace('</head>', `${scriptTags}${consoleCapture}</head>`)
+    html = html.replace('
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
+</head>', `${scriptTags}${consoleCapture}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to write and run code online with the Code IDE","description":"Write, run, and share code in 50+ languages with live preview, AI assistance, and interview mode â€” free online IDE.","step":[{"@type":"HowToStep","position":1,"name":"Select a language","text":"Click the language selector in the topbar and choose from 50+ languages. IntelliSense activates automatically."},{"@type":"HowToStep","position":2,"name":"Write your code","text":"Type in the Monaco editor. For HTML/CSS/JS, the preview updates live. Press Ctrl+Enter to run any code."},{"@type":"HowToStep","position":3,"name":"Debug with console","text":"Open the Console panel to see console.log output, errors, and warnings from your running code."},{"@type":"HowToStep","position":4,"name":"Share your code","text":"Click Share to generate a URL that preserves your code so you can share it with anyone."}]}</script>
+
+</head>`)
   }
 
   document.getElementById('preview-iframe').srcdoc = html
@@ -2924,7 +2972,7 @@ function runJS(code) {
 
 async function runPython(code) {
   openBottomPanel('console')
-  addConsole('sys', '?? Loading Pyodide (Python runtime)…')
+  addConsole('sys', '?? Loading Pyodide (Python runtime)ï¿½')
   try {
     if (!window.loadPyodide) {
       const script = document.createElement('script')
@@ -2966,11 +3014,11 @@ window.addEventListener('message', e => {
 })
 
 // -- CONSOLE ----------------------------------------------
-const CONSOLE_ICONS = { log:'›', warn:'?', error:'?', info:'?', sys:'·' }
+const CONSOLE_ICONS = { log:'ï¿½', warn:'?', error:'?', info:'?', sys:'ï¿½' }
 function addConsole(level, msg) {
   const out = document.getElementById('panel-console')
   const div = document.createElement('div'); div.className = `cl ${level}`
-  div.innerHTML = `<span class="cl-icon">${CONSOLE_ICONS[level]||'›'}</span><span class="cl-msg">${escHTML(msg)}</span>`
+  div.innerHTML = `<span class="cl-icon">${CONSOLE_ICONS[level]||'ï¿½'}</span><span class="cl-msg">${escHTML(msg)}</span>`
   out.appendChild(div); out.scrollTop = out.scrollHeight
 }
 function clearConsole() { document.getElementById('panel-console').innerHTML = '' }
@@ -3015,7 +3063,7 @@ function handleTermInput(e) {
   else result = TERM_CMDS[cmd]?.() ?? `Command not found: ${cmd}. Type 'help' for available commands.`
   if (result) {
     const res = document.createElement('div'); res.className = 'cl sys'
-    res.innerHTML = `<span class="cl-icon">·</span><span class="cl-msg">${escHTML(result)}</span>`
+    res.innerHTML = `<span class="cl-icon">ï¿½</span><span class="cl-msg">${escHTML(result)}</span>`
     out.appendChild(res)
   }
   out.scrollTop = out.scrollHeight
@@ -3117,7 +3165,7 @@ function searchCDN(q) {
         <div class="cdn-item" onclick="addCDN('${p.name}','${p.latest}','${p.description?.replace(/'/g,'').slice(0,60)||''}')">
           <div class="cdn-name">${p.name}</div>
           <div class="cdn-desc">${p.description?.slice(0,60) || ''}</div>
-          <div class="cdn-ver">v${p.version} · cdnjs</div>
+          <div class="cdn-ver">v${p.version} ï¿½ cdnjs</div>
         </div>`).join('') || '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">No results</p>'
     } catch {
       document.getElementById('cdn-results').innerHTML = '<p style="font-size:.75rem;color:var(--t3);padding:.5rem">Search unavailable</p>'
@@ -3208,7 +3256,7 @@ function stopInterview() {
 
 // -- FORMAT ------------------------------------------------
 async function formatCode() {
-  if (!editor || typeof prettier === 'undefined') { toast('Formatter loading…', 'err'); return }
+  if (!editor || typeof prettier === 'undefined') { toast('Formatter loadingï¿½', 'err'); return }
   const parserMap = { html:'html', css:'css', js:'babel', ts:'babel', jsx:'babel', tsx:'babel', json:'json' }
   const parser = parserMap[currentLangId]
   if (!parser) { toast('Auto-format not available for this language', 'info'); return }
@@ -3307,7 +3355,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catc
 
 <!-- -- Guided Tour ------------------------------------ -->
 <script>
-window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor — 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
+window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A full browser-based code editor ï¿½ 50+ languages, live preview, Python via Pyodide, AI assistance, and interview mode.",tip:"bottom"},{sel:".lang-select-wrap",title:"50+ languages",body:"Click to browse JavaScript, TypeScript, Python, Go, Rust, Java, SQL, HTML and more. Full IntelliSense for all major languages.",tip:"bottom"},{sel:"#monaco-host",title:"Monaco Editor",body:"The same engine as VS Code. IntelliSense, multi-cursor, Vim mode, 10 themes, font ligatures. Press Ctrl+Enter to run.",tip:"right"},{sel:".bp-tabs",title:"Console, Preview & Terminal",body:"Console captures console.log output. Preview renders HTML live. Terminal simulates basic shell commands.",tip:"top"},{sel:".ai-badge",title:"AI Code Assistant",body:"Add your OpenAI API key to get instant code explanations, suggestions and generation in the context of your current file.",tip:"bottom"}];
 </script>
 <script>
 (function(){
@@ -3475,9 +3523,9 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
 </body>
 </html>
 <script>
-// GA4 Custom Events — Code IDE
+// GA4 Custom Events ï¿½ Code IDE
 (function(){
-  // Track language selections — most important insight
+  // Track language selections ï¿½ most important insight
   document.querySelectorAll('.lang-select,select,[data-lang]').forEach(function(el){
     el.addEventListener('change',function(){
       gaEvent('language_selected','Code IDE',this.value||this.textContent.trim());
