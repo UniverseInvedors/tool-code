@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -161,12 +161,30 @@ input[type=range]{accent-color:var(--accent);width:100%}
   </div>
 
   <!-- Action buttons -->
-  <button class="btn btn-ghost btn-sm" onclick="openPanel('cdn')" title="Add CDN Library">?? CDN</button>
-  <button class="btn btn-ghost btn-sm" onclick="openPanel('interview')" title="Interview Mode">?? Interview</button>
-  <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format (Shift+Alt+F)">? Format</button>
-  <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">??</button>
-  <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share via URL">?? Share</button>
-  <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">? Run</button>
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('cdn')" title="Add CDN Library">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>CDN
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="openPanel('interview')" title="Interview Mode">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Interview
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="formatCode()" title="Format code (Shift+Alt+F)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><line x1="21" y1="10" x2="7" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>Format
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="openSettings()" title="Editor Settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Settings
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="openShortcuts()" title="Keyboard Shortcuts">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/></svg>Keys
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="copyCode()" title="Copy current file">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>Copy
+  </button>
+  <button class="btn btn-ghost btn-sm" onclick="shareCode()" title="Share via URL">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>Share
+  </button>
+  <button class="btn btn-green" onclick="runCode()" title="Run (Ctrl+Enter)">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><polygon points="5 3 19 12 5 21 5 3"/></svg>Run
+  </button>
   <button class="tour-btn" onclick="startTour()" aria-label="Start guided tour" title="Take a quick tour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Tour</button>
 </header>
 
@@ -359,7 +377,7 @@ input[type=range]{accent-color:var(--accent);width:100%}
   <span class="sb-right">
     <span id="sb-words" style="color:var(--t4)">0 chars</span>
     <span style="color:var(--t4)">�</span>
-    <span style="color:var(--t4)">Ctrl+Enter run � Shift+Alt+F format � Ctrl+P command palette</span>
+    <span style="color:var(--t4)">Ctrl+Enter run &nbsp;&middot;&nbsp; Shift+Alt+F format &nbsp;&middot;&nbsp; Ctrl+, settings &nbsp;&middot;&nbsp; Ctrl+Shift+K shortcuts</span>
   </span>
 </div>
 
@@ -406,6 +424,139 @@ input[type=range]{accent-color:var(--accent);width:100%}
 
 <!-- Toasts -->
 <div class="toasts" id="toasts"></div>
+
+<!-- ── SETTINGS MODAL ── -->
+<div class="overlay" id="settings-overlay" onclick="closeSettings()">
+  <div class="modal" onclick="event.stopPropagation()" style="max-width:480px;width:90%">
+    <div class="modal-title" style="display:flex;align-items:center;justify-content:space-between">
+      <span>&#9881; Editor Settings</span>
+      <button class="btn btn-ghost btn-sm" onclick="resetSettings()" style="font-size:.7rem">Reset defaults</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.1rem;margin-top:.5rem">
+
+      <div>
+        <label class="fl">Font Size <span id="fs-val" style="color:var(--accent)">14px</span></label>
+        <input type="range" id="set-fontsize" min="10" max="24" step="1" value="14"
+          oninput="applyEditorSetting('fontSize',+this.value);document.getElementById('fs-val').textContent=this.value+'px'">
+      </div>
+
+      <div>
+        <label class="fl">Tab Size</label>
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+          <button class="set-tab-btn btn btn-ghost btn-sm active" onclick="setTabSize(2,this)">2 spaces</button>
+          <button class="set-tab-btn btn btn-ghost btn-sm" onclick="setTabSize(4,this)">4 spaces</button>
+          <button class="set-tab-btn btn btn-ghost btn-sm" onclick="setTabSize(8,this)">8 spaces</button>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:.6rem">
+        <label class="fl" style="margin:0">Editor Options</label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Word Wrap
+          <input type="checkbox" id="set-wordwrap" checked onchange="applyEditorSetting('wordWrap',this.checked?'on':'off')" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Minimap
+          <input type="checkbox" id="set-minimap" checked onchange="applyEditorSetting('minimap',{enabled:this.checked})" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Line Numbers
+          <input type="checkbox" id="set-linenums" checked onchange="applyEditorSetting('lineNumbers',this.checked?'on':'off')" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Bracket Pair Colorization
+          <input type="checkbox" id="set-brackets" checked onchange="applyEditorSetting('bracketPairColorization',{enabled:this.checked})" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Format On Paste
+          <input type="checkbox" id="set-fmtpaste" checked onchange="applyEditorSetting('formatOnPaste',this.checked)" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Format On Save (Ctrl+S)
+          <input type="checkbox" id="set-fmtsave" checked style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Vim Mode
+          <input type="checkbox" id="set-vim" onchange="toggleVimMode(this.checked)" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Font Ligatures
+          <input type="checkbox" id="set-ligatures" checked onchange="applyEditorSetting('fontLigatures',this.checked)" style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--text-2);cursor:pointer">
+          Auto-save to localStorage
+          <input type="checkbox" id="set-autosave" checked style="accent-color:var(--accent);width:16px;height:16px">
+        </label>
+      </div>
+
+      <div>
+        <label class="fl">Cursor Style</label>
+        <select id="set-cursor" onchange="applyEditorSetting('cursorStyle',this.value)"
+          style="padding:.4rem .6rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.82rem;width:100%;outline:none">
+          <option value="line">Line</option>
+          <option value="block">Block</option>
+          <option value="underline">Underline</option>
+          <option value="line-thin">Line Thin</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="fl">Render Whitespace</label>
+        <select id="set-whitespace" onchange="applyEditorSetting('renderWhitespace',this.value)"
+          style="padding:.4rem .6rem;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--r-md);color:var(--text-1);font-size:.82rem;width:100%;outline:none">
+          <option value="none">None</option>
+          <option value="boundary">Boundary</option>
+          <option value="all">All</option>
+          <option value="selection">Selection only</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="modal-actions" style="margin-top:1.5rem">
+      <button class="btn btn-ghost" onclick="closeSettings()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── KEYBOARD SHORTCUTS MODAL ── -->
+<div class="overlay" id="shortcuts-overlay" onclick="closeShortcuts()">
+  <div class="modal" onclick="event.stopPropagation()" style="max-width:560px;width:90%">
+    <div class="modal-title">&#9000; Keyboard Shortcuts</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.5rem;margin-top:.75rem">
+      <div style="display:flex;flex-direction:column;gap:.5rem">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem">Running & Formatting</div>
+        <div class="kb-row"><kbd>Ctrl+Enter</kbd><span>Run code</span></div>
+        <div class="kb-row"><kbd>Shift+Alt+F</kbd><span>Format code</span></div>
+        <div class="kb-row"><kbd>Ctrl+S</kbd><span>Save + format</span></div>
+        <div class="kb-row"><kbd>Ctrl+/</kbd><span>Toggle comment</span></div>
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:.75rem 0 .25rem">Editor</div>
+        <div class="kb-row"><kbd>Ctrl+Z</kbd><span>Undo</span></div>
+        <div class="kb-row"><kbd>Ctrl+Y</kbd><span>Redo</span></div>
+        <div class="kb-row"><kbd>Ctrl+D</kbd><span>Select next match</span></div>
+        <div class="kb-row"><kbd>Alt+Click</kbd><span>Multi-cursor</span></div>
+        <div class="kb-row"><kbd>Ctrl+Shift+K</kbd><span>Delete line</span></div>
+        <div class="kb-row"><kbd>Alt+↑/↓</kbd><span>Move line</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.5rem">
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem">Navigation</div>
+        <div class="kb-row"><kbd>Ctrl+P</kbd><span>Command palette</span></div>
+        <div class="kb-row"><kbd>Ctrl+G</kbd><span>Go to line</span></div>
+        <div class="kb-row"><kbd>Ctrl+F</kbd><span>Find</span></div>
+        <div class="kb-row"><kbd>Ctrl+H</kbd><span>Find & replace</span></div>
+        <div class="kb-row"><kbd>F12</kbd><span>Go to definition</span></div>
+        <div style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:.75rem 0 .25rem">UI</div>
+        <div class="kb-row"><kbd>Escape</kbd><span>Close panel / modal</span></div>
+        <div class="kb-row"><kbd>Ctrl+\</kbd><span>Toggle sidebar</span></div>
+        <div class="kb-row"><kbd>Ctrl+`</kbd><span>Toggle console</span></div>
+        <div class="kb-row"><kbd>Ctrl+Shift+P</kbd><span>Full command palette</span></div>
+        <div class="kb-row"><kbd>Ctrl+,</kbd><span>Open settings</span></div>
+      </div>
+    </div>
+    <div class="modal-actions" style="margin-top:1.5rem">
+      <button class="btn btn-ghost" onclick="closeShortcuts()">Close</button>
+    </div>
+  </div>
+</div>
 
 <!-- Monaco -->
 <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.50.0/min/vs/loader.js"></script>
@@ -2583,6 +2734,11 @@ require(['vs/editor/editor.main'], () => {
   editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, runCode)
   editor.addCommand(monaco.KeyMod.Shift | monaco.KeyMod.Alt | monaco.KeyCode.KeyF, formatCode)
   editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyS, formatCode)
+  editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Comma, openSettings)
+  editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Backslash, toggleLeftSidebar)
+  editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Backquote, () => toggleBottomPanel())
+
+  loadEditorPrefs()
 
   initLangList()
   renderFileTabs()
@@ -3255,6 +3411,90 @@ function stopInterview() {
 }
 
 // -- FORMAT ------------------------------------------------
+// ── SETTINGS ──────────────────────────────────────────
+function openSettings() {
+  // Sync UI with current editor values
+  if (editor) {
+    const opts = editor.getOptions()
+    const fsEl = document.getElementById('set-fontsize')
+    const fsVal = document.getElementById('fs-val')
+    const fs = opts.get(monaco.editor.EditorOption.fontSize) || 14
+    if (fsEl) { fsEl.value = fs; if (fsVal) fsVal.textContent = fs + 'px' }
+
+    const ww = opts.get(monaco.editor.EditorOption.wordWrap)
+    const wwEl = document.getElementById('set-wordwrap')
+    if (wwEl) wwEl.checked = (ww === 'on')
+
+    const mm = opts.get(monaco.editor.EditorOption.minimap)
+    const mmEl = document.getElementById('set-minimap')
+    if (mmEl) mmEl.checked = mm?.enabled !== false
+
+    const ln = opts.get(monaco.editor.EditorOption.lineNumbers)
+    const lnEl = document.getElementById('set-linenums')
+    if (lnEl) lnEl.checked = (ln !== 'off')
+  }
+  document.getElementById('settings-overlay').classList.add('active')
+}
+function closeSettings() {
+  document.getElementById('settings-overlay').classList.remove('active')
+  // Persist to localStorage
+  try { localStorage.setItem('code_settings', JSON.stringify(getEditorPrefs())) } catch(e){}
+}
+function applyEditorSetting(key, value) {
+  if (!editor) return
+  editor.updateOptions({ [key]: value })
+}
+function setTabSize(size, btn) {
+  if (editor) editor.getModel()?.updateOptions({ tabSize: size, insertSpaces: true })
+  document.querySelectorAll('.set-tab-btn').forEach(b => b.classList.remove('active'))
+  if (btn) btn.classList.add('active')
+}
+function resetSettings() {
+  if (!editor) return
+  editor.updateOptions({
+    fontSize: 14, wordWrap: 'on', minimap: { enabled: true },
+    lineNumbers: 'on', bracketPairColorization: { enabled: true },
+    formatOnPaste: true, fontLigatures: true, cursorStyle: 'line',
+    renderWhitespace: 'none'
+  })
+  editor.getModel()?.updateOptions({ tabSize: 2, insertSpaces: true })
+  const fsEl = document.getElementById('set-fontsize')
+  const fsVal = document.getElementById('fs-val')
+  if (fsEl) { fsEl.value = 14; if (fsVal) fsVal.textContent = '14px' }
+  document.getElementById('set-wordwrap').checked = true
+  document.getElementById('set-minimap').checked = true
+  document.getElementById('set-linenums').checked = true
+  document.getElementById('set-brackets').checked = true
+  document.getElementById('set-fmtpaste').checked = true
+  document.getElementById('set-ligatures').checked = true
+  document.querySelectorAll('.set-tab-btn').forEach((b,i) => b.classList.toggle('active', i===0))
+  toast('Settings reset to defaults', 'ok')
+}
+function getEditorPrefs() {
+  if (!editor) return {}
+  const opts = editor.getOptions()
+  return {
+    fontSize: opts.get(monaco.editor.EditorOption.fontSize),
+    wordWrap: opts.get(monaco.editor.EditorOption.wordWrap),
+    minimap: opts.get(monaco.editor.EditorOption.minimap),
+    lineNumbers: opts.get(monaco.editor.EditorOption.lineNumbers),
+  }
+}
+function loadEditorPrefs() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('code_settings') || '{}')
+    if (editor && Object.keys(saved).length) editor.updateOptions(saved)
+  } catch(e){}
+}
+
+// ── KEYBOARD SHORTCUTS MODAL ─────────────────────────
+function openShortcuts() {
+  document.getElementById('shortcuts-overlay').classList.add('active')
+}
+function closeShortcuts() {
+  document.getElementById('shortcuts-overlay').classList.remove('active')
+}
+
 async function formatCode() {
   if (!editor || typeof prettier === 'undefined') { toast('Formatter loading�', 'err'); return }
   const parserMap = { html:'html', css:'css', js:'babel', ts:'babel', jsx:'babel', tsx:'babel', json:'json' }
@@ -3305,6 +3545,19 @@ function openThemes() {
   document.getElementById('theme-overlay').classList.add('open')
 }
 function closeThemes() { document.getElementById('theme-overlay').classList.remove('open') }
+
+// ── GLOBAL ESCAPE HANDLER for Settings/Shortcuts overlays ──
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeSettings()
+    closeShortcuts()
+    closeThemes()
+  }
+  // Ctrl+, open settings (fallback for when editor not focused)
+  if (e.ctrlKey && e.key === ',') { e.preventDefault(); openSettings() }
+  // Ctrl+K Ctrl+S open shortcuts
+  if (e.ctrlKey && e.shiftKey && e.key === 'K') { e.preventDefault(); openShortcuts() }
+})
 function setTheme(id, el) {
   document.querySelectorAll('.theme-swatch').forEach(s => s.classList.remove('active'))
   el.classList.add('active')
@@ -3627,4 +3880,9 @@ window.__TOUR_STEPS__ = [{sel:".topbar-logo",title:"Welcome to Code IDE",body:"A
 
 /* Tour CSS */
 .tour-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.26rem .6rem;border-radius:8px;font-size:.72rem;font-weight:700;cursor:pointer;border:1px solid rgba(59,130,246,.35);background:rgba(59,130,246,.10);color:#60a5fa;transition:all .18s;white-space:nowrap;flex-shrink:0}.tour-btn:hover{background:rgba(59,130,246,.20);border-color:rgba(59,130,246,.6)}.tour-btn svg{width:13px;height:13px}#tour-overlay{position:fixed;inset:0;z-index:9000;pointer-events:none;opacity:0;transition:opacity .3s}#tour-overlay.active{pointer-events:auto;opacity:1}#tour-svg{position:fixed;inset:0;width:100%;height:100%;z-index:9001;pointer-events:none}#tour-tip{position:fixed;z-index:9002;width:min(320px,calc(100vw - 2rem));background:#111b2e;border:1px solid rgba(59,130,246,.4);border-radius:16px;padding:1.2rem 1.35rem 1rem;box-shadow:0 24px 64px rgba(0,0,0,.7);animation:tourPop .22s cubic-bezier(.34,1.56,.64,1)}@keyframes tourPop{from{opacity:0;transform:scale(.9) translateY(6px)}to{opacity:1;transform:scale(1) translateY(0)}}.tour-step-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#60a5fa;margin-bottom:.4rem}.tour-tip-title{font-size:.97rem;font-weight:800;color:#f0f4ff;margin-bottom:.35rem}.tour-tip-body{font-size:.82rem;color:#a8b8cf;line-height:1.6;margin-bottom:.9rem}.tour-footer{display:flex;align-items:center;gap:.5rem;margin-top:.35rem}.tour-dots{display:flex;gap:.3rem;flex:1}.tour-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15);transition:all .2s;cursor:pointer}.tour-dot.active{background:#3b82f6;width:18px;border-radius:3px}.tour-nav{display:flex;gap:.4rem}.tour-nav-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.32rem .75rem;border-radius:8px;font-size:.75rem;font-weight:700;cursor:pointer;border:none;transition:all .18s}.tour-prev{background:rgba(255,255,255,.07);color:#a8b8cf;border:1px solid rgba(255,255,255,.1)}.tour-prev:hover{background:rgba(255,255,255,.12)}.tour-next{background:#3b82f6;color:#fff}.tour-next:hover{background:#60a5fa}.tour-skip{background:none;border:none;font-size:.72rem;color:#5a6a82;cursor:pointer;padding:.3rem;display:block;margin-top:.4rem;transition:color .18s}.tour-skip:hover{color:#a8b8cf}.tour-progress{height:3px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;margin-bottom:.8rem}.tour-progress-fill{height:100%;background:linear-gradient(90deg,#3b82f6,#06b6d4);border-radius:2px;transition:width .3s}#tour-tip.arrow-top::before,#tour-tip.arrow-bottom::before,#tour-tip.arrow-left::before,#tour-tip.arrow-right::before{content:'';position:absolute;width:10px;height:10px;background:#111b2e;border:1px solid rgba(59,130,246,.4);transform:rotate(45deg)}#tour-tip.arrow-top::before{top:-6px;left:24px;border-right:none;border-bottom:none}#tour-tip.arrow-bottom::before{bottom:-6px;left:24px;border-left:none;border-top:none}#tour-tip.arrow-left::before{left:-6px;top:20px;border-right:none;border-top:none}#tour-tip.arrow-right::before{right:-6px;top:20px;border-left:none;border-bottom:none}
+/* Settings & Shortcuts CSS */
+.kb-row{display:flex;align-items:center;justify-content:space-between;gap:.75rem;font-size:.78rem;color:var(--text-2);padding:.2rem 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.kb-row:last-child{border-bottom:none}
+kbd{display:inline-flex;align-items:center;padding:.18rem .45rem;border-radius:5px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);font-family:var(--font-mono);font-size:.7rem;color:var(--text-1);white-space:nowrap;letter-spacing:0}
+.set-tab-btn.active{background:var(--accent)!important;color:#fff!important;border-color:var(--accent)!important}
 </style>
